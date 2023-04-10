@@ -60,7 +60,7 @@ int main() {
 
 
     print("Hello World\n\r");
-    print("test print\n\r");
+    print("test print1\n\r");
 
     while (1) {
         XGpio_DiscreteWrite(&output, 1, XGpio_DiscreteRead(&input, 1));
