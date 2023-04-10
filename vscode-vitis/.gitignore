@@ -1,4 +1,3 @@
-*
-!src
-!src/*
-!Makefile
+.analytics
+IDE.log
+.metadata
