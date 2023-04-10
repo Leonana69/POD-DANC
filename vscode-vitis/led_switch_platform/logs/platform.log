@@ -1,0 +1,911 @@
+TRACE::2023-04-10.15:42:27::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:27::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:27::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:27::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:27::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:27::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:27::SCWPlatform::Do not have an existing db opened. 
+TRACE::2023-04-10.15:42:28::SCWPlatform::Opened new HwDB with name design_1_wrapper
+TRACE::2023-04-10.15:42:28::SCWWriter::formatted JSON is {
+	"platformName":	"led_switch_platform",
+	"sprVersion":	"2.0",
+	"mode":	"cmd",
+	"dsaType":	"Fixed",
+	"platformDesc":	"led_switch_platform",
+	"platHandOff":	"/home/gc635/Documents/DANC/vscode-vitis/../vivado/led_switch/led_switch_platform.xsa",
+	"platIntHandOff":	"<platformDir>/hw/led_switch_platform.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2023-04-10.15:42:28::SCWWriter::formatted JSON is {
+	"platformName":	"led_switch_platform",
+	"sprVersion":	"2.0",
+	"mode":	"cmd",
+	"dsaType":	"Fixed",
+	"platformDesc":	"led_switch_platform",
+	"platHandOff":	"/home/gc635/Documents/DANC/vscode-vitis/../vivado/led_switch/led_switch_platform.xsa",
+	"platIntHandOff":	"<platformDir>/hw/led_switch_platform.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"led_switch_platform",
+	"systems":	[{
+			"systemName":	"led_switch_platform",
+			"systemDesc":	"led_switch_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"led_switch_platform"
+		}]
+}
+TRACE::2023-04-10.15:42:28::SCWPlatform::Boot application domains not present, creating them
+TRACE::2023-04-10.15:42:28::SCWDomain::checking for install qemu data   : 
+TRACE::2023-04-10.15:42:28::SCWDomain:: Using the QEMU Data from install at  : /usr/local/Xilinx/Vitis/2022.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2023-04-10.15:42:28::SCWDomain:: Using the QEMU args  from install at  : /usr/local/Xilinx/Vitis/2022.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2023-04-10.15:42:28::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:28::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:28::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:28::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:28::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:28::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:28::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:28::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:28::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:28::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:28::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:28::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:28::SCWPlatform::Boot application domain added for zynq_fsbl
+TRACE::2023-04-10.15:42:28::SCWPlatform::Generating the sources  .
+TRACE::2023-04-10.15:42:28::SCWBDomain::Generating boot domain sources.
+TRACE::2023-04-10.15:42:28::SCWBDomain:: Generating the zynq_fsbl Application.
+TRACE::2023-04-10.15:42:28::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:28::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:28::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:28::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:28::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:28::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:28::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2023-04-10.15:42:28::SCWMssOS::No sw design opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:28::SCWMssOS::mss does not exists at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:28::SCWMssOS::Creating sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:28::SCWMssOS::Adding the swdes entry, created swdb /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:28::SCWMssOS::updating the scw layer changes to swdes at   /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:28::SCWMssOS::Writing mss at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:28::SCWMssOS::Completed writing the mss file at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2023-04-10.15:42:28::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2023-04-10.15:42:28::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2023-04-10.15:42:28::SCWBDomain::Completed writing the mss file at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2023-04-10.15:42:29::SCWPlatform::Generating sources Done.
+TRACE::2023-04-10.15:42:29::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:29::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:29::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:29::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:29::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2023-04-10.15:42:29::SCWMssOS::No sw design opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWMssOS::mss exists loading the mss file  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWMssOS::Opened the sw design from mss  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWMssOS::Adding the swdes entry /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2023-04-10.15:42:29::SCWMssOS::updating the scw layer about changes
+TRACE::2023-04-10.15:42:29::SCWMssOS::Opened the sw design.  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWMssOS::Saving the mss changes /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-04-10.15:42:29::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-04-10.15:42:29::SCWMssOS::Commit changes completed.
+TRACE::2023-04-10.15:42:29::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:29::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:29::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:29::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:29::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:29::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:29::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:29::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:29::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:29::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:29::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:29::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:29::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:29::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:29::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:29::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:29::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:29::SCWWriter::formatted JSON is {
+	"platformName":	"led_switch_platform",
+	"sprVersion":	"2.0",
+	"mode":	"cmd",
+	"dsaType":	"Fixed",
+	"platformDesc":	"led_switch_platform",
+	"platHandOff":	"/home/gc635/Documents/DANC/vscode-vitis/../vivado/led_switch/led_switch_platform.xsa",
+	"platIntHandOff":	"<platformDir>/hw/led_switch_platform.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"led_switch_platform",
+	"systems":	[{
+			"systemName":	"led_switch_platform",
+			"systemDesc":	"led_switch_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"led_switch_platform",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"af4bbaa40f54e4f3f411187c8b705236",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.8", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWDomain::checking for install qemu data   : 
+TRACE::2023-04-10.15:42:32::SCWDomain:: Using the QEMU Data from install at  : /usr/local/Xilinx/Vitis/2022.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2023-04-10.15:42:32::SCWDomain:: Using the QEMU args  from install at  : /usr/local/Xilinx/Vitis/2022.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWDomain::Qemu Directory name is changed from "" to "qemu"
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::No sw design opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::mss does not exists at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Creating sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Adding the swdes entry, created swdb /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss with des name /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::updating the scw layer changes to swdes at   /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Writing mss at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Completed writing the mss file at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+TRACE::2023-04-10.15:42:32::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2023-04-10.15:42:32::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2023-04-10.15:42:32::SCWMssOS::Completed writing the mss file at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+TRACE::2023-04-10.15:42:32::SCWMssOS::Forcing BSP Sources regeneration.
+TRACE::2023-04-10.15:42:32::SCWMssOS::Saving the mss changes /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-04-10.15:42:32::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-04-10.15:42:32::SCWMssOS::Commit changes completed.
+TRACE::2023-04-10.15:42:32::SCWMssOS::Saving the mss changes /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Adding the swdes entry, mss present, able to open swdb /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2023-04-10.15:42:32::SCWMssOS::Writing the mss file completed /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Commit changes completed.
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWWriter::formatted JSON is {
+	"platformName":	"led_switch_platform",
+	"sprVersion":	"2.0",
+	"mode":	"cmd",
+	"dsaType":	"Fixed",
+	"platformDesc":	"led_switch_platform",
+	"platHandOff":	"/home/gc635/Documents/DANC/vscode-vitis/../vivado/led_switch/led_switch_platform.xsa",
+	"platIntHandOff":	"<platformDir>/hw/led_switch_platform.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"led_switch_platform",
+	"systems":	[{
+			"systemName":	"led_switch_platform",
+			"systemDesc":	"led_switch_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"led_switch_platform",
+			"sysActiveDom":	"standalone_ps7_cortexa9_0",
+			"sysDefaultDom":	"standalone_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"af4bbaa40f54e4f3f411187c8b705236",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.8", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_ps7_cortexa9_0",
+					"domainDispName":	"standalone_ps7_cortexa9_0",
+					"domainDesc":	"standalone_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"<platformDir>/resources/led_switch_platform/standalone_ps7_cortexa9_0/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/led_switch_platform/standalone_ps7_cortexa9_0/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"ed1ed5f5982ffc30b98b778020513d09",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2023-04-10.15:42:32::SCWPlatform::Started generating the artifacts platform led_switch_platform
+TRACE::2023-04-10.15:42:32::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-04-10.15:42:32::SCWPlatform::Started generating the artifacts for system configuration led_switch_platform
+LOG::2023-04-10.15:42:32::SCWSystem::Checking the domain zynq_fsbl
+LOG::2023-04-10.15:42:32::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2023-04-10.15:42:32::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2023-04-10.15:42:32::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2023-04-10.15:42:32::SCWSystem::Checking the domain standalone_ps7_cortexa9_0
+LOG::2023-04-10.15:42:32::SCWSystem::Not a boot domain 
+LOG::2023-04-10.15:42:32::SCWSystem::Started Processing the domain standalone_ps7_cortexa9_0
+TRACE::2023-04-10.15:42:32::SCWDomain::Generating domain artifcats
+TRACE::2023-04-10.15:42:32::SCWMssOS::Generating standalone artifcats
+TRACE::2023-04-10.15:42:32::SCWMssOS::Copying the qemu file from  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/resources/led_switch_platform/standalone_ps7_cortexa9_0/qemu_args.txt To /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/qemu/
+TRACE::2023-04-10.15:42:32::SCWMssOS::Copying the qemu file from  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/resources/led_switch_platform/standalone_ps7_cortexa9_0/qemu_args.txt To /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/qemu/
+TRACE::2023-04-10.15:42:32::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Completed writing the mss file at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+TRACE::2023-04-10.15:42:32::SCWMssOS::Mss edits present, copying mssfile into export location /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-04-10.15:42:32::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-04-10.15:42:32::SCWDomain::Skipping the build for domain :  standalone_ps7_cortexa9_0
+TRACE::2023-04-10.15:42:32::SCWMssOS::skipping the bsp build ... 
+TRACE::2023-04-10.15:42:32::SCWMssOS::Copying to export directory.
+TRACE::2023-04-10.15:42:32::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-04-10.15:42:32::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2023-04-10.15:42:32::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2023-04-10.15:42:32::SCWSystem::Completed Processing the domain standalone_ps7_cortexa9_0
+LOG::2023-04-10.15:42:32::SCWSystem::Completed Processing the sysconfig led_switch_platform
+LOG::2023-04-10.15:42:32::SCWPlatform::Completed generating the artifacts for system configuration led_switch_platform
+TRACE::2023-04-10.15:42:32::SCWPlatform::Started preparing the platform 
+TRACE::2023-04-10.15:42:32::SCWSystem::Writing the bif file for system config led_switch_platform
+TRACE::2023-04-10.15:42:32::SCWSystem::dir created 
+TRACE::2023-04-10.15:42:32::SCWSystem::Writing the bif 
+TRACE::2023-04-10.15:42:32::SCWPlatform::Started writing the spfm file 
+TRACE::2023-04-10.15:42:32::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-04-10.15:42:32::SCWPlatform::Completed generating the platform
+TRACE::2023-04-10.15:42:32::SCWMssOS::Saving the mss changes /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-04-10.15:42:32::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-04-10.15:42:32::SCWMssOS::Commit changes completed.
+TRACE::2023-04-10.15:42:32::SCWMssOS::Saving the mss changes /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-04-10.15:42:32::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-04-10.15:42:32::SCWMssOS::Commit changes completed.
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:32::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:32::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:32::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:32::SCWWriter::formatted JSON is {
+	"platformName":	"led_switch_platform",
+	"sprVersion":	"2.0",
+	"mode":	"cmd",
+	"dsaType":	"Fixed",
+	"platformDesc":	"led_switch_platform",
+	"platHandOff":	"/home/gc635/Documents/DANC/vscode-vitis/../vivado/led_switch/led_switch_platform.xsa",
+	"platIntHandOff":	"<platformDir>/hw/led_switch_platform.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"led_switch_platform",
+	"systems":	[{
+			"systemName":	"led_switch_platform",
+			"systemDesc":	"led_switch_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"led_switch_platform",
+			"sysActiveDom":	"standalone_ps7_cortexa9_0",
+			"sysDefaultDom":	"standalone_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"af4bbaa40f54e4f3f411187c8b705236",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.8", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_ps7_cortexa9_0",
+					"domainDispName":	"standalone_ps7_cortexa9_0",
+					"domainDesc":	"standalone_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"<platformDir>/resources/led_switch_platform/standalone_ps7_cortexa9_0/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/led_switch_platform/standalone_ps7_cortexa9_0/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"ed1ed5f5982ffc30b98b778020513d09",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-04-10.15:42:32::SCWPlatform::updated the xpfm file.
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:33::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:33::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::Saving the mss changes /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-04-10.15:42:33::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-04-10.15:42:33::SCWMssOS::Commit changes completed.
+TRACE::2023-04-10.15:42:33::SCWMssOS::Saving the mss changes /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-04-10.15:42:33::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-04-10.15:42:33::SCWMssOS::Commit changes completed.
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:33::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:33::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:33::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:33::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:33::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:33::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:33::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:33::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:33::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:33::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:33::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:33::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWWriter::formatted JSON is {
+	"platformName":	"led_switch_platform",
+	"sprVersion":	"2.0",
+	"mode":	"cmd",
+	"dsaType":	"Fixed",
+	"platformDesc":	"led_switch_platform",
+	"platHandOff":	"/home/gc635/Documents/DANC/vscode-vitis/../vivado/led_switch/led_switch_platform.xsa",
+	"platIntHandOff":	"<platformDir>/hw/led_switch_platform.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"led_switch_platform",
+	"systems":	[{
+			"systemName":	"led_switch_platform",
+			"systemDesc":	"led_switch_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"led_switch_platform",
+			"sysActiveDom":	"standalone_ps7_cortexa9_0",
+			"sysDefaultDom":	"standalone_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"af4bbaa40f54e4f3f411187c8b705236",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.8", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_ps7_cortexa9_0",
+					"domainDispName":	"standalone_ps7_cortexa9_0",
+					"domainDesc":	"standalone_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"<platformDir>/resources/led_switch_platform/standalone_ps7_cortexa9_0/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/led_switch_platform/standalone_ps7_cortexa9_0/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"ed1ed5f5982ffc30b98b778020513d09",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:33::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:33::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to open the hw design at /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA given /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA absoulate path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform::DSA directory /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Platform Path /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/hw/led_switch_platform.xsa
+TRACE::2023-04-10.15:42:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2023-04-10.15:42:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2023-04-10.15:42:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-04-10.15:42:33::SCWMssOS::Checking the sw design at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-04-10.15:42:33::SCWMssOS::DEBUG:  swdes dump  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-04-10.15:42:33::SCWMssOS::Sw design exists and opened at  /home/gc635/Documents/DANC/vscode-vitis/led_switch_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/system.mss

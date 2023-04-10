@@ -1,0 +1,20 @@
+15:23:05 DEBUG : Logs will be stored at '/home/gc635/Documents/DANC/vscode-vitis/IDE.log'.
+15:23:05 INFO  : Registering command handlers for Vitis TCF services
+15:23:05 INFO  : Platform repository initialization has completed.
+15:23:05 INFO  : Result from executing command 'getProjects': led_switch
+15:23:05 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/usr/local/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/usr/local/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/usr/local/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+15:23:05 INFO  : Result from executing command 'getProjects': 
+15:23:05 INFO  : Result from executing command 'reportPlatform': {led_switch={standalone_ps7_cortexa9_0={Os=standalone, DomainName=standalone_ps7_cortexa9_0, CpuType=cortex-a9, CpuInstance=ps7_cortexa9_0}}}
+15:23:07 INFO  : plnx-install-location is set to ''
+15:23:07 INFO  : Successfully done query RDI_DATADIR 
+15:23:11 INFO  : Result from executing command 'getProjects': led_switch
+15:23:11 INFO  : Result from executing command 'getPlatforms': led_switch|/home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/led_switch.xpfm;xilinx_zcu102_base_202220_1|/usr/local/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/usr/local/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/usr/local/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+15:23:15 INFO  : Checking for BSP changes to sync application flags for project 'led_switch_app'...
+15:42:32 DEBUG : Logs will be stored at '/home/gc635/Documents/DANC/vscode-vitis/IDE.log'.
+15:42:32 INFO  : Registering command handlers for Vitis TCF services
+15:42:32 INFO  : Platform repository initialization has completed.
+15:42:32 INFO  : Result from executing command 'getProjects': led_switch;led_switch_platform
+15:42:32 INFO  : Result from executing command 'getPlatforms': led_switch|/home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/led_switch.xpfm;xilinx_zcu102_base_202220_1|/usr/local/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/usr/local/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/usr/local/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+15:42:33 INFO  : Result from executing command 'getProjects': led_switch_sys
+15:42:33 INFO  : Result from executing command 'reportPlatform': {led_switch_platform={standalone_ps7_cortexa9_0={Os=standalone, DomainName=standalone_ps7_cortexa9_0, CpuType=cortex-a9, CpuInstance=ps7_cortexa9_0}}}
+15:42:33 ERROR : Error from executing command 'createAppFromPlatform': A project with given name already exists in the workspace. Please choose a differenet name. 
