@@ -1,4 +1,5 @@
-.analytics
-IDE.log
-.metadata
-.Xil
+*
+!active_noise_control
+!active_noise_control/*
+!Makefile
+!user.mk
