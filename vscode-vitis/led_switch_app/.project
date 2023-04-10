@@ -3,7 +3,7 @@
 	<name>led_switch_app</name>
 	<comment>Created by Vitis v2022.2</comment>
 	<projects>
-		<project>led_switch</project>
+		<project>led_switch_platform</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

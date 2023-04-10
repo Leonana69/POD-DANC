@@ -1,21 +1,21 @@
-!SESSION 2023-04-10 15:23:03.877 -----------------------------------------------
+!SESSION 2023-04-10 16:21:33.833 -----------------------------------------------
 eclipse.buildId=2022.2
 java.version=11.0.11
 java.vendor=Oracle Corporation
 BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Framework arguments:  -application com.xilinx.sdx.cmdline.service 40339
-Command-line arguments:  -os linux -ws gtk -arch x86_64 -application com.xilinx.sdx.cmdline.service 40339 -data /home/gc635/Documents/DANC/vscode-vitis
+Framework arguments:  -application com.xilinx.sdx.cmdline.service 41521
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -application com.xilinx.sdx.cmdline.service 41521 -data /home/gc635/Documents/POD-DANC/vscode-vitis
 
-!ENTRY org.eclipse.osgi 4 0 2023-04-10 15:23:04.066
+!ENTRY org.eclipse.osgi 4 0 2023-04-10 16:21:34.022
 !MESSAGE Bundle reference:file:org.apache.log4j_1.2.15.v201012070815.jar not found.
 
-!ENTRY org.eclipse.osgi 4 0 2023-04-10 15:23:04.075
+!ENTRY org.eclipse.osgi 4 0 2023-04-10 16:21:34.031
 !MESSAGE Bundle reference:file:org.slf4j.impl.log4j12_1.7.2.v20131105-2200.jar not found.
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:05.739
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:35.588
 !MESSAGE XSCT Command: [::hsi::utils::get_all_app_details -json], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:05.745
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:35.596
 !MESSAGE XSCT command with result: [::hsi::utils::get_all_app_details -json], Result: [null, {"ddr_self_refresh": {"userdefname": "DDR self refresh",
 "description": "This DDR self refresh application provides a simple demonstration of how to enter to/exit from DDR self refresh mode. This application runs on R5 out of TCM.",
 "supp_proc": "psu_cortexr5",
@@ -346,17 +346,17 @@ Don't forget to modify blconfig.h to reflect the physical address where your SRE
 },
 }]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:05.758
-!MESSAGE XSCT Command: [::hsi::utils::openhw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:35.611
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:06.819
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:36.718
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:06.820
-!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:36.719
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:06.826
-!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Result: [null, {"AND_gate_0": {"hier_name": "AND_gate_0",
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:36.723
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Result: [null, {"AND_gate_0": {"hier_name": "AND_gate_0",
 "type": "AND_gate",
 "version": "1.0",
 "ip_type": "PERIPHERAL",
@@ -578,56 +578,53 @@ Don't forget to modify blconfig.h to reflect the physical address where your SRE
 },
 }]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:06.888
-!MESSAGE XSCT Command: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa -os standalone -processor ps7_cortexa9_0 -app hello_world -sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss -arch {}], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:36.786
+!MESSAGE XSCT Command: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa -os standalone -processor ps7_cortexa9_0 -app hello_world -sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss -arch {}], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:06.891
-!MESSAGE XSCT command with result: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa -os standalone -processor ps7_cortexa9_0 -app hello_world -sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss -arch {}], Result: [null, 1]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:36.789
+!MESSAGE XSCT command with result: [::hsi::utils::is_app_supported_on_hw_sw  -hw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa -os standalone -processor ps7_cortexa9_0 -app hello_world -sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss -arch {}], Result: [null, 1]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.045
+!ENTRY org.eclipse.cdt.core 1 0 2023-04-10 16:21:36.833
+!MESSAGE Indexed 'led_switch_platform' (251 sources, 229 headers) in 1.42 sec: 10,096 declarations; 57,506 references; 118 unresolved inclusions; 42 syntax errors; 306 unresolved names (0.45%)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:36.922
 !MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode batch], Thread: Thread-24
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.046
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:36.923
 !MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode batch], Result: [null, ]. Thread: Thread-24
 
-!ENTRY org.eclipse.cdt.core 1 0 2023-04-10 15:23:07.101
-!MESSAGE Indexed 'led_switch' (251 sources, 229 headers) in 1.57 sec: 10,096 declarations; 57,506 references; 118 unresolved inclusions; 42 syntax errors; 306 unresolved names (0.45%)
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.007
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss ], Thread: Thread-19
 
-!ENTRY org.eclipse.cdt.core 1 0 2023-04-10 15:23:07.136
-!MESSAGE Indexed 'led_switch_sys' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.008
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss ], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.138
-!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss ], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.009
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.140
-!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss ], Result: [null, ]. Thread: Thread-19
-
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.140
-!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
-
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.140
-!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.010
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
 "osname": "standalone",
 "osver": "8.0",
 }]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.470
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.335
 !MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.481
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.354
 !MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.482
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.354
 !MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.482
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.354
 !MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, /usr/local/Xilinx/Vitis/2022.2/data]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.483
-!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.356
+!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.490
-!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Result: [null, {"ps7_cortexa9_0": {"freertos10_xilinx_v1_12": {"name": "freertos10_xilinx",
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.363
+!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Result: [null, {"ps7_cortexa9_0": {"freertos10_xilinx_v1_12": {"name": "freertos10_xilinx",
 "version": "1.12",
 "desc": "This Xilinx FreeRTOS port is based on FreeRTOS kernel version 10.4.6",
 "compilerflags": "",
@@ -659,29 +656,29 @@ Don't forget to modify blconfig.h to reflect the physical address where your SRE
 },
 }]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.491
-!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.364
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.492
-!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.365
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.492
-!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.365
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.493
-!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, {}]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.366
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, {}]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.493
-!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa ps7_cortexa9_0], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.366
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa ps7_cortexa9_0], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.494
-!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa ps7_cortexa9_0], Result: [null, axi_gpio_0 axi_gpio_1 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.367
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa ps7_cortexa9_0], Result: [null, axi_gpio_0 axi_gpio_1 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.494
-!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.367
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.496
-!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.370
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
 "ver": "4.9",
 },
 "axi_gpio_1": {"name": "gpio",
@@ -791,11 +788,11 @@ Don't forget to modify blconfig.h to reflect the physical address where your SRE
 },
 }]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.496
-!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.370
+!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.547
-!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Result: [null, {"AND_gate_0": {"version": "1.0",
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.433
+!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Result: [null, {"AND_gate_0": {"version": "1.0",
 "driver_info": {"generic": {"name": "generic",
 "version": "3.0 3.1",
 "repo": "/usr/local/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_0 /usr/local/Xilinx/Vitis/2022.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v3_1",
@@ -1219,137 +1216,128 @@ Don't forget to modify blconfig.h to reflect the physical address where your SRE
 },
 }]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.549
-!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.435
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.550
-!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.436
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.550
-!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.436
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.550
-!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, {}]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.436
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, {}]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.566
-!MESSAGE XSCT Command: [::hsi::utils::openhw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.461
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.566
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.462
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.566
-!MESSAGE XSCT Command: [::hsi::utils::opensw /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.462
+!MESSAGE XSCT Command: [::hsi::utils::opensw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.567
-!MESSAGE XSCT command with result: [::hsi::utils::opensw /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.462
+!MESSAGE XSCT command with result: [::hsi::utils::opensw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.567
-!MESSAGE XSCT Command: [::hsi::utils::generate_app_template -hw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa -sw /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss -app hello_world -processor ps7_cortexa9_0 -os standalone -dir /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/src], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.463
+!MESSAGE XSCT Command: [::hsi::utils::generate_app_template -hw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa -sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss -app hello_world -processor ps7_cortexa9_0 -os standalone -dir /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/src], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.582
-!MESSAGE XSCT command with result: [::hsi::utils::generate_app_template -hw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa -sw /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss -app hello_world -processor ps7_cortexa9_0 -os standalone -dir /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/src], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.477
+!MESSAGE XSCT command with result: [::hsi::utils::generate_app_template -hw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa -sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss -app hello_world -processor ps7_cortexa9_0 -os standalone -dir /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/src], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.607
-!MESSAGE XSCT Command: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {/home/gc635/Documents/DANC/vscode-vitis/led_switch_app/_ide/bitstream}], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.518
+!MESSAGE XSCT Command: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {/home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/_ide/bitstream}], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.613
-!MESSAGE XSCT command with result: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {/home/gc635/Documents/DANC/vscode-vitis/led_switch_app/_ide/bitstream}], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.525
+!MESSAGE XSCT command with result: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {/home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/_ide/bitstream}], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.613
-!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.525
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.614
-!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Result: [null, {"device": "7z010",
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.526
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Result: [null, {"device": "7z010",
 "family": "zynq",
 "timestamp": "Mon Apr 10 14:44:26 2023",
 "vivado_version": "2022.2",
 "part": "xc7z010clg400-1",
 }]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:07.615
-!MESSAGE XSCT Command: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {/home/gc635/Documents/DANC/vscode-vitis/led_switch_app/_ide/psinit} -quiet], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:37.527
+!MESSAGE XSCT Command: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {/home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/_ide/psinit} -quiet], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:09.619
-!MESSAGE XSCT command with result: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {/home/gc635/Documents/DANC/vscode-vitis/led_switch_app/_ide/psinit} -quiet], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:39.328
+!MESSAGE XSCT command with result: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {/home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/_ide/psinit} -quiet], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:09.666
-!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:39.409
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:09.667
-!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gc635/Documents/DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, ]. Thread: Thread-19
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:39.410
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_app/system.mss], Result: [null, ]. Thread: Thread-19
 
-!ENTRY com.xilinx.sdk.utils 1 0 2023-04-10 15:23:09.677
-!MESSAGE Generating MD5 hash for file: /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss ...
+!ENTRY com.xilinx.sdk.utils 1 0 2023-04-10 16:21:39.423
+!MESSAGE Generating MD5 hash for file: /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss ...
 
-!ENTRY org.eclipse.cdt.core 1 0 2023-04-10 15:23:10.646
-!MESSAGE Indexed 'led_switch_app' (2 sources, 50 headers) in 0.06 sec: 1,451 declarations; 2,175 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!ENTRY org.eclipse.cdt.core 1 0 2023-04-10 16:21:40.435
+!MESSAGE Indexed 'led_switch_app' (2 sources, 50 headers) in 0.056 sec: 1,451 declarations; 2,175 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:15.565
-!MESSAGE XSCT Command: [::hsi::utils::closehw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Thread: Worker-5: Building selected projects in workspace
+!ENTRY org.eclipse.cdt.core 1 0 2023-04-10 16:21:40.436
+!MESSAGE Indexed 'led_switch_sys' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:15.581
-!MESSAGE XSCT command with result: [::hsi::utils::closehw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Result: [null, ]. Thread: Worker-5: Building selected projects in workspace
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:45.351
+!MESSAGE XSCT Command: [::hsi::utils::closehw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Thread: Worker-4: Building selected projects in workspace
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:15.581
-!MESSAGE XSCT Command: [::hsi::utils::openhw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Thread: Worker-5: Building selected projects in workspace
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:45.366
+!MESSAGE XSCT command with result: [::hsi::utils::closehw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Result: [null, ]. Thread: Worker-4: Building selected projects in workspace
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:16.352
-!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa], Result: [null, ]. Thread: Worker-5: Building selected projects in workspace
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:45.366
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Thread: Worker-4: Building selected projects in workspace
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:16.352
-!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss ], Thread: Worker-5: Building selected projects in workspace
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:46.054
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa], Result: [null, ]. Thread: Worker-4: Building selected projects in workspace
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:16.353
-!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-5: Building selected projects in workspace
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:46.055
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss ], Thread: Worker-4: Building selected projects in workspace
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:16.354
-!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-5: Building selected projects in workspace
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:46.056
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-4: Building selected projects in workspace
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:16.354
-!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/hw/led_switch.xsa /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:46.056
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-4: Building selected projects in workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:46.057
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/hw/led_switch_platform.xsa /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
 "osname": "standalone",
 "osver": "8.0",
-}]. Thread: Worker-5: Building selected projects in workspace
+}]. Thread: Worker-4: Building selected projects in workspace
 
-!ENTRY com.xilinx.sdk.utils 1 0 2023-04-10 15:23:16.354
-!MESSAGE Generating MD5 hash for file: /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss ...
+!ENTRY com.xilinx.sdk.utils 1 0 2023-04-10 16:21:46.057
+!MESSAGE Generating MD5 hash for file: /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss ...
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:16.356
-!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-5: Building selected projects in workspace
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:46.059
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-4: Building selected projects in workspace
 
-!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 15:23:16.357
-!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-5: Building selected projects in workspace
+!ENTRY com.xilinx.sdk.utils 0 0 2023-04-10 16:21:46.059
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-4: Building selected projects in workspace
 
-!ENTRY org.eclipse.core.resources 2 10035 2023-04-10 15:23:16.984
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-10 16:21:46.656
 !MESSAGE The workspace will exit with unsaved changes in this session.
-!SESSION 2023-04-10 15:42:31.261 -----------------------------------------------
+!SESSION 2023-04-10 16:23:03.295 -----------------------------------------------
 eclipse.buildId=2022.2
 java.version=11.0.11
 java.vendor=Oracle Corporation
 BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Framework arguments:  -application com.xilinx.sdx.cmdline.service 41013
-Command-line arguments:  -os linux -ws gtk -arch x86_64 -application com.xilinx.sdx.cmdline.service 41013 -data /home/gc635/Documents/DANC/vscode-vitis
+Framework arguments:  -application com.xilinx.sdx.cmdline.service 40705
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -application com.xilinx.sdx.cmdline.service 40705 -data /home/gc635/Documents/POD-DANC/vscode-vitis
 
-!ENTRY org.eclipse.osgi 4 0 2023-04-10 15:42:31.447
+!ENTRY org.eclipse.osgi 4 0 2023-04-10 16:23:03.492
 !MESSAGE Bundle reference:file:org.apache.log4j_1.2.15.v201012070815.jar not found.
 
-!ENTRY org.eclipse.osgi 4 0 2023-04-10 15:42:31.455
+!ENTRY org.eclipse.osgi 4 0 2023-04-10 16:23:03.500
 !MESSAGE Bundle reference:file:org.slf4j.impl.log4j12_1.7.2.v20131105-2200.jar not found.
 
-!ENTRY org.eclipse.core.resources 2 10035 2023-04-10 15:42:31.859
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-10 16:23:03.858
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
 
-!ENTRY org.eclipse.core.resources 2 10035 2023-04-10 15:42:33.128
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-10 16:23:06.617
 !MESSAGE The workspace will exit with unsaved changes in this session.
-
-!ENTRY org.eclipse.core.jobs 4 2 2023-04-10 15:42:33.154
-!MESSAGE An internal error occurred during: "C/C++ Indexer".
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.core.internal.runtime.InternalPlatform.getLog(InternalPlatform.java:361)
-	at org.eclipse.core.runtime.Plugin.getLog(Plugin.java:237)
-	at org.eclipse.cdt.core.CCorePlugin.log(CCorePlugin.java:1617)
-	at org.eclipse.cdt.core.CCorePlugin.log(CCorePlugin.java:1596)
-	at org.eclipse.cdt.core.CCorePlugin.log(CCorePlugin.java:1580)
-	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:170)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

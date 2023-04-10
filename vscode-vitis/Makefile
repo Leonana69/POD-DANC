@@ -6,8 +6,8 @@ plat_name = $(proj_name)_platform
 app_name = $(proj_name)_app
 sys_name = $(proj_name)_sys
 
-ws = $(shell pwd)
-xsa = $(shell pwd)/../vivado/$(proj_name)/$(plat_name).xsa
+ws = ./
+xsa = ../vivado/$(proj_name)/$(plat_name).xsa
 
 all: build
 
@@ -20,6 +20,12 @@ init:
 		platform generate; \
 		app build $(app_name)"
 
+init_platform:
+	xsct -eval "setws $(ws); \
+		platform create -name $(plat_name) -hw $(xsa); \
+		domain create -name $(domain_name_apu) -os standalone -proc $(apu); \
+		platform active $(plat_name); \
+		platform generate"
 
 build: $(ws)/$(app_name)/Debug/makefile
 	make -C $(ws)/$(app_name)/Debug all

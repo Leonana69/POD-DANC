@@ -40,7 +40,7 @@ main-build: led_switch_app.elf secondary-outputs
 led_switch_app.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM v7 gcc linker'
-	arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/gc635/Documents/DANC/vscode-vitis/led_switch/export/led_switch/sw/led_switch/standalone_ps7_cortexa9_0/bsplib/lib -o "led_switch_app.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/gc635/Documents/POD-DANC/vscode-vitis/led_switch_platform/export/led_switch_platform/sw/led_switch_platform/standalone_ps7_cortexa9_0/bsplib/lib -o "led_switch_app.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

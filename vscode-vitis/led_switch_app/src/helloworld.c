@@ -44,7 +44,6 @@
  *   uartlite    Configurable only in HW design
  *   ps7_uart    115200 (configured by bootrom/bsp)
  */
-
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
@@ -64,7 +63,7 @@ int main() {
     print("test print\n\r");
 
     while (1) {
-    	XGpio_DiscreteWrite(&output, 1, XGpio_DiscreteRead(&input, 1));
+        XGpio_DiscreteWrite(&output, 1, XGpio_DiscreteRead(&input, 1));
     }
 
     cleanup_platform();
