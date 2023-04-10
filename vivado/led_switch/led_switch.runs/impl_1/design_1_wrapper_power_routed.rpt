@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Mon Apr 10 14:45:15 2023
+| Date             : Mon Apr 10 17:47:49 2023
 | Host             : guojun-server running 64-bit Ubuntu 22.04.2 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |     1725 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      510 |     17600 |            2.90 |
+| Slice Logic             |    <0.001 |     1781 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      525 |     17600 |            2.98 |
+|   Register              |    <0.001 |      801 |     35200 |            2.28 |
 |   CARRY4                |    <0.001 |       18 |      4400 |            0.41 |
-|   Register              |    <0.001 |      758 |     35200 |            2.15 |
 |   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
-|   Others                |     0.000 |      209 |       --- |             --- |
-| Signals                 |    <0.001 |     1249 |       --- |             --- |
-| I/O                     |    <0.001 |        3 |       100 |            3.00 |
+|   Others                |     0.000 |      208 |       --- |             --- |
+| Signals                 |    <0.001 |     1308 |       --- |             --- |
+| I/O                     |    <0.001 |        8 |       100 |            8.00 |
 | PS7                     |     1.399 |        1 |       --- |             --- |
 | Static Power            |     0.117 |          |           |                 |
 | Total                   |     1.519 |          |           |                 |
@@ -153,7 +153,7 @@ Table of Contents
 |   design_1_i             |     1.402 |
 |     processing_system7_0 |     1.399 |
 |       inst               |     1.399 |
-|     ps7_0_axi_periph     |     0.002 |
+|     ps7_0_axi_periph     |     0.003 |
 |       s00_couplers       |     0.002 |
 +--------------------------+-----------+
 

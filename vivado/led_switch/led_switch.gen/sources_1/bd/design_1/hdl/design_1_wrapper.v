@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Mon Apr 10 14:44:26 2023
+//Date        : Mon Apr 10 17:46:34 2023
 //Host        : guojun-server running 64-bit Ubuntu 22.04.2 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -31,9 +31,8 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    led0,
-    sw0,
-    sw1);
+    led,
+    sw);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -55,9 +54,8 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [0:0]led0;
-  input sw0;
-  input sw1;
+  output [3:0]led;
+  input [3:0]sw;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -80,9 +78,8 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [0:0]led0;
-  wire sw0;
-  wire sw1;
+  wire [3:0]led;
+  wire [3:0]sw;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -106,7 +103,6 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .led0(led0),
-        .sw0(sw0),
-        .sw1(sw1));
+        .led(led),
+        .sw(sw));
 endmodule

@@ -20,6 +20,10 @@ clean: $(WORKSPACE)/$(APP_NAME)/Debug/makefile
 
 flash:
 	xsct -eval "connect; \
+		fpga -file $(WORKSPACE)/$(PLATFORM_NAME)/hw/$(PLATFORM_NAME).bit; \
 		targets 2; \
+		source $(WORKSPACE)/$(PLATFORM_NAME)/hw/ps7_init.tcl; \
+		ps7_init; \
+		ps7_post_config; \
 		dow $(WORKSPACE)/$(APP_NAME)/Debug/$(APP_NAME).elf; \
 		con"

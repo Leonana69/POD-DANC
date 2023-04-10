@@ -21,8 +21,11 @@
 
 
 module AND_gate(
-    input sw0, input sw1,
-    output led0
+    input [3:0] sw,
+    output [3:0] led
     );
-    assign led0 = sw0 & sw1;
+    assign led[0] = sw[0] & sw[1];
+    assign led[1] = sw[0] & sw[2];
+    assign led[2] = sw[0] & sw[3];
+    assign led[3] = sw[1] & sw[2] & sw[3];
 endmodule

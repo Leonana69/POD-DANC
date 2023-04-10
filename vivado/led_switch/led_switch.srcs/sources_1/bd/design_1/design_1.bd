@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x256407C3D73851E5",
+      "boundary_crc": "0xFE06CB17C61943F0",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../led_switch.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -196,15 +196,14 @@
       }
     },
     "ports": {
-      "sw0": {
-        "direction": "I"
+      "sw": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
       },
-      "sw1": {
-        "direction": "I"
-      },
-      "led0": {
+      "led": {
         "direction": "O",
-        "left": "0",
+        "left": "3",
         "right": "0"
       }
     },
@@ -1359,7 +1358,7 @@
             "value": "1"
           },
           "C_GPIO_WIDTH": {
-            "value": "1"
+            "value": "4"
           },
           "GPIO_BOARD_INTERFACE": {
             "value": "Custom"
@@ -1382,7 +1381,7 @@
             "value": "1"
           },
           "C_GPIO_WIDTH": {
-            "value": "1"
+            "value": "4"
           },
           "GPIO_BOARD_INTERFACE": {
             "value": "Custom"
@@ -1806,14 +1805,15 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "sw0": {
-            "direction": "I"
+          "sw": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
           },
-          "sw1": {
-            "direction": "I"
-          },
-          "led0": {
-            "direction": "O"
+          "led": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
           }
         }
       }
@@ -1851,16 +1851,16 @@
       }
     },
     "nets": {
-      "AND_gate_0_led0": {
+      "AND_gate_0_led": {
         "ports": [
-          "AND_gate_0/led0",
+          "AND_gate_0/led",
           "axi_gpio_0/gpio_io_i"
         ]
       },
       "axi_gpio_1_gpio_io_o": {
         "ports": [
           "axi_gpio_1/gpio_io_o",
-          "led0"
+          "led"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -1893,16 +1893,10 @@
           "ps7_0_axi_periph/M01_ARESETN"
         ]
       },
-      "sw0_0_1": {
+      "sw_0_1": {
         "ports": [
-          "sw0",
-          "AND_gate_0/sw0"
-        ]
-      },
-      "sw1_0_1": {
-        "ports": [
-          "sw1",
-          "AND_gate_0/sw1"
+          "sw",
+          "AND_gate_0/sw"
         ]
       }
     },

@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Apr 10 13:52:47 2023
-# Process ID: 2947397
-# Current directory: /home/gc635/Documents/vivado/led_switch/led_switch.runs/design_1_processing_system7_0_0_synth_1
+# Start of session at: Mon Apr 10 17:46:40 2023
+# Process ID: 3456570
+# Current directory: /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_processing_system7_0_0_synth_1
 # Command line: vivado -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
-# Log file: /home/gc635/Documents/vivado/led_switch/led_switch.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
-# Journal file: /home/gc635/Documents/vivado/led_switch/led_switch.runs/design_1_processing_system7_0_0_synth_1/vivado.jou
-# Running On: guojun-server, OS: Linux, CPU Frequency: 3182.975 MHz, CPU Physical cores: 32, Host memory: 134158 MB
+# Log file: /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
+# Journal file: /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_processing_system7_0_0_synth_1/vivado.jou
+# Running On: guojun-server, OS: Linux, CPU Frequency: 5241.041 MHz, CPU Physical cores: 32, Host memory: 134158 MB
 #-----------------------------------------------------------
 source design_1_processing_system7_0_0.tcl -notrace

@@ -56,18 +56,15 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_AND_gate_0_2 (
-  sw0,
-  sw1,
-  led0
+  sw,
+  led
 );
 
-input wire sw0;
-input wire sw1;
-output wire led0;
+input wire [3 : 0] sw;
+output wire [3 : 0] led;
 
   AND_gate inst (
-    .sw0(sw0),
-    .sw1(sw1),
-    .led0(led0)
+    .sw(sw),
+    .led(led)
   );
 endmodule

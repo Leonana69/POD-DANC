@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Mon Apr 10 14:41:11 2023
+// Date        : Mon Apr 10 17:46:57 2023
 // Host        : guojun-server running 64-bit Ubuntu 22.04.2 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_AND_gate_0_2 -prefix
-//               design_1_AND_gate_0_2_ design_1_AND_gate_0_2_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_AND_gate_0_2/design_1_AND_gate_0_2_sim_netlist.v
 // Design      : design_1_AND_gate_0_2
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,23 +16,58 @@
 (* X_CORE_INFO = "AND_gate,Vivado 2022.2" *) 
 (* NotValidForBitStream *)
 module design_1_AND_gate_0_2
-   (sw0,
-    sw1,
-    led0);
-  input sw0;
-  input sw1;
-  output led0;
+   (sw,
+    led);
+  input [3:0]sw;
+  output [3:0]led;
 
-  wire led0;
-  wire sw0;
-  wire sw1;
+  wire [3:0]led;
+  wire [3:0]sw;
 
+  design_1_AND_gate_0_2_AND_gate inst
+       (.led(led),
+        .sw(sw));
+endmodule
+
+(* ORIG_REF_NAME = "AND_gate" *) 
+module design_1_AND_gate_0_2_AND_gate
+   (led,
+    sw);
+  output [3:0]led;
+  input [3:0]sw;
+
+  wire [3:0]led;
+  wire [3:0]sw;
+
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    led0_INST_0
-       (.I0(sw0),
-        .I1(sw1),
-        .O(led0));
+    \led[0]_INST_0 
+       (.I0(sw[0]),
+        .I1(sw[1]),
+        .O(led[0]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \led[1]_INST_0 
+       (.I0(sw[0]),
+        .I1(sw[2]),
+        .O(led[1]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \led[2]_INST_0 
+       (.I0(sw[0]),
+        .I1(sw[3]),
+        .O(led[2]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \led[3]_INST_0 
+       (.I0(sw[1]),
+        .I1(sw[2]),
+        .I2(sw[3]),
+        .O(led[3]));
 endmodule
 `ifndef GLBL
 `define GLBL
