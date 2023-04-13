@@ -9,7 +9,6 @@ volatile sDemo_t Demo;
 
 int main() {
     int status = init_platform();
-    Demo.u8Verbose = 1;
 
     print("System init [OK]\n\r");
 

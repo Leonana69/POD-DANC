@@ -9,9 +9,6 @@ LD_SRCS += \
 OBJS += \
 ./src/main.o \
 ./src/platform.o \
-./src/audio.o \
-./src/dma.o \
-./src/iic.o \
 ./src/userio.o \
 ./src/interrupt.o 
 

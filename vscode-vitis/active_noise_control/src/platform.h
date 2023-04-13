@@ -1,5 +1,5 @@
-#ifndef __PLATFORM_H_
-#define __PLATFORM_H_
+#ifndef PLATFORM_H_
+#define PLATFORM_H_
 
 #include "platform_config.h"
 #include "xstatus.h"

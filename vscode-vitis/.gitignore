@@ -1,5 +1,5 @@
-*
-!active_noise_control
-!active_noise_control/*
-!Makefile
-!user.mk
+audio_dma
+.metadata
+.Xil
+.analytics
+IDE.log
