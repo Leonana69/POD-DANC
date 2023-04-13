@@ -1,4 +1,4 @@
-PLATFORM_NAME = led_switch
+PLATFORM_NAME = audio_dma
 APP_NAME = active_noise_control
 
 WORKSPACE = .

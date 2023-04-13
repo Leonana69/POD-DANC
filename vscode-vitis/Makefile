@@ -14,13 +14,29 @@ platform generate
 endef
 
 define FLASH_STRING
-connect; \
+connect -url tcp:127.0.0.1:3121; \
+targets -set -nocase -filter {name =~ "*A9*#0"}; \
+dow $(WORKSPACE)/$(APP_NAME)/Debug/$(APP_NAME).elf; \
+con
+endef
+
+define FLASH_BITSTREAM_STRING
+connect -url tcp:127.0.0.1:3121; \
+targets -set -nocase -filter {name =~"APU*"}; \
+rst -system;\
+after 3000; \
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AAA2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7AAA2A-13722093-0"}; \
 fpga -file $(WORKSPACE)/$(PLATFORM_NAME)/hw/$(PLATFORM_NAME).bit; \
-targets 2; \
+targets -set -nocase -filter {name =~"APU*"}; \
+loadhw -hw $(WORKSPACE)/$(PLATFORM_NAME)/hw/$(PLATFORM_NAME).xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs; \
+configparams force-mem-access 1; \
+targets -set -nocase -filter {name =~"APU*"}; \
 source $(WORKSPACE)/$(PLATFORM_NAME)/hw/ps7_init.tcl; \
 ps7_init; \
 ps7_post_config; \
+targets -set -nocase -filter {name =~ "*A9*#0"}; \
 dow $(WORKSPACE)/$(APP_NAME)/Debug/$(APP_NAME).elf; \
+configparams force-mem-access 0; \
 con
 endef
 
@@ -35,3 +51,6 @@ clean: $(WORKSPACE)/$(APP_NAME)/Debug/makefile
 
 flash:
 	xsct -eval '$(FLASH_STRING)'
+
+flash-all:
+	xsct -eval '$(FLASH_BITSTREAM_STRING)'

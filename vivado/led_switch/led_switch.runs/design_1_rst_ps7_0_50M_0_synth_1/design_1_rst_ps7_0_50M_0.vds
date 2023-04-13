@@ -1,14 +1,14 @@
 #-----------------------------------------------------------
 # Vivado v2022.2 (64-bit)
-# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Apr 10 17:46:40 2023
-# Process ID: 3456571
-# Current directory: /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1
-# Command line: vivado -log design_1_rst_ps7_0_50M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rst_ps7_0_50M_0.tcl
-# Log file: /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/design_1_rst_ps7_0_50M_0.vds
-# Journal file: /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/vivado.jou
-# Running On: guojun-server, OS: Linux, CPU Frequency: 3139.873 MHz, CPU Physical cores: 32, Host memory: 134158 MB
+# Start of session at: Thu Apr 13 09:11:09 2023
+# Process ID: 42232
+# Current directory: D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1
+# Command line: vivado.exe -log design_1_rst_ps7_0_50M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rst_ps7_0_50M_0.tcl
+# Log file: D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/design_1_rst_ps7_0_50M_0.vds
+# Journal file: D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1\vivado.jou
+# Running On: DESKTOP-0HSVFGJ, OS: Windows, CPU Frequency: 3800 MHz, CPU Physical cores: 16, Host memory: 34299 MB
 #-----------------------------------------------------------
 source design_1_rst_ps7_0_50M_0.tcl -notrace
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_rst_ps7_0_50M_0
@@ -18,16 +18,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3456756
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/usr/local/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-7075] Helper process launched with PID 44724
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1951.852 ; gain = 371.770 ; free physical = 54221 ; free virtual = 113324
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1183.783; parent = 1044.672; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 2954.160; parent = 1954.824; children = 999.336
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1197.012 ; gain = 406.953
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
@@ -37,119 +35,105 @@ INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [/home/gc635/
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'd:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'lpf' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-3491] module 'SRL16' declared at '/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:131628' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
-INFO: [Synth 8-6157] synthesizing module 'SRL16' [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:131628]
-INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:131628]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:131628' bound to instance 'POR_SRL_I' of component 'SRL16' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:131628]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:131628]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'design_1_rst_ps7_0_50M_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:74]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'design_1_rst_ps7_0_50M_0' (0#1) [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:74]
 WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2023.789 ; gain = 443.707 ; free physical = 54219 ; free virtual = 113322
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1183.783; parent = 1044.672; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3023.129; parent = 2023.793; children = 999.336
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.434 ; gain = 502.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2041.602 ; gain = 461.520 ; free physical = 54207 ; free virtual = 113310
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1183.783; parent = 1044.672; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3040.941; parent = 2041.605; children = 999.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.434 ; gain = 502.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2041.602 ; gain = 461.520 ; free physical = 54202 ; free virtual = 113305
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1183.783; parent = 1044.672; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3040.941; parent = 2041.605; children = 999.336
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.434 ; gain = 502.375
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2047.539 ; gain = 0.000 ; free physical = 54194 ; free virtual = 113297
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1292.434 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'U0'
-Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'U0'
-Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'U0'
+Parsing XDC File [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'U0'
+Parsing XDC File [D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2201.352 ; gain = 0.000 ; free physical = 54243 ; free virtual = 113347
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1354.258 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2201.352 ; gain = 0.000 ; free physical = 54235 ; free virtual = 113340
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1355.523 ; gain = 1.266
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/usr/local/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 54494 ; free virtual = 113600
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1183.783; parent = 1044.672; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 54528 ; free virtual = 113634
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1183.783; parent = 1044.672; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 54517 ; free virtual = 113623
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1183.783; parent = 1044.672; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 54465 ; free virtual = 113571
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1183.783; parent = 1044.672; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -185,33 +169,25 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GE
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 54434 ; free virtual = 113548
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1183.783; parent = 1044.672; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 54300 ; free virtual = 113424
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.234; parent = 1120.195; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 54297 ; free virtual = 113422
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.434; parent = 1120.395; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 54288 ; free virtual = 113412
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.781; parent = 1120.742; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -229,49 +205,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 53903 ; free virtual = 113033
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.781; parent = 1120.742; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 53900 ; free virtual = 113030
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.781; parent = 1120.742; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 53898 ; free virtual = 113029
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.781; parent = 1120.742; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 53897 ; free virtual = 113027
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.781; parent = 1120.742; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 53895 ; free virtual = 113026
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.781; parent = 1120.742; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 53893 ; free virtual = 113023
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.781; parent = 1120.742; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -299,20 +263,18 @@ Report Cell Usage:
 |10    |FDSE  |     4|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 53892 ; free virtual = 113022
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.781; parent = 1120.742; children = 139.111
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3168.676; parent = 2169.340; children = 999.336
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1355.523 ; gain = 565.465
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2201.352 ; gain = 461.520 ; free physical = 53942 ; free virtual = 113072
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2201.352 ; gain = 621.270 ; free physical = 53940 ; free virtual = 113071
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1355.523 ; gain = 502.375
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 1355.523 ; gain = 565.465
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2201.352 ; gain = 0.000 ; free physical = 53934 ; free virtual = 113065
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1355.523 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2201.352 ; gain = 0.000 ; free physical = 53991 ; free virtual = 113121
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1355.523 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
@@ -322,9 +284,9 @@ Synth Design complete, checksum: 373aa1b4
 INFO: [Common 17-83] Releasing license: Synthesis
 47 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2201.352 ; gain = 924.668 ; free physical = 54222 ; free virtual = 113353
-INFO: [Common 17-1381] The checkpoint '/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/design_1_rst_ps7_0_50M_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1355.523 ; gain = 943.285
+INFO: [Common 17-1381] The checkpoint 'D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/design_1_rst_ps7_0_50M_0.dcp' has been generated.
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/design_1_rst_ps7_0_50M_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/design_1_rst_ps7_0_50M_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_rst_ps7_0_50M_0_utilization_synth.rpt -pb design_1_rst_ps7_0_50M_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 10 17:46:56 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 13 09:11:50 2023...

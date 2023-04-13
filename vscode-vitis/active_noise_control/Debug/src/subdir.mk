@@ -9,7 +9,11 @@ LD_SRCS += \
 OBJS += \
 ./src/main.o \
 ./src/platform.o \
-./src/func.o 
+./src/audio.o \
+./src/dma.o \
+./src/iic.o \
+./src/userio.o \
+./src/interrupt.o 
 
 C_DEPS = ./src/*.d 
 

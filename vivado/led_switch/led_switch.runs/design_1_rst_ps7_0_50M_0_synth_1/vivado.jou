@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2022.2 (64-bit)
-# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Apr 10 17:46:40 2023
-# Process ID: 3456571
-# Current directory: /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1
-# Command line: vivado -log design_1_rst_ps7_0_50M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rst_ps7_0_50M_0.tcl
-# Log file: /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/design_1_rst_ps7_0_50M_0.vds
-# Journal file: /home/gc635/Documents/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/vivado.jou
-# Running On: guojun-server, OS: Linux, CPU Frequency: 3139.873 MHz, CPU Physical cores: 32, Host memory: 134158 MB
+# Start of session at: Thu Apr 13 09:11:09 2023
+# Process ID: 42232
+# Current directory: D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1
+# Command line: vivado.exe -log design_1_rst_ps7_0_50M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rst_ps7_0_50M_0.tcl
+# Log file: D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1/design_1_rst_ps7_0_50M_0.vds
+# Journal file: D:/Sundries/GithubProject/POD-DANC/vivado/led_switch/led_switch.runs/design_1_rst_ps7_0_50M_0_synth_1\vivado.jou
+# Running On: DESKTOP-0HSVFGJ, OS: Windows, CPU Frequency: 3800 MHz, CPU Physical cores: 16, Host memory: 34299 MB
 #-----------------------------------------------------------
 source design_1_rst_ps7_0_50M_0.tcl -notrace

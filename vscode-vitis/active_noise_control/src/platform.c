@@ -32,8 +32,10 @@
 
 #include "xparameters.h"
 #include "xil_cache.h"
-
+#include "platform.h"
 #include "platform_config.h"
+#include "userio.h"
+#include "interrupt.h"
 
 /*
  * Uncomment one of the following two lines, depending on the target,
@@ -49,9 +51,7 @@
  #define UART_BAUD 9600
 #endif
 
-void
-enable_caches()
-{
+void enable_caches() {
 #ifdef __PPC__
     Xil_ICacheEnableRegion(CACHEABLE_REGION_MASK);
     Xil_DCacheEnableRegion(CACHEABLE_REGION_MASK);
@@ -65,9 +65,7 @@ enable_caches()
 #endif
 }
 
-void
-disable_caches()
-{
+void disable_caches() {
 #ifdef __MICROBLAZE__
 #ifdef XPAR_MICROBLAZE_USE_DCACHE
     Xil_DCacheDisable();
@@ -78,9 +76,7 @@ disable_caches()
 #endif
 }
 
-void
-init_uart()
-{
+void init_uart() {
 #ifdef STDOUT_IS_16550
     XUartNs550_SetBaud(STDOUT_BASEADDR, XPAR_XUARTNS550_CLOCK_HZ, UART_BAUD);
     XUartNs550_SetLineControlReg(STDOUT_BASEADDR, XUN_LCR_8_DATA_BITS);
@@ -88,9 +84,40 @@ init_uart()
     /* Bootrom/BSP configures PS7/PSU UART to 115200 bps */
 }
 
-void
-init_platform()
-{
+XGpio sUserIO;
+// XPAR_INTC_0_DEVICE_ID is defined if the interrupt controller is present
+#ifdef XPAR_INTC_0_DEVICE_ID
+    XIntc sIntc;
+#else
+    XScuGic sIntc;
+#endif
+
+// Interrupt vector table
+#ifdef XPAR_INTC_0_DEVICE_ID
+const ivt_t ivt[] = {
+	//IIC
+	{XPAR_AXI_INTC_0_AXI_IIC_0_IIC2INTC_IRPT_INTR, (XInterruptHandler)XIic_InterruptHandler, &sIic},
+	//DMA Stream to MemoryMap Interrupt handler
+	{XPAR_AXI_INTC_0_AXI_DMA_0_S2MM_INTROUT_INTR, (XInterruptHandler)fnS2MMInterruptHandler, &sAxiDma},
+	//DMA MemoryMap to Stream Interrupt handler
+	{XPAR_AXI_INTC_0_AXI_DMA_0_MM2S_INTROUT_INTR, (XInterruptHandler)fnMM2SInterruptHandler, &sAxiDma},
+	//User I/O (buttons, switches, LEDs)
+	{XPAR_AXI_INTC_0_AXI_GPIO_0_IP2INTC_IRPT_INTR, (XInterruptHandler)fnUserIOIsr, &sUserIO}
+};
+#else
+const ivt_t ivt[] = {
+	//IIC
+	// {XPAR_FABRIC_AXI_IIC_0_IIC2INTC_IRPT_INTR, (Xil_ExceptionHandler)XIic_InterruptHandler, &sIic},
+	//DMA Stream to MemoryMap Interrupt handler
+	// {XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR, (Xil_ExceptionHandler)fnS2MMInterruptHandler, &sAxiDma},
+	//DMA MemoryMap to Stream Interrupt handler
+	// {XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR, (Xil_ExceptionHandler)fnMM2SInterruptHandler, &sAxiDma},
+	//User I/O (buttons, switches, LEDs)
+	{XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR, (Xil_ExceptionHandler)fnUserIOIsr, &sUserIO}
+};
+#endif
+
+XStatus init_platform() {
     /*
      * If you want to run this example outside of SDK,
      * uncomment one of the following two lines and also #include "ps7_init.h"
@@ -102,10 +129,31 @@ init_platform()
     /* psu_init();*/
     enable_caches();
     init_uart();
+
+    /* Initialize User I/O driver */
+    int status;
+
+    status = fnInitInterruptController(&sIntc);
+	if (status != XST_SUCCESS) {
+		xil_printf("Interrupts initialization [FAILED]\n\r");
+		return XST_FAILURE;
+	} else {
+        xil_printf("Interrupts initialization [OK]\n\r");
+    }
+
+    status = fnInitUserIO(&sUserIO);
+    if (status != XST_SUCCESS) {
+        xil_printf("User I/O initialization [FAILED]\n\r");
+        return XST_FAILURE;
+    } else {
+        xil_printf("User I/O initialization [OK]\n\r");
+    }
+
+    fnEnableInterrupts(&sIntc, &ivt[0], sizeof(ivt) / sizeof(ivt[0]));
+
+    return XST_SUCCESS;
 }
 
-void
-cleanup_platform()
-{
+void cleanup_platform() {
     disable_caches();
 }
