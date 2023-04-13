@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Wed Apr 12 20:23:06 2023
-// Host        : DESKTOP-0HSVFGJ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top system_axi_dma_0_0 -prefix
-//               system_axi_dma_0_0_ system_axi_dma_0_0_stub.v
+// Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+// Date        : Thu Apr 13 10:36:12 2023
+// Host        : guojun-server running 64-bit Ubuntu 22.04.2 LTS
+// Command     : write_verilog -force -mode synth_stub
+//               /home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_stub.v
 // Design      : system_axi_dma_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

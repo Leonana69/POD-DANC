@@ -1,6 +1,6 @@
 
-#ifndef INTERRUPT_H_
-#define INTERRUPT_H_
+#ifndef INTERRUPT_H
+#define INTERRUPT_H
 
 #include "xstatus.h"
 #ifdef XPAR_INTC_0_DEVICE_ID
@@ -31,4 +31,4 @@ typedef struct {
     #define INTC_HANDLER	XScuGic_InterruptHandler
 #endif
 
-#endif /* INTERRUPT_H_ */
+#endif /* INTERRUPT_H */

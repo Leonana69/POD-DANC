@@ -1,5 +1,5 @@
-#ifndef USERIO_H_
-#define USERIO_H_
+#ifndef USERIO_H
+#define USERIO_H
 
 #include "xstatus.h"
 #include "xgpio.h"
@@ -21,4 +21,4 @@
 XStatus fnInitUserIO(XGpio *psGpio);
 void fnUserIOIsr(void *pvInst);
 
-#endif /* USERIO_H_ */
+#endif /* USERIO_H */

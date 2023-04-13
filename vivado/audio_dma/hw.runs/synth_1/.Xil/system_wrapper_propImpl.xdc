@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.srcs/constrs_1/imports/constraints/zybo-z7-dma.xdc rfile:../../../hw.srcs/constrs_1/imports/constraints/zybo-z7-dma.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.srcs/constrs_1/imports/constraints/zybo-z7-dma.xdc rfile:../../../hw.srcs/constrs_1/imports/constraints/zybo-z7-dma.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R19   IOSTANDARD LVCMOS33 } [get_ports ac_bclk]; #IO_L12N_T1_MRCC_35 Sch=AC_BCLK
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]

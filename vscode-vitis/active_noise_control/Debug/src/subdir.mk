@@ -10,7 +10,11 @@ OBJS += \
 ./src/main.o \
 ./src/platform.o \
 ./src/userio.o \
-./src/interrupt.o 
+./src/interrupt.o \
+./src/dma.o \
+./src/audio.o \
+./src/iic.o \
+./src/anc.o 
 
 C_DEPS = ./src/*.d 
 

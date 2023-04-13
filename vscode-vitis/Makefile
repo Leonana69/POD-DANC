@@ -25,7 +25,7 @@ connect -url tcp:127.0.0.1:3121; \
 targets -set -nocase -filter {name =~"APU*"}; \
 rst -system;\
 after 3000; \
-targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AAA2A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7AAA2A-13722093-0"}; \
+targets -set -filter {name =~"xc7z*"}; \
 fpga -file $(WORKSPACE)/$(PLATFORM_NAME)/hw/$(PLATFORM_NAME).bit; \
 targets -set -nocase -filter {name =~"APU*"}; \
 loadhw -hw $(WORKSPACE)/$(PLATFORM_NAME)/hw/$(PLATFORM_NAME).xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs; \

@@ -5,9 +5,9 @@
 
 #define RETURN_ON_FAILURE(x) if ((x) != XST_SUCCESS) return XST_FAILURE;
 
-#define DEBUG
+#define DEBUG_PRINT
 
-#if (!defined(DEBUG))
+#if (!defined(DEBUG_PRINT))
     extern void xil_printf(const char *format, ...);
 #endif
 

@@ -1,10 +1,18 @@
-#ifndef PLATFORM_H_
-#define PLATFORM_H_
+#ifndef PLATFORM_H
+#define PLATFORM_H
 
 #include "platform_config.h"
 #include "xstatus.h"
 
+#include "iic.h"
+#include "dma.h"
+#include "xgpio.h"
+
 XStatus init_platform();
 void cleanup_platform();
 
-#endif
+extern XIic sIic;
+extern XAxiDma sAxiDma;
+extern XGpio sUserIO;
+
+#endif /* PLATFORM_H */

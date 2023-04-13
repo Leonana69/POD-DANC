@@ -1,4 +1,4 @@
-verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../hw.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../hw.gen/sources_1/bd/system/ipshared/ee60/hdl" \
+verilog xil_defaultlib --include "/usr/local/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../hw.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../hw.gen/sources_1/bd/system/ipshared/ee60/hdl" \
 "../../../bd/system/ip/system_d_axi_i2s_audio_0_0/src/fifo_32/sim/fifo_32.v" \
 "../../../bd/system/ip/system_d_axi_i2s_audio_0_0/src/fifo_4/sim/fifo_4.v" \
 "../../../bd/system/ip/system_processing_system7_0_0/sim/system_processing_system7_0_0.v" \

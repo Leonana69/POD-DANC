@@ -1,5 +1,5 @@
-#ifndef MAIN_H_
-#define MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
 /***************************** Include Files *********************************/
 #include <stdio.h>
@@ -12,7 +12,6 @@
 
 /**************************** Type Definitions *******************************/
 typedef struct {
-	u8 u8Verbose;
 	u8 fUserIOEvent;
 	u8 fVideoEvent;
 	u8 fAudioRecord;
@@ -27,12 +26,12 @@ typedef struct {
 	int linkSpeed;
 	int mac;
 	XStatus fMacStatus;
-} sDemo_t;
+} ANC;
 
 /************************** Function Prototypes ******************************/
 
 
 // This variable holds the demo related settings
-extern volatile sDemo_t Demo;
+extern volatile ANC ANC_INSTANCE;
 
-#endif /* MAIN_H_ */
+#endif /* MAIN_H */

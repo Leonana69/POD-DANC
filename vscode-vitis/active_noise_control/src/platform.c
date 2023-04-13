@@ -36,20 +36,7 @@
 #include "platform_config.h"
 #include "userio.h"
 #include "interrupt.h"
-
-/*
- * Uncomment one of the following two lines, depending on the target,
- * if ps7/psu init source files are added in the source directory for
- * compiling example outside of SDK.
- */
-/*#include "ps7_init.h"*/
-/*#include "psu_init.h"*/
-
-#ifdef STDOUT_IS_16550
- #include "xuartns550_l.h"
-
- #define UART_BAUD 9600
-#endif
+#include "audio.h"
 
 void enable_caches() {
 #ifdef __PPC__
@@ -76,14 +63,8 @@ void disable_caches() {
 #endif
 }
 
-void init_uart() {
-#ifdef STDOUT_IS_16550
-    XUartNs550_SetBaud(STDOUT_BASEADDR, XPAR_XUARTNS550_CLOCK_HZ, UART_BAUD);
-    XUartNs550_SetLineControlReg(STDOUT_BASEADDR, XUN_LCR_8_DATA_BITS);
-#endif
-    /* Bootrom/BSP configures PS7/PSU UART to 115200 bps */
-}
-
+XIic sIic;
+XAxiDma sAxiDma;
 XGpio sUserIO;
 // XPAR_INTC_0_DEVICE_ID is defined if the interrupt controller is present
 #ifdef XPAR_INTC_0_DEVICE_ID
@@ -107,11 +88,11 @@ const ivt_t ivt[] = {
 #else
 const ivt_t ivt[] = {
 	//IIC
-	// {XPAR_FABRIC_AXI_IIC_0_IIC2INTC_IRPT_INTR, (Xil_ExceptionHandler)XIic_InterruptHandler, &sIic},
+	{XPAR_FABRIC_AXI_IIC_0_IIC2INTC_IRPT_INTR, (Xil_ExceptionHandler)XIic_InterruptHandler, &sIic},
 	//DMA Stream to MemoryMap Interrupt handler
-	// {XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR, (Xil_ExceptionHandler)fnS2MMInterruptHandler, &sAxiDma},
+	{XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR, (Xil_ExceptionHandler)fnS2MMInterruptHandler, &sAxiDma},
 	//DMA MemoryMap to Stream Interrupt handler
-	// {XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR, (Xil_ExceptionHandler)fnMM2SInterruptHandler, &sAxiDma},
+	{XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR, (Xil_ExceptionHandler)fnMM2SInterruptHandler, &sAxiDma},
 	//User I/O (buttons, switches, LEDs)
 	{XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR, (Xil_ExceptionHandler)fnUserIOIsr, &sUserIO}
 };
@@ -128,7 +109,6 @@ XStatus init_platform() {
     /* ps7_init();*/
     /* psu_init();*/
     enable_caches();
-    init_uart();
 
     /* Initialize User I/O driver */
     int status;
@@ -147,6 +127,30 @@ XStatus init_platform() {
         return XST_FAILURE;
     } else {
         xil_printf("User I/O initialization [OK]\n\r");
+    }
+
+    status = fnInitIic(&sIic);
+    if (status != XST_SUCCESS) {
+        xil_printf("IIC initialization [FAILED]\n\r");
+        return XST_FAILURE;
+    } else {
+        xil_printf("IIC initialization [OK]\n\r");
+    }
+
+    status = fnInitDma(&sAxiDma);
+    if (status != XST_SUCCESS) {
+        xil_printf("DMA initialization [FAILED]\n\r");
+        return XST_FAILURE;
+    } else {
+        xil_printf("DMA initialization [OK]\n\r");
+    }
+
+    status = fnInitAudio();
+    if (status != XST_SUCCESS) {
+        xil_printf("Audio initialization [FAILED]\n\r");
+        return XST_FAILURE;
+    } else {
+        xil_printf("Audio initialization [OK]\n\r");
     }
 
     fnEnableInterrupts(&sIntc, &ivt[0], sizeof(ivt) / sizeof(ivt[0]));

@@ -54,4 +54,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto
 # IP: bd/system/ip/system_auto_pc_1/system_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_pc_1 || ORIG_REF_NAME==system_auto_pc_1} -quiet] -quiet
 
-# XDC: d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/system_ooc.xdc
+# XDC: /home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/system_ooc.xdc

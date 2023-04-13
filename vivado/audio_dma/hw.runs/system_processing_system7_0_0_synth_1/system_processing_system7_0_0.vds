@@ -1,55 +1,57 @@
 #-----------------------------------------------------------
 # Vivado v2022.2 (64-bit)
-# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Apr 13 09:21:03 2023
-# Process ID: 40416
-# Current directory: D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1
-# Command line: vivado.exe -log system_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_processing_system7_0_0.tcl
-# Log file: D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/system_processing_system7_0_0.vds
-# Journal file: D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1\vivado.jou
-# Running On: DESKTOP-0HSVFGJ, OS: Windows, CPU Frequency: 3800 MHz, CPU Physical cores: 16, Host memory: 34299 MB
+# Start of session at: Thu Apr 13 10:41:59 2023
+# Process ID: 3087684
+# Current directory: /home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1
+# Command line: vivado -log system_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_processing_system7_0_0.tcl
+# Log file: /home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/system_processing_system7_0_0.vds
+# Journal file: /home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/vivado.jou
+# Running On: guojun-server, OS: Linux, CPU Frequency: 3122.421 MHz, CPU Physical cores: 32, Host memory: 134158 MB
 #-----------------------------------------------------------
 source system_processing_system7_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.ipdefs/repo'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.ipdefs/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/Xilinx/Vivado/2022.2/data/ip'.
 Command: synth_design -top system_processing_system7_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 44428
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-7075] Helper process launched with PID 3087833
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/usr/local/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1205.070 ; gain = 407.773
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1959.180 ; gain = 372.770 ; free physical = 51870 ; free virtual = 114168
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1276.432; parent = 1107.683; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2964.457; parent = 1965.121; children = 999.336
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
-INFO: [Synth 8-6157] synthesizing module 'BIBUF' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:729]
-INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:729]
-INFO: [Synth 8-6157] synthesizing module 'PS7' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:109424]
-INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:109424]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
-INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (0#1) [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6157] synthesizing module 'BIBUF' [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:729]
+INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:729]
+INFO: [Synth 8-6157] synthesizing module 'PS7' [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:109424]
+INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:109424]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:465]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:53]
 WARNING: [Synth 8-7129] Port ENET0_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET0_GMII_CRS in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET0_GMII_RX_DV in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
@@ -130,56 +132,70 @@ WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[2] in module processing_system7_v
 WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1308.586 ; gain = 511.289
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2037.086 ; gain = 450.676 ; free physical = 51945 ; free virtual = 114243
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1276.432; parent = 1107.683; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3036.426; parent = 2037.090; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1308.586 ; gain = 511.289
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2054.898 ; gain = 468.488 ; free physical = 51940 ; free virtual = 114239
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1276.432; parent = 1107.683; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3054.238; parent = 2054.902; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1308.586 ; gain = 511.289
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2054.898 ; gain = 468.488 ; free physical = 51933 ; free virtual = 114232
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1276.432; parent = 1107.683; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3054.238; parent = 2054.902; children = 999.336
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1308.586 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2060.836 ; gain = 0.000 ; free physical = 51903 ; free virtual = 114201
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'inst'
-Finished Parsing XDC File [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_processing_system7_0_0_propImpl.xdc].
+Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_processing_system7_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_processing_system7_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1308.586 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2131.805 ; gain = 0.000 ; free physical = 51748 ; free virtual = 114046
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1308.586 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2131.805 ; gain = 0.000 ; free physical = 51748 ; free virtual = 114046
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/usr/local/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1308.586 ; gain = 511.289
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2131.805 ; gain = 545.395 ; free physical = 52013 ; free virtual = 114312
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1276.432; parent = 1107.683; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3099.129; parent = 2099.793; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1308.586 ; gain = 511.289
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2131.805 ; gain = 545.395 ; free physical = 52010 ; free virtual = 114309
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1276.432; parent = 1107.683; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3099.129; parent = 2099.793; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1308.586 ; gain = 511.289
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2131.805 ; gain = 545.395 ; free physical = 51968 ; free virtual = 114267
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1276.432; parent = 1107.683; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3099.129; parent = 2099.793; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1308.586 ; gain = 511.289
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2131.805 ; gain = 545.395 ; free physical = 51955 ; free virtual = 114255
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1276.432; parent = 1107.683; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3099.129; parent = 2099.793; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -224,25 +240,33 @@ WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[4] in module processing_system7_v5_5
 WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1308.586 ; gain = 511.289
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2131.805 ; gain = 545.395 ; free physical = 51951 ; free virtual = 114255
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1276.432; parent = 1107.683; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3099.129; parent = 2099.793; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1419.055 ; gain = 621.758
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2184.789 ; gain = 598.379 ; free physical = 51690 ; free virtual = 113999
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1491.982; parent = 1323.339; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3184.129; parent = 2184.793; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1439.078 ; gain = 641.781
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2204.797 ; gain = 618.387 ; free physical = 51672 ; free virtual = 113981
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1503.896; parent = 1335.253; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3204.137; parent = 2204.801; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1450.414 ; gain = 653.117
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2223.828 ; gain = 637.418 ; free physical = 51666 ; free virtual = 113975
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1504.365; parent = 1335.722; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3223.168; parent = 2223.832; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -260,37 +284,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1455.723 ; gain = 658.426
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2223.828 ; gain = 637.418 ; free physical = 51553 ; free virtual = 113862
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1504.604; parent = 1335.960; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3223.168; parent = 2223.832; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1455.723 ; gain = 658.426
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2223.828 ; gain = 637.418 ; free physical = 51550 ; free virtual = 113859
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1504.604; parent = 1335.960; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3223.168; parent = 2223.832; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1455.723 ; gain = 658.426
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2223.828 ; gain = 637.418 ; free physical = 51549 ; free virtual = 113858
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1504.604; parent = 1335.960; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3223.168; parent = 2223.832; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1455.723 ; gain = 658.426
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2223.828 ; gain = 637.418 ; free physical = 51551 ; free virtual = 113860
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1504.604; parent = 1335.960; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3223.168; parent = 2223.832; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1455.723 ; gain = 658.426
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2223.828 ; gain = 637.418 ; free physical = 51551 ; free virtual = 113860
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1504.604; parent = 1335.960; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3223.168; parent = 2223.832; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1455.723 ; gain = 658.426
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2223.828 ; gain = 637.418 ; free physical = 51551 ; free virtual = 113860
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1504.604; parent = 1335.960; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3223.168; parent = 2223.832; children = 999.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -312,16 +348,18 @@ Report Cell Usage:
 |4     |PS7   |     1|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1455.723 ; gain = 658.426
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2223.828 ; gain = 637.418 ; free physical = 51551 ; free virtual = 113860
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1504.604; parent = 1335.960; children = 168.749
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3223.168; parent = 2223.832; children = 999.336
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 80 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 1455.723 ; gain = 658.426
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1455.723 ; gain = 658.426
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2223.828 ; gain = 560.512 ; free physical = 51608 ; free virtual = 113917
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2223.836 ; gain = 637.418 ; free physical = 51614 ; free virtual = 113923
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1455.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2223.836 ; gain = 0.000 ; free physical = 51726 ; free virtual = 114035
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1482.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2239.672 ; gain = 0.000 ; free physical = 51663 ; free virtual = 113972
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -329,7 +367,7 @@ Synth Design complete, checksum: 58879100
 INFO: [Common 17-83] Releasing license: Synthesis
 30 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 1482.082 ; gain = 1063.441
-INFO: [Common 17-1381] The checkpoint 'D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/system_processing_system7_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2239.672 ; gain = 960.629 ; free physical = 52005 ; free virtual = 114315
+INFO: [Common 17-1381] The checkpoint '/home/gc635/Documents/POD-DANC/vivado/audio_dma/hw.runs/system_processing_system7_0_0_synth_1/system_processing_system7_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_processing_system7_0_0_utilization_synth.rpt -pb system_processing_system7_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 13 09:21:38 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 13 10:42:16 2023...

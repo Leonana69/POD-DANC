@@ -44,12 +44,12 @@ void fnUpdateLedsFromSwitches(XGpio *psGpio) {
 	dwBtnSw = XGpio_DiscreteRead(psGpio, BTN_SW_CHANNEL);
 	dwBtn = dwBtnSw & (BTN0_MASK | BTN1_MASK | BTN2_MASK | BTN3_MASK);
 	if (dwBtn == 0) {
-		Demo.fUserIOEvent = 0;
+		ANC_INSTANCE.fUserIOEvent = 0;
 		dwPrevButtons = 0;
 	} else if (dwBtn ^ dwPrevButtons) {
-        Demo.btnState = dwBtn & 0xFF;
+        ANC_INSTANCE.btnState = dwBtn & 0xFF;
 		// Keep values in mind
-		Demo.fUserIOEvent = 1;
+		ANC_INSTANCE.fUserIOEvent = 1;
 		dwPrevButtons = dwBtn;
 	}
 
