@@ -5,6 +5,10 @@
 #include "platform.h"
 #include "userio.h"
 
+struct adc_data {
+    u8 data[3];
+};
+
 void run() {
     while (1) {
         if (ANC_INSTANCE.fDmaS2MMEvent) {
@@ -14,7 +18,9 @@ void run() {
             Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
 			Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
 
-            Xil_DCacheInvalidateRange((u32) MEM_BASE_ADDR, 5 * NR_AUDIO_SAMPLES);
+            // len is in byte: 2 channels * 24bits * samples
+            Xil_DCacheInvalidateRange((u32) MEM_BASE_ADDR, 2 * DATA_BYTE_LENGTH * NR_AUDIO_SAMPLES);
+
             ANC_INSTANCE.fDmaS2MMEvent = 0;
             ANC_INSTANCE.fAudioRecord = 0;
         }
@@ -26,7 +32,7 @@ void run() {
             Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
 			Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
 
-            Xil_DCacheFlushRange((u32) MEM_BASE_ADDR, 5 * NR_AUDIO_SAMPLES);
+            Xil_DCacheFlushRange((u32) MEM_BASE_ADDR, 2 * DATA_BYTE_LENGTH * NR_AUDIO_SAMPLES);
 			// Reset MM2S event and playback flag
 			ANC_INSTANCE.fDmaMM2SEvent = 0;
 			ANC_INSTANCE.fAudioPlayback = 0;
@@ -92,6 +98,7 @@ void run() {
                 default:
                     break;
             }
+            ANC_INSTANCE.fUserIOEvent = 0;
         }
     }
 }

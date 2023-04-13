@@ -13,16 +13,21 @@
 /************************** Constant Definitions *****************************/
 #define DDR_OFFSET				0x07F00000
 
-// Base Addresses
+// base Addresses
 #define SW_ADDR					XPAR_SWITCHES_0_BASEADDR
 #define AUDIO_CTL_ADDR			XPAR_D_AXI_I2S_AUDIO_0_AXI_L_BASEADDR
 
-//SLave address of the ADAU audio controller
-#define IIC_SLAVE_ADDR			0x1A //for Zybo 0b0011010
+#define DATA_WORD_LENGTH        24	// 24 bit data
+#define DATA_BYTE_LENGTH        4 	// dma is run in 32bit mode
+#define AUDIO_SAMPLING_RATE		48000
+
+// i2c address for ssm2603
+#define IIC_SLAVE_ADDR			0b0011010
+
 #define DDR_BASEADDR			XPAR_MIG_7SERIES_0_BASEADDR
 
-//Bit field construction
-struct bits {
+// bit field construction
+struct u32_bits {
 	u32 u32bit0:1;
 	u32 u32bit1:1;
 	u32 u32bit2:1;
@@ -60,7 +65,7 @@ struct bits {
 union ubitField{
 	u8 rgu8[4];
 	u32 l;
-	struct bits bit;
+	struct u32_bits bit;
 };
 
 
@@ -86,18 +91,7 @@ enum i2sFifoTransferControlBits {
 	RX_RS						= 1
 };
 
-// I2S CLK control register
-enum i2sClockControlBits {
-	SAMPLING_RATE_BIT0			= 0,
-	SAMPLING_RATE_BIT1			= 1,
-	SAMPLING_RATE_BIT2			= 2,
-	SAMPLING_RATE_BIT3			= 3,
-	MASTER_MODE_ENABLE      	= 16,
-};
-
-//Audio controller registers
-
-//Audio controller registers
+// audio controller registers
 enum i2sRegisters {
 	I2S_RESET_REG				= AUDIO_CTL_ADDR,
 	I2S_TRANSFER_CONTROL_REG	= AUDIO_CTL_ADDR + 0x04,
@@ -110,8 +104,7 @@ enum i2sRegisters {
 	I2S_STREAM_CONTROL_REG     	= AUDIO_CTL_ADDR + 0x20
 };
 
-
-//ADAU internal register addresses
+// ADAU internal register addresses
 enum adauRegisterAdresses {
 	R0_LEFT_ADC_VOL				= 0x00,
 	R1_RIGHT_ADC_VOL			= 0x01,
@@ -129,13 +122,29 @@ enum adauRegisterAdresses {
 	R18_ALC_CONTROL_2			= 0x12
 };
 
-/************************** Variable Definitions *****************************/
+// i2s data transfer rate
+enum i2sClockControlBits {
+	CLOCK_RATE_8KHZ				= 0,
+	CLOCK_RATE_12KHZ			= 1,
+	CLOCK_RATE_16KHZ			= 2,
+	CLOCK_RATE_24KHZ			= 3,
+	CLOCK_RATE_32KHZ			= 4,
+	CLOCK_RATE_48KHZ			= 5,
+	CLOCK_RATE_96KHZ			= 6
+};
 
-// general reg
-extern u8 u8Verbose;
+// ADAU sample rate
+enum adauSampleRate {
+	ADAU_SAMPLE_RATE_8KHZ		= 0b001100,
+	ADAU_SAMPLE_RATE_12KHZ		= 0b010000,
+	ADAU_SAMPLE_RATE_16KHZ		= 0b010100,
+	ADAU_SAMPLE_RATE_24KHZ		= 0b111000,
+	ADAU_SAMPLE_RATE_32KHZ		= 0b011000,
+	ADAU_SAMPLE_RATE_48KHZ		= 0b000000,
+	ADAU_SAMPLE_RATE_96KHZ		= 0b011100
+};
 
 /************************** Function Definitions *****************************/
-
 XStatus fnAudioWriteToReg(u8 u8RegAddr, u16 u8Data);
 XStatus fnAudioReadFromReg(u8 u8RegAddr, u8 *u8RxData);
 //XStatus fnAudioPllConfig();

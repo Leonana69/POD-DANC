@@ -164,34 +164,38 @@ XStatus fnAudioStartupConfig () {
 
 	// Configure the I2S controller for generating a valid sampling rate
 	uConfigurationVariable.l = Xil_In32(I2S_CLOCK_CONTROL_REG);
-	uConfigurationVariable.bit.u32bit0 = 1;
-	uConfigurationVariable.bit.u32bit1 = 0;
-	uConfigurationVariable.bit.u32bit2 = 1;
+	// dma runs at 48 KHz
+	uConfigurationVariable.l |= CLOCK_RATE_48KHZ;
 	Xil_Out32(I2S_CLOCK_CONTROL_REG, uConfigurationVariable.l);
 
 	uConfigurationVariable.l = 0x00000000;
 
-	//STOP_TRANSACTION
+	// STOP_TRANSACTION
 	uConfigurationVariable.bit.u32bit1 = 1;
 	Xil_Out32(I2S_TRANSFER_CONTROL_REG, uConfigurationVariable.l);
 
-	//STOP_TRANSACTION
+	// STOP_TRANSACTION
 	uConfigurationVariable.bit.u32bit1 = 0;
 	Xil_Out32(I2S_TRANSFER_CONTROL_REG, uConfigurationVariable.l);
 
-	//slave: I2S
+	// slave: I2S
 	Status = fnAudioWriteToReg(R15_SOFTWARE_RESET, 0b000000000);
-	Status = XST_SUCCESS;
 	if (Status == XST_FAILURE) {
 		xil_printf("Error: could not write R15_SOFTWARE_RESET (0x00)\n\r");
 		return XST_FAILURE;
 	}
+
 	usleep(1000);
 	Status = fnAudioWriteToReg(R6_POWER_MGMT, 0b000110000);
 	if (Status == XST_FAILURE) {
 		xil_printf("Error: could not write R6_POWER_MGMT (0b000110000)\n\r");
 		return XST_FAILURE;
 	}
+	// LRINBOTH | LINMUTE | 0 | LINVOL[5:0]
+	// LINVOL[5:0]
+	// -> 0b010111 = 0dB
+	// -> 0b000000 = -34.5dB
+	// -> 0b111111 = 33dB
 	Status = fnAudioWriteToReg(R0_LEFT_ADC_VOL, 0b000010111);
 	if (Status == XST_FAILURE) {
 		xil_printf("Error: could not write R0_LEFT_ADC_VOL (0b000010111)\n\r");
@@ -199,27 +203,39 @@ XStatus fnAudioStartupConfig () {
 	}
 	Status = fnAudioWriteToReg(R1_RIGHT_ADC_VOL, 0b000010111);
 	if (Status == XST_FAILURE) {
-		xil_printf("Error: could not write R0_LEFT_ADC_VOL (0b000010111)\n\r");
+		xil_printf("Error: could not write R1_RIGHT_ADC_VOL (0b000010111)\n\r");
 		return XST_FAILURE;
 	}
-	Status = fnAudioWriteToReg(R2_LEFT_DAC_VOL, 0b101111001);
+	// LRHPBOTH | 0 | LHPVOL[6:0]
+	// LHPVOL[6:0]
+	// -> 0b1111001 = 0dB
+	// -> 0b0000000 = -73dB
+	// -> 0b1111111 = 6dB
+	Status = fnAudioWriteToReg(R2_LEFT_DAC_VOL, 0b001111001);
 	if (Status == XST_FAILURE) {
-		xil_printf("Error: could not write R0_LEFT_ADC_VOL (0b000010111)\n\r");
+		xil_printf("Error: could not write R2_LEFT_DAC_VOL (0b000010111)\n\r");
 		return XST_FAILURE;
 	}
-	Status = fnAudioWriteToReg(R3_RIGHT_DAC_VOL, 0b101111001);
+	Status = fnAudioWriteToReg(R3_RIGHT_DAC_VOL, 0b001111001);
 	if (Status == XST_FAILURE) {
-		xil_printf("Error: could not write R0_LEFT_ADC_VOL (0b000010111)\n\r");
+		xil_printf("Error: could not write R3_RIGHT_DAC_VOL (0b000010111)\n\r");
 		return XST_FAILURE;
 	}
 	Status = fnAudioWriteToReg(R4_ANALOG_PATH, 0b000000000);
 	if (Status == XST_FAILURE) {
-		xil_printf("Error: could not write R0_LEFT_ADC_VOL (0b000010111)\n\r");
+		xil_printf("Error: could not write R4_ANALOG_PATH (0b000010111)\n\r");
 		return XST_FAILURE;
 	}
+
 	fnAudioWriteToReg(R5_DIGITAL_PATH, 0b000000000);
+	// 0 | BCLKINV | MS | LRSWAP | LRP | WL[1:0] | Format[1:0]
+	// WL[1:0]
+	// -> 0b00 = 16 bits
+	// -> 0b01 = 20 bits
+	// -> 0b10 = 24 bits
+	// -> 0b11 = 32 bits
 	fnAudioWriteToReg(R7_DIGITAL_IF, 0b000001010);
-	fnAudioWriteToReg(R8_SAMPLE_RATE, 0b000000000);
+	fnAudioWriteToReg(R8_SAMPLE_RATE, 0b000000000 | ADAU_SAMPLE_RATE_48KHZ);
 	usleep(1000);
 	fnAudioWriteToReg(R9_ACTIVE, 0b000000001);
 	fnAudioWriteToReg(R6_POWER_MGMT, 0b000100000);
@@ -237,8 +253,8 @@ XStatus fnAudioStartupConfig () {
 XStatus fnInitAudio() {
 	int Status;
 
-	//Set the PLL and wait for Lock
-	//Status = fnAudioPllConfig();
+	// Set the PLL and wait for Lock
+	// Status = fnAudioPllConfig();
 //	if (Status != XST_SUCCESS)
 //	{
 //		if (Demo.u8Verbose)
@@ -247,7 +263,7 @@ XStatus fnInitAudio() {
 //		}
 //	}
 
-	//Configure the ADAU registers
+	// Configure the ADAU registers
 	Status = fnAudioStartupConfig();
 	if (Status != XST_SUCCESS) {
 		xil_printf("Error: Failed I2C Configuration\n\r");
@@ -272,7 +288,7 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples) {
 
 	xil_printf("Enter Record function\n\r");
 
-	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma,(u32) MEM_BASE_ADDR, 5 * u32NrSamples, XAXIDMA_DEVICE_TO_DMA);
+	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma, (u32) MEM_BASE_ADDR, 2 * DATA_BYTE_LENGTH * u32NrSamples, XAXIDMA_DEVICE_TO_DMA);
 	if (uTransferVariable.l != XST_SUCCESS) {
 		xil_printf("fail @ rec; ERROR: %d\n\r", uTransferVariable.l);
 	}
@@ -288,8 +304,6 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples) {
 
 	// Enable Stream function to send data (S2MM)
 	Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000001);
-
-	xil_printf("Recording function done\n\r");
 }
 
 /******************************************************************************
@@ -313,16 +327,13 @@ void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples) {
 	uTransferVariable.bit.u32bit0 = 1;
 	Xil_Out32(I2S_TRANSFER_CONTROL_REG, uTransferVariable.l);
 
-
-	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma,(u32) MEM_BASE_ADDR, 5*u32NrSamples, XAXIDMA_DMA_TO_DEVICE);
+	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma, (u32) MEM_BASE_ADDR, 2 * DATA_BYTE_LENGTH * u32NrSamples, XAXIDMA_DMA_TO_DEVICE);
 	if (uTransferVariable.l != XST_SUCCESS) {
         xil_printf("fail @ play; ERROR: %d\n\r", uTransferVariable.l);
 	}
 
 	// Enable Stream function to send data (MM2S)
     Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000002);
-
-    xil_printf("Playback function done\n\r");
 }
 
 /******************************************************************************
@@ -334,7 +345,7 @@ void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples) {
  * @return	none.
  *****************************************************************************/
 void fnSetMicInput() {
-	//MX1AUXG = MUTE; MX2AUXG = MUTE; LDBOOST = 0dB; RDBOOST = 0dB
+	// MX1AUXG = MUTE; MX2AUXG = MUTE; LDBOOST = 0dB; RDBOOST = 0dB
 	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010100);
 	xil_printf("Input set to MIC\n\r");
 }
@@ -348,7 +359,7 @@ void fnSetMicInput() {
  * @return	none.
  *****************************************************************************/
 void fnSetLineInput() {
-	//MX1AUXG = 0dB; MX2AUXG = 0dB; LDBOOST = MUTE; RDBOOST = MUTE
+	// MX1AUXG = 0dB; MX2AUXG = 0dB; LDBOOST = MUTE; RDBOOST = MUTE
 	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010010);
 	fnAudioWriteToReg(R5_DIGITAL_PATH, 0b000000000);
 	xil_printf("Input set to LineIn\n\r");
@@ -363,9 +374,9 @@ void fnSetLineInput() {
  * @return	none.
  *****************************************************************************/
 void fnSetLineOutput() {
-	//zybo does not have a line output
-	//MX3G1 = mute; MX3G2 = mute; MX4G1 = mute; MX4G2 = mute;
-	//fnAudioWriteToReg(R4_ANALOG_PATH, 0x00);
+	// zybo does not have a line output
+	// MX3G1 = mute; MX3G2 = mute; MX4G1 = mute; MX4G2 = mute;
+	// fnAudioWriteToReg(R4_ANALOG_PATH, 0x00);
 	xil_printf("Output set to LineOut\n\r");
 }
 
@@ -378,7 +389,7 @@ void fnSetLineOutput() {
  * @return	none.
  *****************************************************************************/
 void fnSetHpOutput() {
-	//MX5G3 = MUTE; MX5EN = MUTE; MX6G4 = MUTE; MX6EN = MUTE
+	// MX5G3 = MUTE; MX5EN = MUTE; MX6G4 = MUTE; MX6EN = MUTE
 	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010110);
 	fnAudioWriteToReg(R5_DIGITAL_PATH, 0b000000000);
 	xil_printf("Output set to HeadPhones\n\r");

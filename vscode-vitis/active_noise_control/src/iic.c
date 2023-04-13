@@ -31,9 +31,7 @@ XStatus fnInitIic(XIic *psIic) {
 		return XST_FAILURE;
 	}
 
-
-	RETURN_ON_FAILURE(XIic_CfgInitialize(psIic, psConfig,
-			psConfig->BaseAddress));
+	RETURN_ON_FAILURE(XIic_CfgInitialize(psIic, psConfig, psConfig->BaseAddress));
 
 	RETURN_ON_FAILURE(XIic_DynamicInitialize(psIic));
 
@@ -43,7 +41,8 @@ XStatus fnInitIic(XIic *psIic) {
 XStatus fnReadMACAsync(XIic *psIic, macAddress_t *pMac, XStatus *pfMacStatus) {
 	memAddress_t memAddress = MAC_MEM_ADDRESS;
 
-	pgMac = pMac; pgfMacStatus = pfMacStatus;
+	pgMac = pMac;
+    pgfMacStatus = pfMacStatus;
 
 	memset(pgMac, 0, sizeof(*pgMac));
 	*pgfMacStatus = XST_DEVICE_BUSY;
@@ -51,12 +50,9 @@ XStatus fnReadMACAsync(XIic *psIic, macAddress_t *pMac, XStatus *pfMacStatus) {
 	psIic->Stats.TxErrors = 0;
 
 	// Set the Handlers for transmit and reception.
-	XIic_SetSendHandler(psIic, psIic,
-			(XIic_Handler) ReadMACSendHandler);
-	XIic_SetRecvHandler(psIic, psIic,
-			(XIic_Handler) ReadMACReceiveHandler);
-	XIic_SetStatusHandler(psIic, psIic,
-			(XIic_StatusHandler) StatusHandler);
+	XIic_SetSendHandler(psIic, psIic, (XIic_Handler) ReadMACSendHandler);
+	XIic_SetRecvHandler(psIic, psIic, (XIic_Handler) ReadMACReceiveHandler);
+	XIic_SetStatusHandler(psIic, psIic, (XIic_StatusHandler) StatusHandler);
 
 	// Use repeated start when sending the register address
 	XIic_SetOptions(psIic, XIic_GetOptions(psIic) | XII_REPEATED_START_OPTION);
@@ -96,7 +92,7 @@ static void ReadMACSendHandler(XIic *psIic, int ByteCount) {
 // This will be called when the MAC Address is read
 static void ReadMACReceiveHandler(XIic *psIic, int ByteCount) {
 	*pgfMacStatus = XST_SUCCESS;
-	//We have finished the transfer
+	// We have finished the transfer
 	XIic_Stop(psIic);
 }
 

@@ -122,17 +122,17 @@ XStatus fnInitDma(XAxiDma *AxiDma) {
 		return XST_FAILURE;
 	}
 
-	//Ensures that the Scatter Gather mode is not active
+	// Ensures that the Scatter Gather mode is not active
 	if (XAxiDma_HasSg(AxiDma)) {
 		xil_printf("Device configured as SG mode\n\r");
 		return XST_FAILURE;
 	}
 
-	//Disable all the DMA related Interrupts
+	// Disable all the DMA related Interrupts
 	XAxiDma_IntrDisable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
 	XAxiDma_IntrDisable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
 
-	//Enable all the DMA Interrupts
+	// Enable all the DMA Interrupts
 	XAxiDma_IntrEnable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
 	XAxiDma_IntrEnable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
 
