@@ -21,6 +21,15 @@ void run() {
             // len is in byte: 2 channels * 24bits * samples
             Xil_DCacheInvalidateRange((u32) MEM_BASE_ADDR, 2 * DATA_BYTE_LENGTH * NR_AUDIO_SAMPLES);
 
+            u8* ptr = (u8*) MEM_BASE_ADDR;
+            for (int i = 0; i < 200; i++) {
+                int val = ptr[0] | (ptr[1] << 8) | (ptr[2] << 16);
+                if (val & 0x800000)
+                    val |= 0xFF000000;
+                xil_printf("%d\n\r", val);
+                ptr += 8;
+            }
+
             ANC_INSTANCE.fDmaS2MMEvent = 0;
             ANC_INSTANCE.fAudioRecord = 0;
         }
