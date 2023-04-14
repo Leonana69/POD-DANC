@@ -42,17 +42,13 @@ main-build: $(APP_NAME).elf secondary-outputs
 
 # Tool invocations
 $(APP_NAME).elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
-	@echo 'Building target: $@'
-	@echo 'Invoking: ARM v7 gcc linker'
-	arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L$(PLATFORM_LIB_PATH) -o "$(APP_NAME).elf" $(OBJS) $(USER_OBJS) $(LIBS)
-	@echo 'Finished building target: $@'
-	@echo ' '
+	@echo "  BUILDING    $@"
+	@arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L$(PLATFORM_LIB_PATH) -o "$(APP_NAME).elf" $(OBJS) $(USER_OBJS) $(LIBS)
 
 $(APP_NAME).elf.size: $(APP_NAME).elf
-	@echo 'Invoking: ARM v7 Print Size'
-	arm-none-eabi-size $(APP_NAME).elf  |tee "$(APP_NAME).elf.size"
-	@echo 'Finished building: $@'
-	@echo ' '
+	@echo "  SIZE    $@"
+	@arm-none-eabi-size $(APP_NAME).elf  |tee "$(APP_NAME).elf.size"
+	@echo '> FINISH <'
 
 # Other Targets
 clean:
