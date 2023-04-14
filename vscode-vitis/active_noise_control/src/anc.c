@@ -12,7 +12,7 @@ struct adc_data {
 void run() {
     while (1) {
         if (ANC_INSTANCE.fDmaS2MMEvent) {
-            xil_printf("Recording [OK]\n\r");
+            xil_printf("Recording [END]\n\r");
 
             // disable stream function to send data (S2MM)
             Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
@@ -26,7 +26,7 @@ void run() {
         }
 
         if (ANC_INSTANCE.fDmaMM2SEvent) {
-            xil_printf("Playback [OK]\n\r");
+            xil_printf("Playback [END]\n\r");
 
             // disable stream function to send data (S2MM)
             Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
@@ -52,7 +52,7 @@ void run() {
                     if (ANC_INSTANCE.fAudioRecord == 0 && ANC_INSTANCE.fAudioPlayback == 0) {
                         fnSetMicInput();
 						fnAudioRecord(sAxiDma, NR_AUDIO_SAMPLES);
-                        xil_printf("Start recording on Mic [OK]\n\r");
+                        xil_printf("Recording on Mic [START]\n\r");
                         ANC_INSTANCE.fAudioRecord = 1;
                     } else {
                         if (ANC_INSTANCE.fAudioRecord == 1) {
@@ -68,7 +68,7 @@ void run() {
                     if (ANC_INSTANCE.fAudioRecord == 0 && ANC_INSTANCE.fAudioPlayback == 0) {
                         fnSetLineInput();
 						fnAudioRecord(sAxiDma, NR_AUDIO_SAMPLES);
-                        xil_printf("Start recording on Line [OK]\n\r");
+                        xil_printf("Recording on Line [START]\n\r");
                         ANC_INSTANCE.fAudioRecord = 1;
                     } else {
                         if (ANC_INSTANCE.fAudioRecord == 1) {

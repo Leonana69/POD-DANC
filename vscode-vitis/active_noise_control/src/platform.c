@@ -115,42 +115,42 @@ XStatus init_platform() {
 
     status = fnInitInterruptController(&sIntc);
 	if (status != XST_SUCCESS) {
-		xil_printf("Interrupts initialization [FAILED]\n\r");
+		xil_printf("Interrupts init [FAILED]\n\r");
 		return XST_FAILURE;
 	} else {
-        xil_printf("Interrupts initialization [OK]\n\r");
+        xil_printf("Interrupts init [OK]\n\r");
     }
 
     status = fnInitUserIO(&sUserIO);
     if (status != XST_SUCCESS) {
-        xil_printf("User I/O initialization [FAILED]\n\r");
+        xil_printf("User I/O init [FAILED]\n\r");
         return XST_FAILURE;
     } else {
-        xil_printf("User I/O initialization [OK]\n\r");
+        xil_printf("User I/O init [OK]\n\r");
     }
 
     status = fnInitIic(&sIic);
     if (status != XST_SUCCESS) {
-        xil_printf("IIC initialization [FAILED]\n\r");
+        xil_printf("IIC init [FAILED]\n\r");
         return XST_FAILURE;
     } else {
-        xil_printf("IIC initialization [OK]\n\r");
+        xil_printf("IIC init [OK]\n\r");
     }
 
     status = fnInitDma(&sAxiDma);
     if (status != XST_SUCCESS) {
-        xil_printf("DMA initialization [FAILED]\n\r");
+        xil_printf("DMA init [FAILED]\n\r");
         return XST_FAILURE;
     } else {
-        xil_printf("DMA initialization [OK]\n\r");
+        xil_printf("DMA init [OK]\n\r");
     }
 
     status = fnInitAudio();
     if (status != XST_SUCCESS) {
-        xil_printf("Audio initialization [FAILED]\n\r");
+        xil_printf("Audio init [FAILED]\n\r");
         return XST_FAILURE;
     } else {
-        xil_printf("Audio initialization [OK]\n\r");
+        xil_printf("Audio init [OK]\n\r");
     }
 
     fnEnableInterrupts(&sIntc, &ivt[0], sizeof(ivt) / sizeof(ivt[0]));

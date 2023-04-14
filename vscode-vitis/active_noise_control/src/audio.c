@@ -266,7 +266,7 @@ XStatus fnInitAudio() {
 	// Configure the ADAU registers
 	Status = fnAudioStartupConfig();
 	if (Status != XST_SUCCESS) {
-		xil_printf("Error: Failed I2C Configuration\n\r");
+		xil_printf("I2C Configuration [FAILED]\n\r");
 	}
 
 	ANC_INSTANCE.fAudioPlayback = 0;
@@ -285,8 +285,6 @@ XStatus fnInitAudio() {
  *****************************************************************************/
 void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples) {
 	union ubitField uTransferVariable;
-
-	xil_printf("Enter Record function\n\r");
 
 	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma, (u32) MEM_BASE_ADDR, 2 * DATA_BYTE_LENGTH * u32NrSamples, XAXIDMA_DEVICE_TO_DMA);
 	if (uTransferVariable.l != XST_SUCCESS) {
@@ -317,8 +315,6 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples) {
 void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples) {
 	union ubitField uTransferVariable;
 
-    xil_printf("Enter Playback function\n\r");
-
 	// Send number of samples to record
 	Xil_Out32(I2S_PERIOD_COUNT_REG, u32NrSamples);
 	// Start i2s initialization sequence
@@ -347,7 +343,7 @@ void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples) {
 void fnSetMicInput() {
 	// MX1AUXG = MUTE; MX2AUXG = MUTE; LDBOOST = 0dB; RDBOOST = 0dB
 	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010100);
-	xil_printf("Input set to MIC\n\r");
+	xil_printf("Set input [MIC]\n\r");
 }
 
 /******************************************************************************
@@ -362,7 +358,7 @@ void fnSetLineInput() {
 	// MX1AUXG = 0dB; MX2AUXG = 0dB; LDBOOST = MUTE; RDBOOST = MUTE
 	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010010);
 	fnAudioWriteToReg(R5_DIGITAL_PATH, 0b000000000);
-	xil_printf("Input set to LineIn\n\r");
+	xil_printf("Set input [LineIn]\n\r");
 }
 
 /******************************************************************************
@@ -377,7 +373,7 @@ void fnSetLineOutput() {
 	// zybo does not have a line output
 	// MX3G1 = mute; MX3G2 = mute; MX4G1 = mute; MX4G2 = mute;
 	// fnAudioWriteToReg(R4_ANALOG_PATH, 0x00);
-	xil_printf("Output set to LineOut\n\r");
+	xil_printf("Set output [LineOut]\n\r");
 }
 
 /******************************************************************************
