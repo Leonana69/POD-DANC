@@ -1,0 +1,22 @@
+vhdl xil_defaultlib  \
+"../../../bd/main_bd/ip/main_bd_axi_gpio_0_0/sim/main_bd_axi_gpio_0_0.vhd" \
+
+vhdl fifo_generator_v13_2_7  \
+"../../../../audio_dma_7020.gen/sources_1/bd/main_bd/ipshared/83df/hdl/fifo_generator_v13_2_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/main_bd/ip/main_bd_rst_ps7_0_50M_0/sim/main_bd_rst_ps7_0_50M_0.vhd" \
+"../../../../audio_dma_7020.gen/sources_1/bd/main_bd/ipshared/3bba/src/rst_sync.vhd" \
+"../../../../audio_dma_7020.gen/sources_1/bd/main_bd/ipshared/3bba/src/i2s_ctl.vhd" \
+"../../../../audio_dma_7020.gen/sources_1/bd/main_bd/ipshared/3bba/src/DCM.vhd" \
+"../../../../audio_dma_7020.gen/sources_1/bd/main_bd/ipshared/3bba/src/Sync_ff.vhd" \
+"../../../../audio_dma_7020.gen/sources_1/bd/main_bd/ipshared/3bba/src/i2s_stream.vhd" \
+"../../../../audio_dma_7020.gen/sources_1/bd/main_bd/ipshared/3bba/src/i2s_rx_tx.vhd" \
+"../../../../audio_dma_7020.gen/sources_1/bd/main_bd/ipshared/3bba/src/d_axi_i2s_audio_v2_0_AXI_L.vhd" \
+"../../../../audio_dma_7020.gen/sources_1/bd/main_bd/ipshared/3bba/src/d_axi_i2s_audio_v2_0.vhd" \
+"../../../bd/main_bd/ip/main_bd_d_axi_i2s_audio_0_0/sim/main_bd_d_axi_i2s_audio_0_0.vhd" \
+"../../../bd/main_bd/ip/main_bd_axi_dma_0_0/sim/main_bd_axi_dma_0_0.vhd" \
+"../../../bd/main_bd/ip/main_bd_axi_iic_0_0/sim/main_bd_axi_iic_0_0.vhd" \
+"../../../bd/main_bd/ip/main_bd_axi_bram_ctrl_0_0/sim/main_bd_axi_bram_ctrl_0_0.vhd" \
+
+nosort

@@ -1,4 +1,4 @@
-PLATFORM_NAME = audio_dma
+PLATFORM_NAME = audio_dma_7020
 APP_NAME = active_noise_control
 
 WORKSPACE = .

@@ -6,29 +6,24 @@
 #include "xbram.h"
 #include "xparameters.h"
 #include "adaptiveFilter.h"
-
 #include "anc.h"
 
 // This variable holds the demo related settings
 volatile ANC ANC_INSTANCE;
 
-int data[128];
 #define BRAM_DATA_BYTE (XPAR_BRAM_0_DATA_WIDTH / 8)
 
 int main() {
     xil_printf("System start\n\r");
 
-    for (int i = 0; i < 16; i++) {
-        data[i] = i;
-    }
 
     for (int i = 0; i < 16; i++) {
-        XBram_WriteReg(XPAR_BRAM_0_BASEADDR, i * BRAM_DATA_BYTE, data[i]);
+        XBram_WriteReg(XPAR_BRAM_0_BASEADDR, i * BRAM_DATA_BYTE, i);
     }
 
     xil_printf("start PL\n\r");
 
-    ADAPTIVEFILTER_mWriteReg(XPAR_ADAPTIVEFILTER_0_S00_AXI_BASEADDR, ADAPTIVEFILTER_S00_AXI_SLV_REG2_OFFSET, 8);
+    ADAPTIVEFILTER_mWriteReg(XPAR_ADAPTIVEFILTER_0_S00_AXI_BASEADDR, ADAPTIVEFILTER_S00_AXI_SLV_REG2_OFFSET, 4 * BRAM_DATA_BYTE);
     ADAPTIVEFILTER_mWriteReg(XPAR_ADAPTIVEFILTER_0_S00_AXI_BASEADDR, ADAPTIVEFILTER_S00_AXI_SLV_REG1_OFFSET, 0x0 * BRAM_DATA_BYTE);
     ADAPTIVEFILTER_mWriteReg(XPAR_ADAPTIVEFILTER_0_S00_AXI_BASEADDR, ADAPTIVEFILTER_S00_AXI_SLV_REG0_OFFSET, 0x1);
     ADAPTIVEFILTER_mWriteReg(XPAR_ADAPTIVEFILTER_0_S00_AXI_BASEADDR, ADAPTIVEFILTER_S00_AXI_SLV_REG0_OFFSET, 0x0);
