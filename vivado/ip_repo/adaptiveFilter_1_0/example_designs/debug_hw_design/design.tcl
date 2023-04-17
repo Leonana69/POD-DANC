@@ -28,7 +28,7 @@ proc create_ipi_design { offsetfile design_name } {
 	connect_bd_net [get_bd_pins sys_clk_0/locked] [get_bd_pins sys_reset_0/dcm_locked]
 
 	# Create instance: adaptiveFilter_0, and set properties
-	set adaptiveFilter_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:adaptiveFilter:1.0 adaptiveFilter_0 ]
+	set adaptiveFilter_0 [ create_bd_cell -type ip -vlnv user.org:user:adaptiveFilter:1.0 adaptiveFilter_0 ]
 
 	# Create instance: jtag_axi_0, and set properties
 	set jtag_axi_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:jtag_axi jtag_axi_0 ]
@@ -72,7 +72,7 @@ proc create_ipi_design { offsetfile design_name } {
 }
 
 # Set IP Repository and Update IP Catalogue 
-set ip_path [file dirname [file normalize [get_property XML_FILE_NAME [ipx::get_cores xilinx.com:user:adaptiveFilter:1.0]]]]
+set ip_path [file dirname [file normalize [get_property XML_FILE_NAME [ipx::get_cores user.org:user:adaptiveFilter:1.0]]]]
 set hw_test_file ${ip_path}/example_designs/debug_hw_design/adaptiveFilter_v1_0_hw_test.tcl
 
 set repo_paths [get_property ip_repo_paths [current_fileset]] 

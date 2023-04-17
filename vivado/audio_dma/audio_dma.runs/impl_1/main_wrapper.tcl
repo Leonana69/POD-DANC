@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.runs/impl_1/main_wrapper.tcl"
+  variable script "/home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.runs/impl_1/main_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
@@ -124,39 +123,35 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 8
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
-  set_property board_part_repo_paths {C:/Users/Leo/AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part_repo_paths {/home/gc635/.Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
   set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.cache/wt [current_project]
-  set_property parent.project_path D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.xpr [current_project]
+  set_property webtalk.parent_dir /home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.cache/wt [current_project]
+  set_property parent.project_path /home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.xpr [current_project]
   set_property ip_repo_paths {
-  D:/Sundries/GithubProject/POD-DANC/vivado/ip_repo/myip_1_0
-  D:/Sundries/GithubProject/POD-DANC/vivado/ip_repo/adaptiveFilter_1_0
-  D:/Sundries/GithubProject/POD-DANC/vivado/ip_repo/slave_fir_1_0
-  D:/Sundries/GithubProject/POD-DANC/vivado/ip_repo/fir_1_0
-  D:/Sundries/GithubProject/POD-DANC/vivado/ip_repo/secondary_path_1_0
-  D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.ip_user_files
-  D:/Sundries/GithubProject/POD-DANC/vivado/adaptiveFilter
+  /home/gc635/Documents/POD-DANC/vivado/ip_repo/adaptiveFilter_1_0
+  /home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.ip_user_files
+  /home/gc635/Documents/POD-DANC/vivado/ip_repo/adaptiveFilter_1_0
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.cache/ip [current_project]
+  set_property ip_output_repo /home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.runs/synth_1/main_wrapper.dcp
+  add_files -quiet /home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.runs/synth_1/main_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.srcs/sources_1/bd/main/main.bd
+  add_files /home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.srcs/sources_1/bd/main/main.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.srcs/constrs_1/new/constr.xdc
+  read_xdc /home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.srcs/constrs_1/new/constr.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

@@ -10,7 +10,7 @@ proc create_ipi_design { offsetfile design_name } {
 	set_property CONFIG.ASSOCIATED_RESET ARESETN $ACLK
 
 	# Create instance: adaptiveFilter_0, and set properties
-	set adaptiveFilter_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:adaptiveFilter:1.0 adaptiveFilter_0]
+	set adaptiveFilter_0 [ create_bd_cell -type ip -vlnv user.org:user:adaptiveFilter:1.0 adaptiveFilter_0]
 
 	# Create instance: master_0, and set properties
 	set master_0 [ create_bd_cell -type ip -vlnv  xilinx.com:ip:axi_vip master_0]
@@ -45,7 +45,7 @@ set_property -name {xsim.simulate.runtime} -value {100ms} -objects [get_filesets
 	close $fp
 }
 
-set ip_path [file dirname [file normalize [get_property XML_FILE_NAME [ipx::get_cores xilinx.com:user:adaptiveFilter:1.0]]]]
+set ip_path [file dirname [file normalize [get_property XML_FILE_NAME [ipx::get_cores user.org:user:adaptiveFilter:1.0]]]]
 set test_bench_file ${ip_path}/example_designs/bfm_design/adaptiveFilter_v1_0_tb.sv
 set interface_address_vh_file ""
 

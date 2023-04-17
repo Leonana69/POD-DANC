@@ -9,9 +9,9 @@ RELEASEDIR=../../../lib
 INCLUDEDIR=../../../include
 INCLUDES=-I./. -I${INCLUDEDIR}
 
-INCLUDEFILES=$(wildcard *.h)
-LIBSOURCES=$(wildcard *.c)
-OUTS = $(wildcard *.o)
+INCLUDEFILES=*.h
+LIBSOURCES=*.c
+OUTS = *.o
 
 libs:
 	echo "Compiling adaptiveFilter..."

@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Sun Apr 16 22:02:21 2023
-// Host        : DESKTOP-0HSVFGJ running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+// Date        : Mon Apr 17 12:38:26 2023
+// Host        : guojun-server running 64-bit Ubuntu 22.04.2 LTS
 // Command     : write_verilog -force -mode synth_stub
-//               d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.gen/sources_1/bd/main/ip/main_axi_bram_ctrl_0_0/main_axi_bram_ctrl_0_0_stub.v
+//               /home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.gen/sources_1/bd/main/ip/main_axi_bram_ctrl_0_0/main_axi_bram_ctrl_0_0_stub.v
 // Design      : main_axi_bram_ctrl_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

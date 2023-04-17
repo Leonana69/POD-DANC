@@ -48,8 +48,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_blk_me
 # IP: bd/main/ip/main_axi_bram_ctrl_0_0/main_axi_bram_ctrl_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_axi_bram_ctrl_0_0 || ORIG_REF_NAME==main_axi_bram_ctrl_0_0} -quiet] -quiet
 
-# IP: bd/main/ip/main_adaptiveFilter_0_0/main_adaptiveFilter_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_adaptiveFilter_0_0 || ORIG_REF_NAME==main_adaptiveFilter_0_0} -quiet] -quiet
+# IP: bd/main/ip/main_adaptiveFilter_0_2/main_adaptiveFilter_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_adaptiveFilter_0_2 || ORIG_REF_NAME==main_adaptiveFilter_0_2} -quiet] -quiet
 
 # IP: bd/main/ip/main_auto_us_0/main_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_auto_us_0 || ORIG_REF_NAME==main_auto_us_0} -quiet] -quiet
@@ -78,4 +78,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_auto_p
 # IP: bd/main/ip/main_auto_pc_5/main_auto_pc_5.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_auto_pc_5 || ORIG_REF_NAME==main_auto_pc_5} -quiet] -quiet
 
-# XDC: d:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.gen/sources_1/bd/main/main_ooc.xdc
+# IP: bd/main/ip/main_s00_mmu_0/main_s00_mmu_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_s00_mmu_0 || ORIG_REF_NAME==main_s00_mmu_0} -quiet] -quiet
+
+# XDC: /home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.gen/sources_1/bd/main/main_ooc.xdc

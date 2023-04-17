@@ -1,4 +1,4 @@
-verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../audio_dma.gen/sources_1/bd/main/ipshared/ec67/hdl" --include "../../../../audio_dma.gen/sources_1/bd/main/ipshared/ee60/hdl" \
+verilog xil_defaultlib --include "/usr/local/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../audio_dma.gen/sources_1/bd/main/ipshared/ec67/hdl" --include "../../../../audio_dma.gen/sources_1/bd/main/ipshared/ee60/hdl" \
 "../../../bd/main/ip/main_processing_system7_0_0/sim/main_processing_system7_0_0.v" \
 "../../../bd/main/ip/main_xlconcat_0_0/sim/main_xlconcat_0_0.v" \
 "../../../bd/main/ip/main_d_axi_i2s_audio_0_0/src/fifo_32/sim/fifo_32.v" \
@@ -7,9 +7,10 @@ verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/includ
 "../../../bd/main/ip/main_xlconstant_0_0/sim/main_xlconstant_0_0.v" \
 "../../../bd/main/ip/main_xbar_1/sim/main_xbar_1.v" \
 "../../../bd/main/ip/main_blk_mem_gen_0_0/sim/main_blk_mem_gen_0_0.v" \
-"../../../bd/main/ipshared/84bb/hdl/adaptiveFilter_v1_0_S00_AXI.v" \
-"../../../bd/main/ipshared/84bb/hdl/adaptiveFilter_v1_0.v" \
-"../../../bd/main/ip/main_adaptiveFilter_0_0/sim/main_adaptiveFilter_0_0.v" \
+"../../../bd/main/sim/main.v" \
+"../../../bd/main/ipshared/badc/hdl/adaptiveFilter_v1_0_S00_AXI.v" \
+"../../../bd/main/ipshared/badc/hdl/adaptiveFilter_v1_0.v" \
+"../../../bd/main/ip/main_adaptiveFilter_0_2/sim/main_adaptiveFilter_0_2.v" \
 "../../../bd/main/ip/main_auto_us_0/sim/main_auto_us_0.v" \
 "../../../bd/main/ip/main_auto_us_1/sim/main_auto_us_1.v" \
 "../../../bd/main/ip/main_auto_pc_0/sim/main_auto_pc_0.v" \
@@ -19,7 +20,7 @@ verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/includ
 "../../../bd/main/ip/main_auto_pc_3/sim/main_auto_pc_3.v" \
 "../../../bd/main/ip/main_auto_pc_4/sim/main_auto_pc_4.v" \
 "../../../bd/main/ip/main_auto_pc_5/sim/main_auto_pc_5.v" \
-"../../../bd/main/sim/main.v" \
+"../../../bd/main/ip/main_s00_mmu_0/sim/main_s00_mmu_0.v" \
 
 verilog xil_defaultlib "glbl.v"
 
