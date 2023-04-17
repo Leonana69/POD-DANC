@@ -22,6 +22,8 @@
 		output wire [3:0] ram_we,             	//RAM ctl
 		output wire [31:0] ram_wr_data,        	//RAM write data
 		output wire ram_rst,                  	//RAM reset
+
+		output wire [3:0] LED,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -75,28 +77,31 @@
 		.S_AXI_RRESP(s00_axi_rresp),
 		.S_AXI_RVALID(s00_axi_rvalid),
 		.S_AXI_RREADY(s00_axi_rready),
-		.slv_reg0(slv_reg0),
-        .slv_reg1(slv_reg1),
-        .slv_reg2(slv_reg2)
+		.slv_reg0(start_rd),
+        .slv_reg1(start_addr),
+        .slv_reg2(rd_len)
 	);
 
-	wire [C_S00_AXI_DATA_WIDTH-1:0] slv_reg0;
-	wire [C_S00_AXI_DATA_WIDTH-1:0] slv_reg1;
-	wire [C_S00_AXI_DATA_WIDTH-1:0] slv_reg2;
+	wire [C_S00_AXI_DATA_WIDTH-1:0] start_rd;
+	wire [C_S00_AXI_DATA_WIDTH-1:0] start_addr;
+	wire [C_S00_AXI_DATA_WIDTH-1:0] rd_len;
+
+	assign LED = 4'b1011;
 
 	// Add user logic here
 	bram_ip_plus1 inst_bram_ip_plus1(
 		.clk(S_AXI_ACLK),
 		.rst_n(S_AXI_ARESETN),
-		.start_rd(slv_reg0[0]),
-		.start_addr(slv_reg1),
-		.rd_len(slv_reg2),
+		.start_rd(start_rd[0]),
+		.start_addr(start_addr),
+		.rd_len(rd_len),
 		.ram_clk(ram_clk),
 		.ram_rd_data(ram_rd_data),
 		.ram_en(ram_en),
 		.ram_addr(ram_addr),
 		.ram_we(ram_we),
 		.ram_wr_data(ram_wr_data),
+		// .LED(LED),
 		.ram_rst(ram_rst)
 	);
 	// User logic ends
@@ -115,6 +120,7 @@
 		output reg [31:0] ram_addr,
 		output reg [3:0] ram_we,
 		output reg [31:0] ram_wr_data,
+		// output reg [3:0] LED,
 		output ram_rst
 		);
 		
@@ -131,10 +137,9 @@
 		//*****************************************************
 		
 		assign ram_rst = 1'b0;
-		assign ram_clk = clk ;
+		assign ram_clk = clk;
 		assign pos_start_rd = ~start_rd_d1 & start_rd_d0;
 		
-		// 延时两拍，采 start_rd 信号的上升沿
 		always @(posedge clk or negedge rst_n) begin
 			if (!rst_n) begin
 				start_rd_d0 <= 1'b0;
@@ -142,6 +147,7 @@
 			end else begin
 				start_rd_d0 <= start_rd;
 				start_rd_d1 <= start_rd_d0;
+				// LED[0] <= 1'b1;
 			end
 		end
 		
@@ -153,11 +159,12 @@
 				ram_we <= 4'd0;
 				end
 			else begin
-				case(flow_cnt)
+				case (flow_cnt)
 					2'd0 : begin
 						if (pos_start_rd) begin
 							ram_en <= 1'b1;
 							ram_addr <= start_addr;
+							// LED[3:1] <= ram_addr[2:0];
 							flow_cnt <= flow_cnt + 2'd1;
 						end
 					end
