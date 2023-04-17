@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Apr 16 22:28:16 2023
+# Process ID: 158192
+# Current directory: D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.runs/main_auto_us_1_synth_1
+# Command line: vivado.exe -log main_auto_us_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_auto_us_1.tcl
+# Log file: D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.runs/main_auto_us_1_synth_1/main_auto_us_1.vds
+# Journal file: D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.runs/main_auto_us_1_synth_1\vivado.jou
+# Running On: DESKTOP-0HSVFGJ, OS: Windows, CPU Frequency: 3800 MHz, CPU Physical cores: 16, Host memory: 34299 MB
+#-----------------------------------------------------------
+source main_auto_us_1.tcl -notrace

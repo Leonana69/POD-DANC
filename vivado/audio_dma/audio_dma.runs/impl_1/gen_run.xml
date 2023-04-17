@@ -1,66 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1681493567">
-  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
-  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="main_wrapper_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS" Name="main_wrapper_routed.rqs"/>
-  <File Type="RBD_FILE" Name="main_wrapper.rbd"/>
-  <File Type="NPI_FILE" Name="main_wrapper.npi"/>
-  <File Type="RNPI_FILE" Name="main_wrapper.rnpi"/>
-  <File Type="CFI_FILE" Name="main_wrapper.cfi"/>
-  <File Type="RCFI_FILE" Name="main_wrapper.rcfi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="main_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-RPX" Name="main_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="main_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="main_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="main_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="main_wrapper_postroute_physopt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="main_wrapper_physopt.dcp"/>
-  <File Type="PLACE-IO" Name="main_wrapper_io_placed.rpt"/>
-  <File Type="OPT-DRC" Name="main_wrapper_drc_opted.rpt"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="main_wrapper.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="main_wrapper.sysdef"/>
-  <File Type="BITSTR-MMI" Name="main_wrapper.mmi"/>
-  <File Type="BITSTR-BMM" Name="main_wrapper_bd.bmm"/>
-  <File Type="PLACE-UTIL-PB" Name="main_wrapper_utilization_placed.pb"/>
-  <File Type="BG-BGN" Name="main_wrapper.bgn"/>
-  <File Type="OPT-DCP" Name="main_wrapper_opt.dcp"/>
-  <File Type="OPT-HWDEF" Name="main_wrapper.hwdef"/>
-  <File Type="BG-BIT" Name="main_wrapper.bit"/>
-  <File Type="ROUTE-BUS-SKEW" Name="main_wrapper_bus_skew_routed.rpt"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1681698488">
+  <File Type="ROUTE-PWR" Name="main_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="main_wrapper.tcl"/>
+  <File Type="BITSTR-MMI" Name="main_wrapper.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="main_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="main_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="main_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="main_wrapper_reports.tcl"/>
-  <File Type="PLACE-UTIL" Name="main_wrapper_utilization_placed.rpt"/>
-  <File Type="BG-DRC" Name="main_wrapper.drc"/>
-  <File Type="PLACE-CTRL" Name="main_wrapper_control_sets_placed.rpt"/>
-  <File Type="PDI-FILE" Name="main_wrapper.pdi"/>
-  <File Type="RDI-RDI" Name="main_wrapper.vdi"/>
-  <File Type="BG-BIN" Name="main_wrapper.bin"/>
-  <File Type="PLACE-DCP" Name="main_wrapper_placed.dcp"/>
-  <File Type="BITSTR-MSK" Name="main_wrapper.msk"/>
+  <File Type="OPT-TIMING" Name="main_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="main_wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="main_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="main_wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="main_wrapper_pwropt.dcp"/>
-  <File Type="BITSTR-RBT" Name="main_wrapper.rbt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="main_wrapper_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-NKY" Name="main_wrapper.nky"/>
+  <File Type="PWROPT-DRC" Name="main_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="main_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="main_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="main_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="main_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="main_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="main_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="main_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="main_wrapper_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="main_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="main_wrapper.bin"/>
+  <File Type="PLACE-TIMING" Name="main_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="main_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="main_wrapper.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="main_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="main_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="main_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="main_wrapper.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="main_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="main_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="main_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="main_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="main_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="main_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="main_wrapper_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="main_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="main_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="main_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="main_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="main_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="main_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="main_wrapper_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="main_wrapper_route_status.pb"/>
-  <File Type="ROUTE-DCP" Name="main_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="main_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="main_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="main_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="main_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="main_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="main_wrapper_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="main_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="main_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="main_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="main_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="main_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="main_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="main_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="main_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="main_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="main_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="main_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="main_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="main_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="main_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="main_wrapper_bd.bmm"/>
+  <File Type="PDI-FILE" Name="main_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="main_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="main_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="main_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="main_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="main_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="main_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="main_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="main_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="main_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="main_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="main_wrapper_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="main_wrapper_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/main/main.bd">
@@ -97,6 +115,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/main_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
@@ -112,18 +138,19 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="main_auto_us_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_auto_us_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_d_axi_i2s_audio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_axi_iic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_axi_dma_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="main_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_axi_iic_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_d_axi_i2s_audio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_adaptiveFilter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_auto_us_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_auto_us_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_auto_pc_0"/>
 </GenRun>

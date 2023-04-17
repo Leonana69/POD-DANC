@@ -41,6 +41,13 @@ void fnUpdateLedsFromSwitches(XGpio *psGpio) {
 	u32  dwBtn;
 	u32 dwBtnSw;
 
+	Xil_DCacheInvalidateRange((u32) 0x0, 4 * 128);
+	u32* ptr = 0x0;
+	for (int i = 0; i < 128; i++) {
+		xil_printf("0x%x: 0x%x\n\r", ptr, *ptr);
+		ptr++;
+	}
+
 	dwBtnSw = XGpio_DiscreteRead(psGpio, BTN_SW_CHANNEL);
 	dwBtn = dwBtnSw & (BTN0_MASK | BTN1_MASK | BTN2_MASK | BTN3_MASK);
 	if (dwBtn == 0) {

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/gc635/Documents/POD-DANC/vivado/audio_dma/audio_dma.srcs/constrs_1/new/constr.xdc rfile:../../../audio_dma.srcs/constrs_1/new/constr.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Sundries/GithubProject/POD-DANC/vivado/audio_dma/audio_dma.srcs/constrs_1/new/constr.xdc rfile:../../../audio_dma.srcs/constrs_1/new/constr.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:45 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R19   IOSTANDARD LVCMOS33 } [get_ports { ac_bclk }]; #IO_0_34 Sch=ac_bclk
 set_property src_info {type:XDC file:1 line:46 export:INPUT save:INPUT read:READ} [current_design]

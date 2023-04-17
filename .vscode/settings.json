@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "platform_config.h": "c",
+        "xparameters.h": "c",
+        "adaptivefilter.h": "c"
+    }
+}

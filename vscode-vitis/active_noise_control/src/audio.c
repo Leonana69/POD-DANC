@@ -158,7 +158,7 @@ XStatus fnAudioReadFromReg(u8 u8RegAddr, u8 *u8RxData) {
  *
  * @return	XST_SUCCESS if the configuration is successful
  *****************************************************************************/
-XStatus fnAudioStartupConfig () {
+XStatus fnAudioStartupConfig() {
 	union ubitField uConfigurationVariable;
 	int Status;
 

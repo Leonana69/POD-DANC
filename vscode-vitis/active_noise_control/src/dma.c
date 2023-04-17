@@ -14,7 +14,7 @@ extern XAxiDma_Config *pCfgPtr;
  * @return	none
  *
  *****************************************************************************/
-void fnS2MMInterruptHandler (void *Callback) {
+void fnS2MMInterruptHandler(void *Callback) {
 	u32 IrqStatus;
 	int TimeOut;
 	XAxiDma *AxiDmaInst = (XAxiDma *)Callback;
@@ -59,7 +59,7 @@ void fnS2MMInterruptHandler (void *Callback) {
  * @return	none
  *
  *****************************************************************************/
-void fnMM2SInterruptHandler (void *Callback) {
+void fnMM2SInterruptHandler(void *Callback) {
 	u32 IrqStatus;
 	int TimeOut;
 	XAxiDma *AxiDmaInst = (XAxiDma *)Callback;
