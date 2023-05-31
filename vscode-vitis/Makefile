@@ -47,7 +47,7 @@ build: $(WORKSPACE)/$(APP_NAME)/Debug/makefile
 	make -C $(WORKSPACE)/$(APP_NAME)/Debug all
 
 clean: $(WORKSPACE)/$(APP_NAME)/Debug/makefile
-	make -C $(WORKSPACE)/$(APP_NAME)/Debug clean
+	@make -C $(WORKSPACE)/$(APP_NAME)/Debug clean
 
 flash:
 	xsct -eval '$(FLASH_STRING)'

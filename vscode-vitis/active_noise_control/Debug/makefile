@@ -52,12 +52,10 @@ $(APP_NAME).elf.size: $(APP_NAME).elf
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(S_UPPER_DEPS)$(C_DEPS)$(ELFSIZE) $(APP_NAME).elf
-	-@echo ' '
+	-@$(RM) $(EXECUTABLES) $(OBJS) $(S_UPPER_DEPS) $(C_DEPS) $(ELFSIZE) $(APP_NAME).elf
 
 pre-build:
 	-a9-linaro-pre-build-step
-	-@echo ' '
 
 secondary-outputs: $(ELFSIZE)
 

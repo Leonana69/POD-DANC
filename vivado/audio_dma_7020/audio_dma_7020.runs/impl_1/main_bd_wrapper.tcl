@@ -207,6 +207,10 @@ set rc [catch {
   create_msg_db place_design.pb
 OPTRACE "read constraints: place_design" START { }
 OPTRACE "read constraints: place_design" END { }
+OPTRACE "read incremental checkpoint" START { }
+  read_checkpoint -auto_incremental  -incremental /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.srcs/utils_1/imports/impl_1/main_bd_wrapper_routed.dcp
+  catch { report_incremental_reuse -file main_bd_wrapper_incremental_reuse_pre_placed.rpt }
+OPTRACE "read incremental checkpoint" END { }
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
 OPTRACE "implement_debug_core" START { }
     implement_debug_core 

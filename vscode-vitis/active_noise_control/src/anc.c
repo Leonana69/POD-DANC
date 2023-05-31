@@ -5,11 +5,17 @@
 #include "platform.h"
 #include "userio.h"
 
-struct adc_data {
-    u8 data[3];
-};
+
+#define FILTER_LEN_MAIN 32
+#define FILTER_LEN_2ND 128
+
+
+void calibration() {
+
+}
 
 void run() {
+    xil_printf("====> ANC start <====");
     while (1) {
         if (ANC_INSTANCE.fDmaS2MMEvent) {
             xil_printf("Recording [END]\n\r");
@@ -18,7 +24,7 @@ void run() {
             Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
 			Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
 
-            // len is in byte: 2 channels * 24bits * samples
+            // len is in byte: 2 channels * 32bits (24 valid bits) * samples
             Xil_DCacheInvalidateRange((u32) MEM_BASE_ADDR, 2 * DATA_BYTE_LENGTH * NR_AUDIO_SAMPLES);
 
             // u8* ptr = (u8*) MEM_BASE_ADDR;

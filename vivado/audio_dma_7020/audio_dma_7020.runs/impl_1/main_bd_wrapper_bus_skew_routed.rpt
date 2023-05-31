@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Mon Apr 17 14:57:31 2023
+| Date         : Wed May 31 15:52:38 2023
 | Host         : guojun-server running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_bus_skew -warn_on_violation -file main_bd_wrapper_bus_skew_routed.rpt -pb main_bd_wrapper_bus_skew_routed.pb -rpx main_bd_wrapper_bus_skew_routed.rpx
 | Design       : main_bd_wrapper
@@ -161,74 +161,74 @@ Slack (MET) :             9.177ns  (requirement - actual skew)
   Actual Bus Skew:            0.823ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.648     6.845    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X36Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X36Y26         FDRE (Prop_fdre_C_Q)         0.478     7.323 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.628     7.951    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[1]
-    SLICE_X38Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.648     6.845    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+                  SLICE_X36Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X36Y26         FDRE (Prop_fdre_C_Q)         0.478     7.323 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                                       net (fo=1, routed)           0.628     7.951    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[1]
+    Routing       SLICE_X38Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.480     2.659    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X38Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.115     2.774    
-    SLICE_X38Y26         FDRE (Setup_fdre_C_D)       -0.218     2.556    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
-  -------------------------------------------------------------------
-                         data arrival                           7.951    
-                         clock arrival                          2.556    
-  -------------------------------------------------------------------
-                         relative delay                         5.395    
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.480     2.659    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+                  SLICE_X38Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                                       clock pessimism              0.115     2.774    
+                  SLICE_X38Y26         FDRE (Setup_fdre_C_D)       -0.218     2.556    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           7.951    
+                                       clock arrival                          2.556    
+  ---------------------------------------------------------------------------------
+                                       relative delay                         5.395    
 
 Reference path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.477     6.185    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X37Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X37Y26         FDRE (Prop_fdre_C_Q)         0.367     6.552 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.389     6.941    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[3]
-    SLICE_X38Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.477     6.185    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+                  SLICE_X37Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X37Y26         FDRE (Prop_fdre_C_Q)         0.367     6.552 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                                       net (fo=1, routed)           0.389     6.941    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[3]
+    Routing       SLICE_X38Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.651     2.945    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X38Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism             -0.115     2.830    
-    SLICE_X38Y26         FDRE (Hold_fdre_C_D)         0.233     3.063    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
-  -------------------------------------------------------------------
-                         data arrival                           6.941    
-                         clock arrival                          3.063    
-  -------------------------------------------------------------------
-                         relative delay                         3.878    
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.651     2.945    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+                  SLICE_X38Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                                       clock pessimism             -0.115     2.830    
+                  SLICE_X38Y26         FDRE (Hold_fdre_C_D)         0.233     3.063    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           6.941    
+                                       clock arrival                          3.063    
+  ---------------------------------------------------------------------------------
+                                       relative delay                         3.878    
 
 
 
@@ -261,74 +261,74 @@ Slack (MET) :             9.188ns  (requirement - actual skew)
   Actual Bus Skew:            0.812ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.651     2.945    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X39Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X39Y26         FDRE (Prop_fdre_C_Q)         0.456     3.401 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.788     4.189    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
-    SLICE_X37Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.651     2.945    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+                  SLICE_X39Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X39Y26         FDRE (Prop_fdre_C_Q)         0.456     3.401 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                                       net (fo=1, routed)           0.788     4.189    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
+    Routing       SLICE_X37Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.475     6.183    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X37Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.115     6.298    
-    SLICE_X37Y25         FDRE (Setup_fdre_C_D)       -0.095     6.203    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
-  -------------------------------------------------------------------
-                         data arrival                           4.189    
-                         clock arrival                          6.203    
-  -------------------------------------------------------------------
-                         relative delay                        -2.014    
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.475     6.183    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+                  SLICE_X37Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                                       clock pessimism              0.115     6.298    
+                  SLICE_X37Y25         FDRE (Setup_fdre_C_D)       -0.095     6.203    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           4.189    
+                                       clock arrival                          6.203    
+  ---------------------------------------------------------------------------------
+                                       relative delay                        -2.014    
 
 Reference path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.481     2.660    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X36Y27         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X36Y27         FDRE (Prop_fdre_C_Q)         0.418     3.078 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.382     3.461    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[0]
-    SLICE_X36Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.481     2.660    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+                  SLICE_X36Y27         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X36Y27         FDRE (Prop_fdre_C_Q)         0.418     3.078 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                                       net (fo=1, routed)           0.382     3.461    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[0]
+    Routing       SLICE_X36Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.646     6.843    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X36Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism             -0.115     6.728    
-    SLICE_X36Y25         FDRE (Hold_fdre_C_D)         0.230     6.958    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
-  -------------------------------------------------------------------
-                         data arrival                           3.461    
-                         clock arrival                          6.958    
-  -------------------------------------------------------------------
-                         relative delay                        -3.498    
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.646     6.843    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+                  SLICE_X36Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                                       clock pessimism             -0.115     6.728    
+                  SLICE_X36Y25         FDRE (Hold_fdre_C_D)         0.230     6.958    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           3.461    
+                                       clock arrival                          6.958    
+  ---------------------------------------------------------------------------------
+                                       relative delay                        -3.498    
 
 
 
@@ -383,74 +383,74 @@ Slack (MET) :             9.008ns  (requirement - actual skew)
   Actual Bus Skew:            0.992ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.730     3.024    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X29Y27         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X29Y27         FDRE (Prop_fdre_C_Q)         0.419     3.443 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]/Q
-                         net (fo=1, routed)           0.825     4.268    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[9]
-    SLICE_X28Y28         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.730     3.024    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+                  SLICE_X29Y27         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X29Y27         FDRE (Prop_fdre_C_Q)         0.419     3.443 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]/Q
+                                       net (fo=1, routed)           0.825     4.268    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[9]
+    Routing       SLICE_X28Y28         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.556     6.264    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X28Y28         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
-                         clock pessimism              0.115     6.379    
-    SLICE_X28Y28         FDRE (Setup_fdre_C_D)       -0.266     6.113    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
-  -------------------------------------------------------------------
-                         data arrival                           4.268    
-                         clock arrival                          6.113    
-  -------------------------------------------------------------------
-                         relative delay                        -1.845    
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.556     6.264    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+                  SLICE_X28Y28         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
+                                       clock pessimism              0.115     6.379    
+                  SLICE_X28Y28         FDRE (Setup_fdre_C_D)       -0.266     6.113    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           4.268    
+                                       clock arrival                          6.113    
+  ---------------------------------------------------------------------------------
+                                       relative delay                        -1.845    
 
 Reference path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.556     2.735    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X31Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X31Y26         FDRE (Prop_fdre_C_Q)         0.367     3.102 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/Q
-                         net (fo=1, routed)           0.422     3.525    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[4]
-    SLICE_X30Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.556     2.735    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+                  SLICE_X31Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X31Y26         FDRE (Prop_fdre_C_Q)         0.367     3.102 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/Q
+                                       net (fo=1, routed)           0.422     3.525    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[4]
+    Routing       SLICE_X30Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.726     6.923    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X30Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
-                         clock pessimism             -0.115     6.808    
-    SLICE_X30Y26         FDRE (Hold_fdre_C_D)         0.230     7.038    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
-  -------------------------------------------------------------------
-                         data arrival                           3.525    
-                         clock arrival                          7.038    
-  -------------------------------------------------------------------
-                         relative delay                        -3.513    
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.726     6.923    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+                  SLICE_X30Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
+                                       clock pessimism             -0.115     6.808    
+                  SLICE_X30Y26         FDRE (Hold_fdre_C_D)         0.230     7.038    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           3.525    
+                                       clock arrival                          7.038    
+  ---------------------------------------------------------------------------------
+                                       relative delay                        -3.513    
 
 
 
@@ -505,74 +505,74 @@ Slack (MET) :             9.040ns  (requirement - actual skew)
   Actual Bus Skew:            0.960ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.740     3.034    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X30Y34         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X30Y34         FDRE (Prop_fdre_C_Q)         0.478     3.512 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/Q
-                         net (fo=1, routed)           0.769     4.281    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[7]
-    SLICE_X31Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.740     3.034    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+                  SLICE_X30Y34         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X30Y34         FDRE (Prop_fdre_C_Q)         0.478     3.512 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/Q
+                                       net (fo=1, routed)           0.769     4.281    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[7]
+    Routing       SLICE_X31Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.563     6.271    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X31Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C
-                         clock pessimism              0.115     6.386    
-    SLICE_X31Y35         FDRE (Setup_fdre_C_D)       -0.267     6.119    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]
-  -------------------------------------------------------------------
-                         data arrival                           4.281    
-                         clock arrival                          6.119    
-  -------------------------------------------------------------------
-                         relative delay                        -1.838    
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.563     6.271    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+                  SLICE_X31Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C
+                                       clock pessimism              0.115     6.386    
+                  SLICE_X31Y35         FDRE (Setup_fdre_C_D)       -0.267     6.119    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           4.281    
+                                       clock arrival                          6.119    
+  ---------------------------------------------------------------------------------
+                                       relative delay                        -1.838    
 
 Reference path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.489     2.668    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X35Y33         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X35Y33         FDRE (Prop_fdre_C_Q)         0.337     3.005 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.423     3.429    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[1]
-    SLICE_X34Y33         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.489     2.668    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+                  SLICE_X35Y33         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X35Y33         FDRE (Prop_fdre_C_Q)         0.337     3.005 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                                       net (fo=1, routed)           0.423     3.429    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[1]
+    Routing       SLICE_X34Y33         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.658     6.855    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X34Y33         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism             -0.115     6.740    
-    SLICE_X34Y33         FDRE (Hold_fdre_C_D)         0.090     6.830    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
-  -------------------------------------------------------------------
-                         data arrival                           3.429    
-                         clock arrival                          6.830    
-  -------------------------------------------------------------------
-                         relative delay                        -3.402    
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.658     6.855    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+                  SLICE_X34Y33         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                                       clock pessimism             -0.115     6.740    
+                  SLICE_X34Y33         FDRE (Hold_fdre_C_D)         0.090     6.830    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           3.429    
+                                       clock arrival                          6.830    
+  ---------------------------------------------------------------------------------
+                                       relative delay                        -3.402    
 
 
 
@@ -627,74 +627,74 @@ Slack (MET) :             9.030ns  (requirement - actual skew)
   Actual Bus Skew:            0.970ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.659     6.856    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X34Y34         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X34Y34         FDRE (Prop_fdre_C_Q)         0.478     7.334 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/Q
-                         net (fo=1, routed)           0.765     8.099    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[5]
-    SLICE_X36Y34         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.659     6.856    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+                  SLICE_X34Y34         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X34Y34         FDRE (Prop_fdre_C_Q)         0.478     7.334 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/Q
+                                       net (fo=1, routed)           0.765     8.099    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[5]
+    Routing       SLICE_X36Y34         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.489     2.668    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X36Y34         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
-                         clock pessimism              0.115     2.783    
-    SLICE_X36Y34         FDRE (Setup_fdre_C_D)       -0.222     2.561    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
-  -------------------------------------------------------------------
-                         data arrival                           8.099    
-                         clock arrival                          2.561    
-  -------------------------------------------------------------------
-                         relative delay                         5.538    
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.489     2.668    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+                  SLICE_X36Y34         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
+                                       clock pessimism              0.115     2.783    
+                  SLICE_X36Y34         FDRE (Setup_fdre_C_D)       -0.222     2.561    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           8.099    
+                                       clock arrival                          2.561    
+  ---------------------------------------------------------------------------------
+                                       relative delay                         5.538    
 
 Reference path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.487     6.195    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X36Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X36Y35         FDRE (Prop_fdre_C_Q)         0.418     6.613 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/Q
-                         net (fo=1, routed)           0.391     7.004    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[8]
-    SLICE_X38Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.487     6.195    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+                  SLICE_X36Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X36Y35         FDRE (Prop_fdre_C_Q)         0.418     6.613 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/Q
+                                       net (fo=1, routed)           0.391     7.004    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[8]
+    Routing       SLICE_X38Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.664     2.958    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X38Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
-                         clock pessimism             -0.115     2.843    
-    SLICE_X38Y35         FDRE (Hold_fdre_C_D)         0.230     3.073    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
-  -------------------------------------------------------------------
-                         data arrival                           7.004    
-                         clock arrival                          3.073    
-  -------------------------------------------------------------------
-                         relative delay                         3.931    
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.664     2.958    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+                  SLICE_X38Y35         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
+                                       clock pessimism             -0.115     2.843    
+                  SLICE_X38Y35         FDRE (Hold_fdre_C_D)         0.230     3.073    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           7.004    
+                                       clock arrival                          3.073    
+  ---------------------------------------------------------------------------------
+                                       relative delay                         3.931    
 
 
 
@@ -749,74 +749,74 @@ Slack (MET) :             8.660ns  (requirement - actual skew)
   Actual Bus Skew:            1.340ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.726     6.923    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X26Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X26Y25         FDRE (Prop_fdre_C_Q)         0.478     7.401 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           1.109     8.510    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
-    SLICE_X24Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.831     3.125    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.088     3.213 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.883     5.096    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     5.197 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.726     6.923    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+                  SLICE_X26Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X26Y25         FDRE (Prop_fdre_C_Q)         0.478     7.401 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                                       net (fo=1, routed)           1.109     8.510    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[3]
+    Routing       SLICE_X24Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.555     2.734    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X24Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.115     2.849    
-    SLICE_X24Y25         FDRE (Setup_fdre_C_D)       -0.270     2.579    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
-  -------------------------------------------------------------------
-                         data arrival                           8.510    
-                         clock arrival                          2.579    
-  -------------------------------------------------------------------
-                         relative delay                         5.930    
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.555     2.734    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+                  SLICE_X24Y25         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                                       clock pessimism              0.115     2.849    
+                  SLICE_X24Y25         FDRE (Setup_fdre_C_D)       -0.270     2.579    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           8.510    
+                                       clock arrival                          2.579    
+  ---------------------------------------------------------------------------------
+                                       relative delay                         5.930    
 
 Reference path:
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkout0 rise edge)    0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
-    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
-                         net (fo=365, routed)         1.554     6.262    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X25Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X25Y26         FDRE (Prop_fdre_C_Q)         0.367     6.629 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/Q
-                         net (fo=1, routed)           0.400     7.029    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[8]
-    SLICE_X24Y24         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
-  -------------------------------------------------------------------    -------------------
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clkout0 rise edge)    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.088     1.088    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.634     2.813    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+                  PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                                    0.083     2.896 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                                       net (fo=1, routed)           1.720     4.617    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     4.708 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                                       net (fo=365, routed)         1.554     6.262    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+                  SLICE_X25Y26         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X25Y26         FDRE (Prop_fdre_C_Q)         0.367     6.629 r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/Q
+                                       net (fo=1, routed)           0.400     7.029    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[8]
+    Routing       SLICE_X24Y24         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+  ---------------------------------------------------------------------------------    -------------------
 
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=6615, routed)        1.729     3.023    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X24Y24         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
-                         clock pessimism             -0.115     2.908    
-    SLICE_X24Y24         FDRE (Hold_fdre_C_D)         0.171     3.079    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
-  -------------------------------------------------------------------
-                         data arrival                           7.029    
-                         clock arrival                          3.079    
-  -------------------------------------------------------------------
-                         relative delay                         3.950    
+                                       (clock clk_fpga_0 rise edge)
+                                                                    0.000     0.000 r  
+                  PS7_X0Y0             PS7                          0.000     0.000 r  main_bd_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                                       net (fo=1, routed)           1.193     1.193    main_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+                  BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  main_bd_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                                       net (fo=6615, routed)        1.729     3.023    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+                  SLICE_X24Y24         FDRE                                         r  main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
+                                       clock pessimism             -0.115     2.908    
+                  SLICE_X24Y24         FDRE (Hold_fdre_C_D)         0.171     3.079    main_bd_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
+  ---------------------------------------------------------------------------------
+                                       data arrival                           7.029    
+                                       clock arrival                          3.079    
+  ---------------------------------------------------------------------------------
+                                       relative delay                         3.950    
 
 
 

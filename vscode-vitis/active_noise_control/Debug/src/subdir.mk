@@ -14,9 +14,10 @@ OBJS += \
 ./src/dma.o \
 ./src/audio.o \
 ./src/iic.o \
-./src/anc.o 
+./src/anc.o \
+./src/fir_filter.o
 
-C_DEPS = ./src/*.d 
+C_DEPS = ./src/*.d
 
 # Each subdirectory must supply rules for building sources it contributes
 -include ../../../user.mk
