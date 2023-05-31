@@ -1,8 +1,8 @@
 #include "fir_filter.h"
 
-void fir_init(fir_instance *fir, uint16_t length, int16_t *coefficients_buffer, int16_t *data_buffer) {
+void fir_init(fir_instance *fir, uint16_t length, int16_t *coeff_buffer, int16_t *data_buffer) {
     fir->length = length;
-    fir->coefficients = coefficients_buffer;
+    fir->coefficients = coeff_buffer;
     fir->data = data_buffer;
     fir->index = 0;
 }
