@@ -2,6 +2,7 @@
     "files.associations": {
         "platform_config.h": "c",
         "xparameters.h": "c",
-        "adaptivefilter.h": "c"
+        "adaptivefilter.h": "c",
+        "math.h": "c"
     }
 }

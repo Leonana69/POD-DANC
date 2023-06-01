@@ -20,7 +20,7 @@ int16_t fir_update(fir_instance *fir, int16_t input);
 /************************** Macro Definitions *****************************/
 #define NEW_FIR(NAME, LEN) \
     static fir_instance NAME; \
-    static int16 NAME##_data_buffer[LEN]; \
-    static int16 NAME##_coeff_buffer[LEN]; \
+    static int16_t NAME##_data_buffer[LEN]; \
+    static int16_t NAME##_coeff_buffer[LEN];
 
 #endif /* FIR_FILTER_H */

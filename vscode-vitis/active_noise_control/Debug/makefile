@@ -31,7 +31,6 @@ endif
 ELFSIZE += \
 $(APP_NAME).elf.size \
 
-
 # All Target
 all:
 	$(MAKE) --no-print-directory pre-build

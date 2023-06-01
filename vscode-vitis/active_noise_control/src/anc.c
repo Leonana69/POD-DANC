@@ -5,17 +5,40 @@
 #include "platform.h"
 #include "userio.h"
 
+#include "fir_filter.h"
 
-#define FILTER_LEN_MAIN 32
-#define FILTER_LEN_2ND 128
+// #include <math.h>
 
+// NEW_FIR(main_fir, 32);
+// NEW_FIR(second_fir, 128);
 
 void calibration() {
+    // chirp generation
+    // int len = 16000;
+    // int fs = 16000;
+    // int f1 = 25; // start freq
+    // int f2 = 2000; // end freq
+    
+    // float dt = 1.0f / fs;
+    // float dur = len * dt;
 
+    // float ff = logf(f2 / f1);
+    // float p1 = 2 * M_PI * f1 * dur / ff;
+    // float p2 = ff / len;
+
+    // for (int i = 0; i < len; i++) {
+    //     int32_t data = INT16_MAX * sinf(p1 * (expf(p2 * i) - 1));
+    //     int32_t *ptr = (int32_t *)MEM_BASE_ADDR;
+    //     *ptr++ = data;
+    //     *ptr = data;
+    //     fnAudioPlay(sAxiDma, 1);
+    //     // wait until play end
+    //     while (!ANC_INSTANCE.fDmaMM2SEvent);
+    // }
 }
 
 void run() {
-    xil_printf("====> ANC start <====");
+    xil_printf("====> ANC start <====\n\r");
     while (1) {
         if (ANC_INSTANCE.fDmaS2MMEvent) {
             xil_printf("Recording [END]\n\r");
@@ -109,6 +132,7 @@ void run() {
                     break;
                 case BTN3_MASK:
                     xil_printf("BTN3 [PRESSED]\n\r");
+                    calibration();
                     break;
                 default:
                     break;

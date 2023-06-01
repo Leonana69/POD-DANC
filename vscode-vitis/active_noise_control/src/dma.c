@@ -18,13 +18,13 @@ void fnS2MMInterruptHandler(void *Callback) {
 	u32 IrqStatus;
 	int TimeOut;
 	XAxiDma *AxiDmaInst = (XAxiDma *)Callback;
-	//Read all the pending DMA interrupts
+	// Read all the pending DMA interrupts
 	IrqStatus = XAxiDma_IntrGetIrq(AxiDmaInst, XAXIDMA_DEVICE_TO_DMA);
 
-	//Acknowledge pending interrupts
+	// Acknowledge pending interrupts
 	XAxiDma_IntrAckIrq(AxiDmaInst, IrqStatus, XAXIDMA_DEVICE_TO_DMA);
 
-	//If there are no interrupts we exit the Handler
+	// If there are no interrupts we exit the Handler
 	if (!(IrqStatus & XAXIDMA_IRQ_ALL_MASK)) {
 		return;
 	}
@@ -45,7 +45,7 @@ void fnS2MMInterruptHandler(void *Callback) {
 		return;
 	}
 
-	if ((IrqStatus & XAXIDMA_IRQ_IOC_MASK)) {
+	if (IrqStatus & XAXIDMA_IRQ_IOC_MASK) {
 		ANC_INSTANCE.fDmaS2MMEvent = 1;
 	}
 }
@@ -64,11 +64,11 @@ void fnMM2SInterruptHandler(void *Callback) {
 	int TimeOut;
 	XAxiDma *AxiDmaInst = (XAxiDma *)Callback;
 
-	//Read all the pending DMA interrupts
+	// Read all the pending DMA interrupts
 	IrqStatus = XAxiDma_IntrGetIrq(AxiDmaInst, XAXIDMA_DMA_TO_DEVICE);
-	//Acknowledge pending interrupts
+	// Acknowledge pending interrupts
 	XAxiDma_IntrAckIrq(AxiDmaInst, IrqStatus, XAXIDMA_DMA_TO_DEVICE);
-	//If there are no interrupts we exit the Handler
+	// If there are no interrupts we exit the Handler
 	if (!(IrqStatus & XAXIDMA_IRQ_ALL_MASK)) {
 		return;
 	}
@@ -88,7 +88,7 @@ void fnMM2SInterruptHandler(void *Callback) {
 		}
 		return;
 	}
-	if ((IrqStatus & XAXIDMA_IRQ_IOC_MASK)) {
+	if (IrqStatus & XAXIDMA_IRQ_IOC_MASK) {
 		ANC_INSTANCE.fDmaMM2SEvent = 1;
 	}
 }
@@ -128,7 +128,7 @@ XStatus fnInitDma(XAxiDma *AxiDma) {
 		return XST_FAILURE;
 	}
 
-	// Disable all the DMA related Interrupts
+	// Disable all the DMA Interrupts
 	XAxiDma_IntrDisable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
 	XAxiDma_IntrDisable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
 
