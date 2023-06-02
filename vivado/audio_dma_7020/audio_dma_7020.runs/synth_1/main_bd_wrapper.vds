@@ -2,13 +2,13 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Jun  1 15:23:09 2023
-# Process ID: 1031709
+# Start of session at: Fri Jun  2 12:16:53 2023
+# Process ID: 3064154
 # Current directory: /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1
 # Command line: vivado -log main_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_bd_wrapper.tcl
 # Log file: /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/main_bd_wrapper.vds
 # Journal file: /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/vivado.jou
-# Running On: guojun-server, OS: Linux, CPU Frequency: 2849.759 MHz, CPU Physical cores: 32, Host memory: 134158 MB
+# Running On: guojun-server, OS: Linux, CPU Frequency: 4500.000 MHz, CPU Physical cores: 32, Host memory: 134158 MB
 #-----------------------------------------------------------
 source main_bd_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -26,52 +26,52 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1031790
+INFO: [Synth 8-7075] Helper process launched with PID 3064454
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/usr/local/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2006.270 ; gain = 370.770 ; free physical = 54529 ; free virtual = 115435
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.373; parent = 1224.886; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3013.547; parent = 2014.211; children = 999.336
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2006.098 ; gain = 370.801 ; free physical = 51678 ; free virtual = 113937
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.827; parent = 1225.216; children = 204.611
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3013.379; parent = 2014.039; children = 999.340
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main_bd_wrapper' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/hdl/main_bd_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/usr/local/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902]
 INFO: [Synth 8-6157] synthesizing module 'main_bd' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2062]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_adaptiveFilter_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_adaptiveFilter_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_adaptiveFilter_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_adaptiveFilter_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_axi_bram_ctrl_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_axi_bram_ctrl_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_axi_bram_ctrl_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_axi_bram_ctrl_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_axi_dma_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_axi_dma_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_axi_dma_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_axi_dma_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_adaptiveFilter_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_adaptiveFilter_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_adaptiveFilter_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_adaptiveFilter_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_axi_bram_ctrl_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_axi_bram_ctrl_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_axi_dma_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_axi_dma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_axi_dma_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_axi_dma_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'main_bd_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2516]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'main_bd_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2516]
 WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'main_bd_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2516]
 WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'main_bd_axi_dma_0_0' has 64 connections declared, but only 61 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2516]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_axi_gpio_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_axi_gpio_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_axi_iic_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_axi_iic_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_axi_iic_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_axi_iic_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_axi_gpio_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_axi_gpio_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_axi_iic_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_axi_iic_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_axi_iic_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_axi_iic_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'gpo' of module 'main_bd_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2601]
 WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'main_bd_axi_iic_0_0' has 27 connections declared, but only 26 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2601]
 INFO: [Synth 8-6157] synthesizing module 'main_bd_axi_interconnect_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3060]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_N15HUO' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:292]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_6' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_6_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_6' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_6_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_6' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_6_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_6' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_6_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_N15HUO' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:292]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1MW06YK' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5477]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_us_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_us_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_us_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_us_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_us_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_us_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_us_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_us_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'main_bd_auto_us_0' is unconnected for instance 'auto_us' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5604]
 WARNING: [Synth 8-7023] instance 'auto_us' of module 'main_bd_auto_us_0' has 34 connections declared, but only 33 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5604]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1MW06YK' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5477]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_N74WHR' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5640]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_us_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_us_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_us_1' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_us_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_us_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_us_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_us_1' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_us_1_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'main_bd_auto_us_1' is unconnected for instance 'auto_us' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5791]
 WARNING: [Synth 8-7023] instance 'auto_us' of module 'main_bd_auto_us_1' has 40 connections declared, but only 39 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5791]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_N74WHR' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5640]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_xbar_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_xbar_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_xbar_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_xbar_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_xbar_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_xbar_0_stub.v:5]
 WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'main_bd_xbar_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3631]
 WARNING: [Synth 8-689] width (64) of port connection 's_axi_rdata' does not match port width (128) of module 'main_bd_xbar_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3648]
 WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'main_bd_xbar_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3649]
@@ -81,15 +81,15 @@ WARNING: [Synth 8-7071] port 's_axi_bid' of module 'main_bd_xbar_0' is unconnect
 WARNING: [Synth 8-7071] port 's_axi_rid' of module 'main_bd_xbar_0' is unconnected for instance 'xbar' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3581]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'main_bd_xbar_0' has 78 connections declared, but only 76 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3581]
 INFO: [Synth 8-6155] done synthesizing module 'main_bd_axi_interconnect_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3060]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_blk_mem_gen_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_blk_mem_gen_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_blk_mem_gen_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_blk_mem_gen_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_blk_mem_gen_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_blk_mem_gen_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'main_bd_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2704]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'main_bd_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2704]
 WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'main_bd_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2704]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_d_axi_i2s_audio_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_d_axi_i2s_audio_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_d_axi_i2s_audio_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_d_axi_i2s_audio_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_processing_system7_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_processing_system7_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_processing_system7_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_d_axi_i2s_audio_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_d_axi_i2s_audio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_d_axi_i2s_audio_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_d_axi_i2s_audio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_processing_system7_0_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_processing_system7_0_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_processing_system7_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'main_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2763]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'main_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2763]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'main_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2763]
@@ -99,53 +99,53 @@ WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'main_bd_processing_s
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'main_bd_processing_system7_0_0' has 111 connections declared, but only 105 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:2763]
 INFO: [Synth 8-6157] synthesizing module 'main_bd_ps7_0_axi_periph_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3660]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_CDJVNM' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:12]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'main_bd_auto_pc_0' is unconnected for instance 'auto_pc' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:235]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'main_bd_auto_pc_0' is unconnected for instance 'auto_pc' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:235]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'main_bd_auto_pc_0' has 56 connections declared, but only 54 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:235]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_CDJVNM' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1BIHE0X' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:697]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_1' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_1' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_1_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'main_bd_auto_pc_1' is unconnected for instance 'auto_pc' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:916]
 WARNING: [Synth 8-7071] port 'm_axi_wstrb' of module 'main_bd_auto_pc_1' is unconnected for instance 'auto_pc' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:916]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'main_bd_auto_pc_1' is unconnected for instance 'auto_pc' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:916]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'main_bd_auto_pc_1' has 56 connections declared, but only 53 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:916]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1BIHE0X' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:697]
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1WZQP51' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:972]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_2' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_2' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_2' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_2' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_2_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'main_bd_auto_pc_2' is unconnected for instance 'auto_pc' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:1195]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'main_bd_auto_pc_2' is unconnected for instance 'auto_pc' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:1195]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'main_bd_auto_pc_2' has 56 connections declared, but only 54 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:1195]
 INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1WZQP51' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:972]
 INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_Z8MD1I' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:1252]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_3' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_3' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_3' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_3' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_3_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_Z8MD1I' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:1252]
 INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_QIO3WT' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:1542]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_4' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_4_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_4' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_4_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_4' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_4_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_4' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_4_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_QIO3WT' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:1542]
 INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1NZO0PA' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:1832]
 INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1NZO0PA' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:1832]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1BMH5SU' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5082]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_5' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_5_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_5' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_auto_pc_5_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_auto_pc_5' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_5_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_auto_pc_5' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_auto_pc_5_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'main_bd_auto_pc_5' is unconnected for instance 'auto_pc' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5397]
 WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'main_bd_auto_pc_5' is unconnected for instance 'auto_pc' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5397]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'main_bd_auto_pc_5' has 79 connections declared, but only 77 given [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5397]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1BMH5SU' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5082]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_xbar_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_xbar_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_xbar_1' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_xbar_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_xbar_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_xbar_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_xbar_1' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_xbar_1_stub.v:5]
 WARNING: [Synth 8-689] width (20) of port connection 'm_axi_arqos' does not match port width (24) of module 'main_bd_xbar_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5014]
 WARNING: [Synth 8-689] width (20) of port connection 'm_axi_arregion' does not match port width (24) of module 'main_bd_xbar_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5016]
 WARNING: [Synth 8-689] width (20) of port connection 'm_axi_awqos' does not match port width (24) of module 'main_bd_xbar_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5025]
 WARNING: [Synth 8-689] width (20) of port connection 'm_axi_awregion' does not match port width (24) of module 'main_bd_xbar_1' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:5027]
 INFO: [Synth 8-6155] done synthesizing module 'main_bd_ps7_0_axi_periph_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3660]
-INFO: [Synth 8-6157] synthesizing module 'main_bd_rst_ps7_0_50M_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_rst_ps7_0_50M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'main_bd_rst_ps7_0_50M_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-1031709-guojun-server/realtime/main_bd_rst_ps7_0_50M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main_bd_rst_ps7_0_50M_0' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_rst_ps7_0_50M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'main_bd_rst_ps7_0_50M_0' (0#1) [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/.Xil/Vivado-3064154-guojun-server/realtime/main_bd_rst_ps7_0_50M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'main_bd_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3043]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'main_bd_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3043]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'main_bd_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/synth/main_bd.v:3043]
@@ -263,24 +263,24 @@ WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2089.176 ; gain = 453.676 ; free physical = 54625 ; free virtual = 115532
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.373; parent = 1224.886; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3088.516; parent = 2089.180; children = 999.336
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2089.004 ; gain = 453.707 ; free physical = 51757 ; free virtual = 114018
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.827; parent = 1225.216; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3088.348; parent = 2089.008; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2104.020 ; gain = 468.520 ; free physical = 54625 ; free virtual = 115532
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.373; parent = 1224.886; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3103.359; parent = 2104.023; children = 999.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2103.848 ; gain = 468.551 ; free physical = 51756 ; free virtual = 114017
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.827; parent = 1225.216; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3103.191; parent = 2103.852; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2104.020 ; gain = 468.520 ; free physical = 54625 ; free virtual = 115532
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.373; parent = 1224.886; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3103.359; parent = 2104.023; children = 999.336
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2103.848 ; gain = 468.551 ; free physical = 51756 ; free virtual = 114017
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.827; parent = 1225.216; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3103.191; parent = 2103.852; children = 999.340
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2109.957 ; gain = 0.000 ; free physical = 54622 ; free virtual = 115529
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2109.785 ; gain = 0.000 ; free physical = 51702 ; free virtual = 113963
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -335,29 +335,29 @@ Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma
 Finished Parsing XDC File [/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2201.770 ; gain = 0.000 ; free physical = 54540 ; free virtual = 115447
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2200.598 ; gain = 0.000 ; free physical = 51686 ; free virtual = 113946
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2201.770 ; gain = 0.000 ; free physical = 54540 ; free virtual = 115447
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2200.598 ; gain = 0.000 ; free physical = 51686 ; free virtual = 113946
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'main_bd_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/usr/local/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54604 ; free virtual = 115508
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.373; parent = 1224.886; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51754 ; free virtual = 114014
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.827; parent = 1225.216; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54604 ; free virtual = 115508
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.373; parent = 1224.886; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51755 ; free virtual = 114016
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.827; parent = 1225.216; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -648,14 +648,14 @@ Applied set_property KEEP_HIERARCHY = SOFT for main_bd_i/axi_bram_ctrl_0. (const
 Applied set_property KEEP_HIERARCHY = SOFT for main_bd_i/blk_mem_gen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for main_bd_i/adaptiveFilter_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54604 ; free virtual = 115508
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.373; parent = 1224.886; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51755 ; free virtual = 114016
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.827; parent = 1225.216; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54604 ; free virtual = 115509
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.373; parent = 1224.886; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51760 ; free virtual = 114022
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.827; parent = 1225.216; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -678,33 +678,33 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54593 ; free virtual = 115503
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.373; parent = 1224.886; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51754 ; free virtual = 114021
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.827; parent = 1225.216; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54457 ; free virtual = 115367
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.344; parent = 1305.920; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51635 ; free virtual = 113902
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.339; parent = 1304.786; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54455 ; free virtual = 115365
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.652; parent = 1306.229; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51635 ; free virtual = 113902
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.647; parent = 1305.095; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54451 ; free virtual = 115361
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.652; parent = 1306.229; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51640 ; free virtual = 113907
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.647; parent = 1305.095; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -722,49 +722,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54439 ; free virtual = 115349
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.652; parent = 1306.229; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51637 ; free virtual = 113904
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.647; parent = 1305.095; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54438 ; free virtual = 115348
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.652; parent = 1306.229; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51642 ; free virtual = 113909
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.647; parent = 1305.095; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54438 ; free virtual = 115348
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.652; parent = 1306.229; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51642 ; free virtual = 113909
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.647; parent = 1305.095; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54441 ; free virtual = 115351
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.652; parent = 1306.229; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51642 ; free virtual = 113909
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.647; parent = 1305.095; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54439 ; free virtual = 115349
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.652; parent = 1306.229; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51642 ; free virtual = 113909
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.647; parent = 1305.095; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54439 ; free virtual = 115349
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.652; parent = 1306.229; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51642 ; free virtual = 113909
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.647; parent = 1305.095; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -817,20 +817,20 @@ Report Cell Usage:
 |23    |OBUF                         |    10|
 +------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54439 ; free virtual = 115349
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1510.652; parent = 1306.229; children = 204.487
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3169.094; parent = 2169.758; children = 999.336
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51642 ; free virtual = 113909
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1509.647; parent = 1305.095; children = 204.635
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3167.926; parent = 2168.586; children = 999.340
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2201.770 ; gain = 468.520 ; free physical = 54496 ; free virtual = 115406
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2201.770 ; gain = 566.270 ; free physical = 54486 ; free virtual = 115399
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2200.598 ; gain = 468.551 ; free physical = 51692 ; free virtual = 113959
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2200.598 ; gain = 565.301 ; free physical = 51692 ; free virtual = 113959
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2201.770 ; gain = 0.000 ; free physical = 54595 ; free virtual = 115509
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2200.598 ; gain = 0.000 ; free physical = 51801 ; free virtual = 114067
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2201.770 ; gain = 0.000 ; free physical = 54512 ; free virtual = 115431
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2200.598 ; gain = 0.000 ; free physical = 51733 ; free virtual = 114000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
@@ -839,7 +839,7 @@ Synth Design complete, checksum: dd73cdba
 INFO: [Common 17-83] Releasing license: Synthesis
 107 Infos, 152 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2201.770 ; gain = 903.801 ; free physical = 54711 ; free virtual = 115633
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2200.598 ; gain = 902.832 ; free physical = 51935 ; free virtual = 114202
 INFO: [Common 17-1381] The checkpoint '/home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.runs/synth_1/main_bd_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_bd_wrapper_utilization_synth.rpt -pb main_bd_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun  1 15:23:27 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun  2 12:17:11 2023...

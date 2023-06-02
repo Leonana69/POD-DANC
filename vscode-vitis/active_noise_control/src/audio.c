@@ -165,7 +165,10 @@ XStatus fnAudioStartupConfig() {
 	// Configure the I2S controller for generating a valid sampling rate
 	uConfigurationVariable.l = Xil_In32(I2S_CLOCK_CONTROL_REG);
 	// dma runs at 16 KHz
-	uConfigurationVariable.l |= CLOCK_RATE_48KHZ;
+	// uConfigurationVariable.l |= CLOCK_RATE_48KHZ;
+	uConfigurationVariable.bit.u32bit0 = 1;
+	uConfigurationVariable.bit.u32bit1 = 0;
+	uConfigurationVariable.bit.u32bit2 = 1;
 	Xil_Out32(I2S_CLOCK_CONTROL_REG, uConfigurationVariable.l);
 
 	uConfigurationVariable.l = 0x00000000;
@@ -235,7 +238,7 @@ XStatus fnAudioStartupConfig() {
 	// -> 0b10 = 24 bits
 	// -> 0b11 = 32 bits
 	fnAudioWriteToReg(R7_DIGITAL_IF, 0b000001010);
-	fnAudioWriteToReg(R8_SAMPLE_RATE, 0b000000000 | ADAU_SAMPLE_RATE_48KHZ);
+	fnAudioWriteToReg(R8_SAMPLE_RATE, ADAU_SAMPLE_RATE_48KHZ);
 	usleep(1000);
 	fnAudioWriteToReg(R9_ACTIVE, 0b000000001);
 	fnAudioWriteToReg(R6_POWER_MGMT, 0b000100000);

@@ -2520,6 +2520,9 @@
         "parameters": {
           "c_include_sg": {
             "value": "0"
+          },
+          "c_sg_length_width": {
+            "value": "23"
           }
         },
         "interface_ports": {

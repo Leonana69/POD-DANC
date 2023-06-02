@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Mon Apr 17 14:09:08 2023
+| Date         : Fri Jun  2 12:16:49 2023
 | Host         : guojun-server running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_utilization -file main_bd_axi_dma_0_0_utilization_synth.rpt -pb main_bd_axi_dma_0_0_utilization_synth.pb
 | Design       : main_bd_axi_dma_0_0
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 1376 |     0 |          0 |     53200 |  2.59 |
-|   LUT as Logic             | 1218 |     0 |          0 |     53200 |  2.29 |
-|   LUT as Memory            |  158 |     0 |          0 |     17400 |  0.91 |
+| Slice LUTs*                | 1510 |     0 |          0 |     53200 |  2.84 |
+|   LUT as Logic             | 1334 |     0 |          0 |     53200 |  2.51 |
+|   LUT as Memory            |  176 |     0 |          0 |     17400 |  1.01 |
 |     LUT as Distributed RAM |    8 |     0 |            |           |       |
-|     LUT as Shift Register  |  150 |     0 |            |           |       |
-| Slice Registers            | 1857 |     0 |          0 |    106400 |  1.75 |
-|   Register as Flip Flop    | 1857 |     0 |          0 |    106400 |  1.75 |
+|     LUT as Shift Register  |  168 |     0 |            |           |       |
+| Slice Registers            | 2001 |     0 |          0 |    106400 |  1.88 |
+|   Register as Flip Flop    | 2001 |     0 |          0 |    106400 |  1.88 |
 |   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                   |    0 |     0 |          0 |     26600 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |     13300 |  0.00 |
@@ -61,7 +61,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 76    |          Yes |         Set |            - |
-| 1781  |          Yes |       Reset |            - |
+| 1925  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -151,16 +151,16 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1781 |        Flop & Latch |
-| LUT3     |  388 |                 LUT |
-| LUT6     |  336 |                 LUT |
-| LUT4     |  257 |                 LUT |
-| LUT5     |  218 |                 LUT |
-| LUT2     |  158 |                 LUT |
-| SRL16E   |  150 |  Distributed Memory |
+| FDRE     | 1925 |        Flop & Latch |
+| LUT3     |  413 |                 LUT |
+| LUT6     |  366 |                 LUT |
+| LUT4     |  298 |                 LUT |
+| LUT5     |  242 |                 LUT |
+| SRL16E   |  168 |  Distributed Memory |
+| LUT2     |  168 |                 LUT |
 | FDSE     |   76 |        Flop & Latch |
-| LUT1     |   65 |                 LUT |
-| CARRY4   |   42 |          CarryLogic |
+| LUT1     |   64 |                 LUT |
+| CARRY4   |   51 |          CarryLogic |
 | RAMD32   |   12 |  Distributed Memory |
 | RAMS32   |    4 |  Distributed Memory |
 | RAMB36E1 |    2 |        Block Memory |

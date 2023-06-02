@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Mon Apr 17 14:09:08 2023
+// Date        : Fri Jun  2 12:16:49 2023
 // Host        : guojun-server running 64-bit Ubuntu 22.04.2 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_axi_dma_0_0/main_bd_axi_dma_0_0_stub.v

@@ -97,26 +97,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_processing_system7_0_0/main_bd_processing_system7_0_0.xci">
-          <Proxy FileSetName="main_bd_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_axi_gpio_0_0/main_bd_axi_gpio_0_0.xci">
-          <Proxy FileSetName="main_bd_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_xbar_1/main_bd_xbar_1.xci">
-          <Proxy FileSetName="main_bd_xbar_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_rst_ps7_0_50M_0/main_bd_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="main_bd_rst_ps7_0_50M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_d_axi_i2s_audio_0_0/main_bd_d_axi_i2s_audio_0_0.xci">
-          <Proxy FileSetName="main_bd_d_axi_i2s_audio_0_0"/>
+        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_xbar_0/main_bd_xbar_0.xci">
+          <Proxy FileSetName="main_bd_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_axi_dma_0_0/main_bd_axi_dma_0_0.xci">
           <Proxy FileSetName="main_bd_axi_dma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_xbar_0/main_bd_xbar_0.xci">
-          <Proxy FileSetName="main_bd_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_d_axi_i2s_audio_0_0/main_bd_d_axi_i2s_audio_0_0.xci">
+          <Proxy FileSetName="main_bd_d_axi_i2s_audio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_rst_ps7_0_50M_0/main_bd_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="main_bd_rst_ps7_0_50M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_adaptiveFilter_0_0/main_bd_adaptiveFilter_0_0.xci">
+          <Proxy FileSetName="main_bd_adaptiveFilter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_xbar_1/main_bd_xbar_1.xci">
+          <Proxy FileSetName="main_bd_xbar_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_axi_iic_0_0/main_bd_axi_iic_0_0.xci">
           <Proxy FileSetName="main_bd_axi_iic_0_0"/>
@@ -127,8 +124,11 @@
         <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_blk_mem_gen_0_0/main_bd_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="main_bd_blk_mem_gen_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_adaptiveFilter_0_0/main_bd_adaptiveFilter_0_0.xci">
-          <Proxy FileSetName="main_bd_adaptiveFilter_0_0"/>
+        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_axi_gpio_0_0/main_bd_axi_gpio_0_0.xci">
+          <Proxy FileSetName="main_bd_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="main_bd.bd" FileRelPathName="ip/main_bd_processing_system7_0_0/main_bd_processing_system7_0_0.xci">
+          <Proxy FileSetName="main_bd_processing_system7_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/main_bd/hdl/main_bd_wrapper.v">

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Thu Jun  1 15:24:00 2023
+| Date             : Fri Jun  2 12:18:05 2023
 | Host             : guojun-server running 64-bit Ubuntu 22.04.2 LTS
 | Command          : report_power -file main_bd_wrapper_power_routed.rpt -pb main_bd_wrapper_power_summary_routed.pb -rpx main_bd_wrapper_power_routed.rpx
 | Design           : main_bd_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.711        |
+| Total On-Chip Power (W)  | 1.710        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.565        |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.023 |        5 |       --- |             --- |
-| Slice Logic              |     0.008 |    14245 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     5037 |     53200 |            9.47 |
-|   CARRY4                 |    <0.001 |      223 |     13300 |            1.68 |
-|   Register               |    <0.001 |     6528 |    106400 |            6.14 |
-|   LUT as Shift Register  |    <0.001 |      314 |     17400 |            1.80 |
+| Slice Logic              |     0.008 |    14547 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     5175 |     53200 |            9.73 |
+|   CARRY4                 |    <0.001 |      232 |     13300 |            1.74 |
+|   Register               |    <0.001 |     6672 |    106400 |            6.27 |
+|   LUT as Shift Register  |    <0.001 |      336 |     17400 |            1.93 |
 |   F7/F8 Muxes            |    <0.001 |       13 |     53200 |            0.02 |
 |   Others                 |     0.000 |      748 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       18 |     17400 |            0.10 |
-| Signals                  |     0.010 |    10360 |       --- |             --- |
+| Signals                  |     0.009 |    10616 |       --- |             --- |
 | Block RAM                |     0.009 |     10.5 |       140 |            7.50 |
 | PLL                      |     0.109 |        1 |         4 |           25.00 |
 | I/O                      |     0.001 |       17 |       125 |           13.60 |
 | PS7                      |     1.404 |        1 |       --- |             --- |
 | Static Power             |     0.146 |          |           |                 |
-| Total                    |     1.711 |          |           |                 |
+| Total                    |     1.710 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -159,16 +159,15 @@ Table of Contents
 |   main_bd_i              |     1.563 |
 |     adaptiveFilter_0     |     0.002 |
 |       inst               |     0.002 |
-|     axi_bram_ctrl_0      |     0.002 |
-|       U0                 |     0.002 |
-|     axi_dma_0            |     0.008 |
-|       U0                 |     0.008 |
+|     axi_bram_ctrl_0      |     0.001 |
+|       U0                 |     0.001 |
+|     axi_dma_0            |     0.009 |
+|       U0                 |     0.009 |
 |     axi_iic_0            |     0.002 |
 |       U0                 |     0.002 |
 |     axi_interconnect_0   |     0.005 |
 |       m00_couplers       |     0.002 |
-|       s00_couplers       |     0.001 |
-|       xbar               |     0.002 |
+|       xbar               |     0.001 |
 |     blk_mem_gen_0        |     0.006 |
 |       U0                 |     0.006 |
 |     d_axi_i2s_audio_0    |     0.116 |

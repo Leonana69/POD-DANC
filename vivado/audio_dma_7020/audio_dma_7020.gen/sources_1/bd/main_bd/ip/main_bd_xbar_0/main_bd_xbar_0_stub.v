@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 // Date        : Mon Apr 17 14:19:36 2023
 // Host        : guojun-server running 64-bit Ubuntu 22.04.2 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_xbar_0/main_bd_xbar_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top main_bd_xbar_0 -prefix
+//               main_bd_xbar_0_ main_bd_xbar_0_stub.v
 // Design      : main_bd_xbar_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
