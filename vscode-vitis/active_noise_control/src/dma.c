@@ -1,5 +1,6 @@
 #include "dma.h"
 #include "main.h"
+#include "audio.h"
 
 /************************** Variable Definitions *****************************/
 
@@ -47,6 +48,11 @@ void fnS2MMInterruptHandler(void *Callback) {
 
 	if (IrqStatus & XAXIDMA_IRQ_IOC_MASK) {
 		ANC_INSTANCE.fDmaS2MMEvent = 1;
+		// disable stream function to send data (S2MM)
+		Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
+		Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
+		if (I2S_CYCLIC_MODE)
+			fnCyclicRecord();
 	}
 }
 
@@ -90,6 +96,11 @@ void fnMM2SInterruptHandler(void *Callback) {
 	}
 	if (IrqStatus & XAXIDMA_IRQ_IOC_MASK) {
 		ANC_INSTANCE.fDmaMM2SEvent = 1;
+		// disable stream function to send data (MM2S)
+		Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
+		Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
+		if (I2S_CYCLIC_MODE)
+			fnCyclicPlay();
 	}
 }
 

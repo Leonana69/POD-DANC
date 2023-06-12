@@ -9,6 +9,7 @@
 #include "xstatus.h"
 #include "sleep.h"
 #include "dma.h"
+#include "anc.h"
 
 /************************** Constant Definitions *****************************/
 #define DDR_OFFSET				0x07F00000
@@ -19,12 +20,26 @@
 
 #define DATA_WORD_LENGTH        24	// 24 bit data
 #define DATA_BYTE_LENGTH        4 	// dma is run in 32bit mode
-#define AUDIO_SAMPLING_RATE		48000
+#define AUDIO_SAMPLING_RATE		16000
+
+// #define BUFFER_SAMPLES          (AUDIO_SAMPLING_RATE / LOOP_FREQ)
+#define BUFFER_SAMPLES          16000
+#define BUFFER_SIZE             (BUFFER_SAMPLES * 2 * DATA_BYTE_LENGTH)
+
+#define RECORD_BUFFER_0         (MEM_BASE_ADDR)
+#define RECORD_BUFFER_1         (MEM_BASE_ADDR + BUFFER_SIZE)
+#define PLAY_BUFFER_0           (MEM_BASE_ADDR + 2 * BUFFER_SIZE)
+#define PLAY_BUFFER_1           (MEM_BASE_ADDR + 3 * BUFFER_SIZE)
+
+#define GET_RECORD_BUFFER(i)	(i == 0 ? RECORD_BUFFER_0 : RECORD_BUFFER_1)
+#define GET_PLAY_BUFFER(i)		(i == 0 ? PLAY_BUFFER_0 : PLAY_BUFFER_1)
 
 // i2c address for ssm2603
 #define IIC_SLAVE_ADDR			0b0011010
 
 #define DDR_BASEADDR			XPAR_MIG_7SERIES_0_BASEADDR
+
+#define I2S_CYCLIC_MODE			1
 
 // bit field construction
 struct u32_bits {
@@ -150,11 +165,17 @@ XStatus fnAudioReadFromReg(u8 u8RegAddr, u8 *u8RxData);
 //XStatus fnAudioPllConfig();
 XStatus fnAudioStartupConfig ();
 XStatus fnInitAudio();
-void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples);
-void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples);
+void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples, u32 addr);
+void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples, u32 addr);
 void fnSetLineInput();
 void fnSetLineOutput();
 void fnSetMicInput();
 void fnSetHpOutput();
+
+
+extern int recordBufferIndex;
+extern int playBufferIndex;
+void fnCyclicPlay();
+void fnCyclicRecord();
 
 #endif /* AUDIO_H */

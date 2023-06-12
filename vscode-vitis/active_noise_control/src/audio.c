@@ -1,6 +1,7 @@
 #include "audio.h"
 #include "main.h"
 #include "platform_config.h"
+#include "platform.h"
 
 /******************************************************************************
  * Function to write one byte (8-bits) to one of the registers from the audio
@@ -165,10 +166,7 @@ XStatus fnAudioStartupConfig() {
 	// Configure the I2S controller for generating a valid sampling rate
 	uConfigurationVariable.l = Xil_In32(I2S_CLOCK_CONTROL_REG);
 	// dma runs at 16 KHz
-	// uConfigurationVariable.l |= CLOCK_RATE_48KHZ;
-	uConfigurationVariable.bit.u32bit0 = 1;
-	uConfigurationVariable.bit.u32bit1 = 0;
-	uConfigurationVariable.bit.u32bit2 = 1;
+	uConfigurationVariable.l |= CLOCK_RATE_16KHZ;
 	Xil_Out32(I2S_CLOCK_CONTROL_REG, uConfigurationVariable.l);
 
 	uConfigurationVariable.l = 0x00000000;
@@ -238,7 +236,7 @@ XStatus fnAudioStartupConfig() {
 	// -> 0b10 = 24 bits
 	// -> 0b11 = 32 bits
 	fnAudioWriteToReg(R7_DIGITAL_IF, 0b000001010);
-	fnAudioWriteToReg(R8_SAMPLE_RATE, ADAU_SAMPLE_RATE_48KHZ);
+	fnAudioWriteToReg(R8_SAMPLE_RATE, ADAU_SAMPLE_RATE_16KHZ);
 	usleep(1000);
 	fnAudioWriteToReg(R9_ACTIVE, 0b000000001);
 	fnAudioWriteToReg(R6_POWER_MGMT, 0b000100000);
@@ -286,16 +284,16 @@ XStatus fnInitAudio() {
  *
  * @return	none.
  *****************************************************************************/
-void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples) {
+void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples, u32 addr) {
 	union ubitField uTransferVariable;
 
-	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma, (u32) MEM_BASE_ADDR, 2 * DATA_BYTE_LENGTH * u32NrSamples, XAXIDMA_DEVICE_TO_DMA);
+	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma, addr, 2 * DATA_BYTE_LENGTH * u32NrSamples, XAXIDMA_DEVICE_TO_DMA);
 	if (uTransferVariable.l != XST_SUCCESS) {
 		xil_printf("fail @ rec; ERROR: %d\n\r", uTransferVariable.l);
 	}
 
 	// Send number of samples to recorde
-	Xil_Out32(I2S_PERIOD_COUNT_REG, u32NrSamples);
+	Xil_Out32(I2S_PERIOD_COUNT_REG, 2 * u32NrSamples);
 
 	// Start i2s initialization sequence
 	uTransferVariable.l = 0x00000000;
@@ -307,6 +305,20 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples) {
 	Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000001);
 }
 
+int recordBufferIndex = 0;
+void fnCyclicRecord() {
+	u32 addr = 0;
+	if (recordBufferIndex == 0) {
+		addr = RECORD_BUFFER_1;
+		recordBufferIndex = 1;
+	} else {
+		addr = RECORD_BUFFER_0;
+		recordBufferIndex = 0;
+	}
+
+	fnAudioRecord(sAxiDma, BUFFER_SAMPLES, addr);
+}
+
 /******************************************************************************
  * Configure the I2S controller to transmit data, which will be read out from
  * the local memory vector (Mem)
@@ -315,24 +327,38 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples) {
  *
  * @return	none.
  *****************************************************************************/
-void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples) {
+void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples, u32 addr) {
 	union ubitField uTransferVariable;
 
 	// Send number of samples to record
-	Xil_Out32(I2S_PERIOD_COUNT_REG, u32NrSamples);
+	Xil_Out32(I2S_PERIOD_COUNT_REG, 2 * u32NrSamples);
 	// Start i2s initialization sequence
 	uTransferVariable.l = 0x00000000;
 	Xil_Out32(I2S_TRANSFER_CONTROL_REG, uTransferVariable.l);
 	uTransferVariable.bit.u32bit0 = 1;
 	Xil_Out32(I2S_TRANSFER_CONTROL_REG, uTransferVariable.l);
 
-	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma, (u32) MEM_BASE_ADDR, 2 * DATA_BYTE_LENGTH * u32NrSamples, XAXIDMA_DMA_TO_DEVICE);
+	uTransferVariable.l = XAxiDma_SimpleTransfer(&AxiDma, addr, 2 * DATA_BYTE_LENGTH * u32NrSamples, XAXIDMA_DMA_TO_DEVICE);
 	if (uTransferVariable.l != XST_SUCCESS) {
         xil_printf("fail @ play; ERROR: %d\n\r", uTransferVariable.l);
 	}
 
 	// Enable Stream function to send data (MM2S)
     Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000002);
+}
+
+int playBufferIndex = 0;
+void fnCyclicPlay() {
+	u32 addr = 0;
+	if (playBufferIndex == 0) {
+		addr = PLAY_BUFFER_1;
+		playBufferIndex = 1;
+	} else {
+		addr = PLAY_BUFFER_0;
+		playBufferIndex = 0;
+	}
+
+	fnAudioPlay(sAxiDma, BUFFER_SAMPLES, addr);
 }
 
 /******************************************************************************
