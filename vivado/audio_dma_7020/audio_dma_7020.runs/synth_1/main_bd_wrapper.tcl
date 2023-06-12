@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 8
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -114,19 +113,23 @@ set_property used_in_implementation false [get_files -all /home/gc635/Documents/
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_axi_iic_0_0/main_bd_axi_iic_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_axi_bram_ctrl_0_0/main_bd_axi_bram_ctrl_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_blk_mem_gen_0_0/main_bd_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_5/main_bd_auto_pc_5_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_axi_dma_1_1/main_bd_axi_dma_1_1.xdc]
+set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_axi_dma_1_1/main_bd_axi_dma_1_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_axi_dma_1_1/main_bd_axi_dma_1_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_6/main_bd_auto_pc_6_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_0/main_bd_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_1/main_bd_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_2/main_bd_auto_pc_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_3/main_bd_auto_pc_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_4/main_bd_auto_pc_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_5/main_bd_auto_pc_5_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_us_0/main_bd_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_us_0/main_bd_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_us_0/main_bd_auto_us_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_us_1/main_bd_auto_us_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_us_1/main_bd_auto_us_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_us_1/main_bd_auto_us_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_6/main_bd_auto_pc_6_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_auto_pc_7/main_bd_auto_pc_7_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/main_bd_ooc.xdc]
 
 OPTRACE "Adding files" END { }

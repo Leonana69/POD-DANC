@@ -64,7 +64,8 @@ void disable_caches() {
 }
 
 XIic sIic;
-XAxiDma sAxiDma;
+XAxiDma sAxiDma0;
+XAxiDma sAxiDma1;
 XGpio sUserIO;
 // XPAR_INTC_0_DEVICE_ID is defined if the interrupt controller is present
 #ifdef XPAR_INTC_0_DEVICE_ID
@@ -90,9 +91,9 @@ const ivt_t ivt[] = {
 	//IIC
 	{XPAR_FABRIC_AXI_IIC_0_IIC2INTC_IRPT_INTR, (Xil_ExceptionHandler)XIic_InterruptHandler, &sIic},
 	//DMA Stream to MemoryMap Interrupt handler
-	{XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR, (Xil_ExceptionHandler)fnS2MMInterruptHandler, &sAxiDma},
+	{XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR, (Xil_ExceptionHandler)fnS2MMInterruptHandler, &sAxiDma0},
 	//DMA MemoryMap to Stream Interrupt handler
-	{XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR, (Xil_ExceptionHandler)fnMM2SInterruptHandler, &sAxiDma},
+	{XPAR_FABRIC_AXI_DMA_1_MM2S_INTROUT_INTR, (Xil_ExceptionHandler)fnMM2SInterruptHandler, &sAxiDma1},
 	//User I/O (buttons, switches, LEDs)
 	{XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR, (Xil_ExceptionHandler)fnUserIOIsr, &sUserIO}
 };
@@ -137,7 +138,8 @@ XStatus init_platform() {
         xil_printf("IIC init [OK]\n\r");
     }
 
-    status = fnInitDma(&sAxiDma);
+    status = fnInitDma(&sAxiDma0, XPAR_AXIDMA_0_DEVICE_ID);
+    status |= fnInitDma(&sAxiDma1, XPAR_AXIDMA_1_DEVICE_ID);
     if (status != XST_SUCCESS) {
         xil_printf("DMA init [FAILED]\n\r");
         return XST_FAILURE;

@@ -18,5 +18,6 @@ vhdl xil_defaultlib  \
 "../../../bd/main_bd/ip/main_bd_axi_dma_0_0/sim/main_bd_axi_dma_0_0.vhd" \
 "../../../bd/main_bd/ip/main_bd_axi_iic_0_0/sim/main_bd_axi_iic_0_0.vhd" \
 "../../../bd/main_bd/ip/main_bd_axi_bram_ctrl_0_0/sim/main_bd_axi_bram_ctrl_0_0.vhd" \
+"../../../bd/main_bd/ip/main_bd_axi_dma_1_1/sim/main_bd_axi_dma_1_1.vhd" \
 
 nosort

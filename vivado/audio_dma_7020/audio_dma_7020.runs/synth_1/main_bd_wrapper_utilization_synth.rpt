@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Jun  2 12:17:11 2023
+| Date         : Mon Jun 12 15:35:56 2023
 | Host         : guojun-server running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_utilization -file main_bd_wrapper_utilization_synth.rpt -pb main_bd_wrapper_utilization_synth.pb
 | Design       : main_bd_wrapper
@@ -168,10 +168,12 @@ Warning! LUT value is adjusted to account for LUT combining.
 | main_bd_blk_mem_gen_0_0        |    1 |
 | main_bd_axi_iic_0_0            |    1 |
 | main_bd_axi_gpio_0_0           |    1 |
+| main_bd_axi_dma_1_1            |    1 |
 | main_bd_axi_dma_0_0            |    1 |
 | main_bd_axi_bram_ctrl_0_0      |    1 |
 | main_bd_auto_us_1              |    1 |
 | main_bd_auto_us_0              |    1 |
+| main_bd_auto_pc_7              |    1 |
 | main_bd_auto_pc_6              |    1 |
 | main_bd_auto_pc_5              |    1 |
 | main_bd_auto_pc_4              |    1 |

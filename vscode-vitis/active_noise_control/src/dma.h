@@ -12,6 +12,6 @@
 
 void fnS2MMInterruptHandler (void *Callback);
 void fnMM2SInterruptHandler (void *Callback);
-XStatus fnInitDma(XAxiDma *AxiDma);
+XStatus fnInitDma(XAxiDma *AxiDma, u32 deviceID);
 
 #endif /* DMA_H */

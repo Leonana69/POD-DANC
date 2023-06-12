@@ -12,7 +12,8 @@ XStatus init_platform();
 void cleanup_platform();
 
 extern XIic sIic;
-extern XAxiDma sAxiDma;
+extern XAxiDma sAxiDma0;
+extern XAxiDma sAxiDma1;
 extern XGpio sUserIO;
 
 #endif /* PLATFORM_H */

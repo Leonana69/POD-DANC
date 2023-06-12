@@ -305,8 +305,23 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples, u32 addr) {
 	Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000001);
 }
 
+void fnCyclicInit() {
+	union ubitField uTransferVariable;
+	// Send number of samples to record
+	Xil_Out32(I2S_PERIOD_COUNT_REG, 2 * BUFFER_SAMPLES);
+	// Start i2s initialization sequence
+	uTransferVariable.l = 0x00000000;
+	Xil_Out32(I2S_TRANSFER_CONTROL_REG, uTransferVariable.l);
+	uTransferVariable.bit.u32bit0 = 1;
+	uTransferVariable.bit.u32bit1 = 1;
+	Xil_Out32(I2S_TRANSFER_CONTROL_REG, uTransferVariable.l);
+
+	Xil_Out32(I2S_STREAM_CONTROL_REG, uTransferVariable.l);
+}
+
 int recordBufferIndex = 0;
 void fnCyclicRecord() {
+	return;
 	u32 addr = 0;
 	if (recordBufferIndex == 0) {
 		addr = RECORD_BUFFER_1;
@@ -316,7 +331,14 @@ void fnCyclicRecord() {
 		recordBufferIndex = 0;
 	}
 
-	fnAudioRecord(sAxiDma, BUFFER_SAMPLES, addr);
+	// fnAudioRecord(sAxiDma0, BUFFER_SAMPLES, addr);
+
+	// fnCyclicInit();
+	
+	// u32 rslt = XAxiDma_SimpleTransfer(&sAxiDma0, addr, 2 * DATA_BYTE_LENGTH * BUFFER_SAMPLES, XAXIDMA_DEVICE_TO_DMA);
+	// if (rslt != XST_SUCCESS) {
+	// 	xil_printf("fail @ rec; ERROR: %d\n\r", rslt);
+	// }
 }
 
 /******************************************************************************
@@ -358,7 +380,10 @@ void fnCyclicPlay() {
 		playBufferIndex = 0;
 	}
 
-	fnAudioPlay(sAxiDma, BUFFER_SAMPLES, addr);
+	u32 rslt = XAxiDma_SimpleTransfer(&sAxiDma1, addr, 2 * DATA_BYTE_LENGTH * BUFFER_SAMPLES, XAXIDMA_DMA_TO_DEVICE);
+	if (rslt != XST_SUCCESS) {
+        xil_printf("fail @ play; ERROR: %d\n\r", rslt);
+	}
 }
 
 /******************************************************************************

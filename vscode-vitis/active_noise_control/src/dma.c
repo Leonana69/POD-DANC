@@ -97,8 +97,8 @@ void fnMM2SInterruptHandler(void *Callback) {
 	if (IrqStatus & XAXIDMA_IRQ_IOC_MASK) {
 		ANC_INSTANCE.fDmaMM2SEvent = 1;
 		// disable stream function to send data (MM2S)
-		Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
-		Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
+		// Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
+		// Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
 		if (I2S_CYCLIC_MODE)
 			fnCyclicPlay();
 	}
@@ -112,15 +112,15 @@ void fnMM2SInterruptHandler(void *Callback) {
  * @return	XST_SUCCESS - if configuration was successful
  * 			XST_FAILURE - when the specification are not met
  *****************************************************************************/
-XStatus fnInitDma(XAxiDma *AxiDma) {
+XStatus fnInitDma(XAxiDma *AxiDma, u32 deviceID) {
 	int Status;
 	XAxiDma_Config *pCfgPtr;
 
 	// Make sure the DMA hardware is present in the project
 	// Ensures that the DMA hardware has been loaded
-	pCfgPtr = XAxiDma_LookupConfig(XPAR_AXIDMA_0_DEVICE_ID);
+	pCfgPtr = XAxiDma_LookupConfig(deviceID);
 	if (!pCfgPtr) {
-		xil_printf("No config found for %d\n\r", XPAR_AXIDMA_0_DEVICE_ID);
+		xil_printf("No config found for %d\n\r", deviceID);
 		return XST_FAILURE;
 	}
 
