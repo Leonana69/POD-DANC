@@ -41,36 +41,31 @@ void calibration() {
     // while (!ANC_INSTANCE.fDmaMM2SEvent);
 }
 
-#if I2S_CYCLIC_MODE == 0
+#if I2S_CYCLIC_MODE == 1
 void run() {
     xil_printf("====> ANC start <====\n\r");
     fnSetLineInput();
-    // fnSetHpOutput(); // this line will cause failed record
+    fnCyclicRecord();
+    fnCyclicPlay();
 
-    // calibration();
-    // fnCyclicRecord();
-    // fnCyclicPlay();
+    // fnAudioRecord(sAxiDma0, BUFFER_SAMPLES, RECORD_BUFFER_0);
+    // while (ANC_INSTANCE.fDmaS2MMEvent == 0) {};
 
-    usleep(2000000);
-    fnAudioRecord(sAxiDma0, BUFFER_SAMPLES, RECORD_BUFFER_0);
-    while (ANC_INSTANCE.fDmaS2MMEvent == 0) {};
+    // Xil_DCacheInvalidateRange(RECORD_BUFFER_0, BUFFER_SIZE);
 
-    Xil_DCacheInvalidateRange(RECORD_BUFFER_0, BUFFER_SIZE);
+    // u8* ptr = (u8*) RECORD_BUFFER_0;
+    // for (int j = 0; j < 16; j++) {
+    //     for (int i = 0; i < 16; i++) {
+    //         int val = ptr[0] | (ptr[1] << 8) | (ptr[2] << 16);
+    //         if (val & 0x800000)
+    //             val |= 0xFF000000;
+    //         xil_printf("%d,", val);
+    //         ptr += 8;
+    //     }
+    //     xil_printf("\n\r");
+    // }
 
-    u8* ptr = (u8*) RECORD_BUFFER_0;
-    for (int j = 0; j < 16; j++) {
-        for (int i = 0; i < 16; i++) {
-            int val = ptr[0] | (ptr[1] << 8) | (ptr[2] << 16);
-            if (val & 0x800000)
-                val |= 0xFF000000;
-            xil_printf("%d,", val);
-            ptr += 8;
-        }
-        xil_printf("\n\r");
-    }
-    
-
-    while (1) {}
+    // while (1) {}
 
     int lastRecordBufferIndex = 0;
     // int lastPlayBufferIndex = 0;
@@ -100,22 +95,10 @@ void run() {
         u32 addrP = GET_PLAY_BUFFER(lastRecordBufferIndex);
 
         Xil_DCacheInvalidateRange(addrR, BUFFER_SIZE);
-
-        u8* ptr = (u8*) addrR;
-        for (int i = 0; i < 128; i++) {
-            int val = ptr[0] | (ptr[1] << 8) | (ptr[2] << 16);
-            if (val & 0x800000)
-                val |= 0xFF000000;
-            xil_printf("%d\n\r", val);
-            ptr += 8;
-        }
-
-        // memcpy((void *)addrP, (void *)addrR, BUFFER_SIZE);
+        memcpy((void *)addrP, (void *)addrR, BUFFER_SIZE);
         Xil_DCacheFlushRange(addrP, BUFFER_SIZE);
 
         lastRecordBufferIndex = recordBufferIndex;
-
-        xil_printf("%d 0x%x 0x%x\n\r", recordBufferIndex, addrR, addrP);
     }
 }
 #else

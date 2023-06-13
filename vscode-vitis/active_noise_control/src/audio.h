@@ -23,7 +23,7 @@
 #define AUDIO_SAMPLING_RATE		16000
 
 // #define BUFFER_SAMPLES          (AUDIO_SAMPLING_RATE / LOOP_FREQ)
-#define BUFFER_SAMPLES          8000
+#define BUFFER_SAMPLES          64
 #define BUFFER_SIZE             (BUFFER_SAMPLES * 2 * DATA_BYTE_LENGTH)
 
 #define RECORD_BUFFER_0         (MEM_BASE_ADDR)
@@ -39,7 +39,7 @@
 
 #define DDR_BASEADDR			XPAR_MIG_7SERIES_0_BASEADDR
 
-#define I2S_CYCLIC_MODE			0
+#define I2S_CYCLIC_MODE			1
 
 // bit field construction
 struct u32_bits {
@@ -82,7 +82,6 @@ union ubitField{
 	u32 l;
 	struct u32_bits bit;
 };
-
 
 // I2S Status Register Flags
 enum i2sStatusFlags {

@@ -321,7 +321,6 @@ void fnCyclicInit() {
 
 int recordBufferIndex = 0;
 void fnCyclicRecord() {
-	return;
 	u32 addr = 0;
 	if (recordBufferIndex == 0) {
 		addr = RECORD_BUFFER_1;
@@ -331,14 +330,12 @@ void fnCyclicRecord() {
 		recordBufferIndex = 0;
 	}
 
-	// fnAudioRecord(sAxiDma0, BUFFER_SAMPLES, addr);
-
-	// fnCyclicInit();
+	fnCyclicInit();
 	
-	// u32 rslt = XAxiDma_SimpleTransfer(&sAxiDma0, addr, 2 * DATA_BYTE_LENGTH * BUFFER_SAMPLES, XAXIDMA_DEVICE_TO_DMA);
-	// if (rslt != XST_SUCCESS) {
-	// 	xil_printf("fail @ rec; ERROR: %d\n\r", rslt);
-	// }
+	u32 rslt = XAxiDma_SimpleTransfer(&sAxiDma0, addr, 2 * DATA_BYTE_LENGTH * BUFFER_SAMPLES, XAXIDMA_DEVICE_TO_DMA);
+	if (rslt != XST_SUCCESS) {
+		xil_printf("fail @ rec; ERROR: %d\n\r", rslt);
+	}
 }
 
 /******************************************************************************
@@ -440,7 +437,7 @@ void fnSetLineOutput() {
  *****************************************************************************/
 void fnSetHpOutput() {
 	// MX5G3 = MUTE; MX5EN = MUTE; MX6G4 = MUTE; MX6EN = MUTE
-	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010110);
+	fnAudioWriteToReg(R4_ANALOG_PATH, 0b000010010);
 	fnAudioWriteToReg(R5_DIGITAL_PATH, 0b000000000);
 	xil_printf("Output set to HeadPhones\n\r");
 }
