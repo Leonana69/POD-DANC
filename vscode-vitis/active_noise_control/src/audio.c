@@ -64,80 +64,6 @@ XStatus fnAudioReadFromReg(u8 u8RegAddr, u8 *u8RxData) {
 }
 
 /******************************************************************************
- * Configures audio codes's internal PLL. With MCLK = 12.288 MHz it configures the
- * PLL for a VCO frequency = 49.152 MHz.
- *
- * @param	none.
- *
- * @return	XST_SUCCESS if PLL is locked
- *****************************************************************************/
-//XStatus fnAudioPllConfig() {
-//
-//	u8 u8TxData[8], u8RxData[6];
-//	int Status;
-//
-//	Status = fnAudioWriteToReg(R0_CLOCK_CONTROL, 0x0E);
-//	if (Status == XST_FAILURE)
-//	{
-//		if (Demo.u8Verbose)
-//		{
-//			xil_printf("\r\nError: could not write R0_CLOCK_CONTROL (0x0E)");
-//		}
-//		return XST_FAILURE;
-//	}
-//
-//	// Write 6 bytes to R1
-//	// For setting the PLL with a MCLK = 12.288 MHz the datasheet suggests the
-//	// following configuration 0xXXXXXX2001
-//	u8TxData[0] = 0x40;
-//	u8TxData[1] = 0x02;
-//	u8TxData[2] = 0x00; // byte 1
-//	u8TxData[3] = 0x7D; // byte 2
-//	u8TxData[4] = 0x00; // byte 3
-//	u8TxData[5] = 0x0C; // byte 4
-//	u8TxData[6] = 0x20; // byte 5
-//	u8TxData[7] = 0x01; // byte 6
-//
-//	Status = XIic_Send(XPAR_IIC_0_BASEADDR, IIC_SLAVE_ADDR, u8TxData, 8, XIIC_STOP);
-//	if (Status != 8)
-//	{
-//		if (Demo.u8Verbose)
-//		{
-//			xil_printf("\r\nError: could not send data to R1_PLL_CONTROL (0xXXXXXX2001)");
-//		}
-//		return XST_FAILURE;
-//	}
-//	// Poll PLL Lock bit
-//	u8TxData[0] = 0x40;
-//	u8TxData[1] = 0x02;
-//
-//	//Wait for the PLL to lock
-//	do {
-//		XIic_Send(XPAR_IIC_0_BASEADDR, IIC_SLAVE_ADDR, u8TxData, 2, XIIC_STOP);
-//
-//		XIic_Recv(XPAR_IIC_0_BASEADDR, IIC_SLAVE_ADDR, u8RxData, 6, XIIC_STOP);
-//		if(Demo.u8Verbose) {
-//			xil_printf("\nAudio PLL R1 = 0x%x%x%x%x%x%x", u8RxData[0], u8RxData[1],
-//				u8RxData[2], u8RxData[3], u8RxData[4], u8RxData[5]);
-//		}
-//	}
-//	while((u8RxData[5] & 0x02) == 0);
-//
-//	//Set COREN
-//	Status = fnAudioWriteToReg(R0_CLOCK_CONTROL, 0x0F);
-//	if (Status == XST_FAILURE)
-//	{
-//		if (Demo.u8Verbose)
-//		{
-//			xil_printf("\r\nError: could not write R0_CLOCK_CONTROL (0x0F)");
-//		}
-//		return XST_FAILURE;
-//	}
-//
-//	return XST_SUCCESS;
-//}
-
-/******************************************************************************
  * Configure the initial settings of the audio controller, the majority of
  * these will remain unchanged during the normal functioning of the code.
  * In order to generate a correct BCLK and LRCK, which are crucial for the
@@ -254,16 +180,6 @@ XStatus fnAudioStartupConfig() {
 XStatus fnInitAudio() {
 	int Status;
 
-	// Set the PLL and wait for Lock
-	// Status = fnAudioPllConfig();
-//	if (Status != XST_SUCCESS)
-//	{
-//		if (Demo.u8Verbose)
-//		{
-//			xil_printf("\r\nError: Could not lock PLL");
-//		}
-//	}
-
 	// Configure the ADAU registers
 	Status = fnAudioStartupConfig();
 	if (Status != XST_SUCCESS) {
@@ -305,37 +221,25 @@ void fnAudioRecord(XAxiDma AxiDma, u32 u32NrSamples, u32 addr) {
 	Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000001);
 }
 
-void fnCyclicInit() {
+void fnNonStopInit() {
+	// disable interrupt since we are using polling mode
+	fnEnableDmaIntr(&sAxiDma0, 0);
+	fnEnableDmaIntr(&sAxiDma1, 0);
+
 	union ubitField uTransferVariable;
 	// Send number of samples to record
 	Xil_Out32(I2S_PERIOD_COUNT_REG, 2 * BUFFER_SAMPLES);
 	// Start i2s initialization sequence
 	uTransferVariable.l = 0x00000000;
 	Xil_Out32(I2S_TRANSFER_CONTROL_REG, uTransferVariable.l);
+	// enable tx and rx transfer
 	uTransferVariable.bit.u32bit0 = 1;
 	uTransferVariable.bit.u32bit1 = 1;
 	Xil_Out32(I2S_TRANSFER_CONTROL_REG, uTransferVariable.l);
-
+	// enable tx and rx stream
 	Xil_Out32(I2S_STREAM_CONTROL_REG, uTransferVariable.l);
-}
-
-int recordBufferIndex = 0;
-void fnCyclicRecord() {
-	u32 addr = 0;
-	if (recordBufferIndex == 0) {
-		addr = RECORD_BUFFER_1;
-		recordBufferIndex = 1;
-	} else {
-		addr = RECORD_BUFFER_0;
-		recordBufferIndex = 0;
-	}
-
-	fnCyclicInit();
-	
-	u32 rslt = XAxiDma_SimpleTransfer(&sAxiDma0, addr, 2 * DATA_BYTE_LENGTH * BUFFER_SAMPLES, XAXIDMA_DEVICE_TO_DMA);
-	if (rslt != XST_SUCCESS) {
-		xil_printf("fail @ rec; ERROR: %d\n\r", rslt);
-	}
+	// enable tx and rx non-stop mode (sample continuously)
+	Xil_Out32(I2S_NONSTOP_REG, uTransferVariable.l);
 }
 
 /******************************************************************************
@@ -364,23 +268,6 @@ void fnAudioPlay(XAxiDma AxiDma, u32 u32NrSamples, u32 addr) {
 
 	// Enable Stream function to send data (MM2S)
     Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000002);
-}
-
-int playBufferIndex = 0;
-void fnCyclicPlay() {
-	u32 addr = 0;
-	if (playBufferIndex == 0) {
-		addr = PLAY_BUFFER_1;
-		playBufferIndex = 1;
-	} else {
-		addr = PLAY_BUFFER_0;
-		playBufferIndex = 0;
-	}
-
-	u32 rslt = XAxiDma_SimpleTransfer(&sAxiDma1, addr, 2 * DATA_BYTE_LENGTH * BUFFER_SAMPLES, XAXIDMA_DMA_TO_DEVICE);
-	if (rslt != XST_SUCCESS) {
-        xil_printf("fail @ play; ERROR: %d\n\r", rslt);
-	}
 }
 
 /******************************************************************************

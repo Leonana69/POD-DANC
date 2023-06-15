@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 8
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -100,11 +101,11 @@ set_property used_in_implementation false [get_files -all /home/gc635/Documents/
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_rst_ps7_0_50M_0/main_bd_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_rst_ps7_0_50M_0/main_bd_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_rst_ps7_0_50M_0/main_bd_rst_ps7_0_50M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4.xdc]
-set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_d_axi_i2s_audio_0_0/src/d_axi_i2s_audio.xdc]
+set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4.xdc]
+set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_axi_dma_0_0/main_bd_axi_dma_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_axi_dma_0_0/main_bd_axi_dma_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/gc635/Documents/POD-DANC/vivado/audio_dma_7020/audio_dma_7020.gen/sources_1/bd/main_bd/ip/main_bd_axi_dma_0_0/main_bd_axi_dma_0_0_ooc.xdc]

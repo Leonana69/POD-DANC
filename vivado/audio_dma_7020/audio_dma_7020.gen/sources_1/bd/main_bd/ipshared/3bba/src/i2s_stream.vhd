@@ -37,39 +37,41 @@ entity i2s_stream is
 	port (
 			
 		-- Tx FIFO Flags
-		TX_FIFO_FULL_I             : in  std_logic;
+		TX_FIFO_FULL_I             	: in  std_logic;
 		
 		-- Rx FIFO Flags
-		RX_FIFO_EMPTY_I            : in  std_logic;
+		RX_FIFO_EMPTY_I            	: in  std_logic;
 		
 		-- Tx FIFO Control signals
-		TX_FIFO_D_O                : out std_logic_vector(C_DATA_WIDTH-1 downto 0);
+		TX_FIFO_D_O                	: out std_logic_vector(C_DATA_WIDTH-1 downto 0);
 		
 		-- Rx FIFO Control signals
-		RX_FIFO_D_I                : in  std_logic_vector(C_DATA_WIDTH-1 downto 0);
+		RX_FIFO_D_I                	: in  std_logic_vector(C_DATA_WIDTH-1 downto 0);
 		
-		NR_OF_SMPL_I               : in  std_logic_vector(20 downto 0);
+		NR_OF_SMPL_I               	: in  std_logic_vector(20 downto 0);
 		
-      TX_STREAM_EN_I             : in std_logic;
-      RX_STREAM_EN_I             : in std_logic;
+		TX_STREAM_EN_I             	: in std_logic;
+		RX_STREAM_EN_I             	: in std_logic;
+	  	TX_NONSTOP					: in std_logic;
+	  	RX_NONSTOP					: in std_logic;
 		
 		-- AXI4-Stream 
 		-- Slave
 		S_AXIS_MM2S_ACLK_I			: in  std_logic;
 		S_AXIS_MM2S_ARESETN			: in  std_logic;
-		S_AXIS_MM2S_TREADY_O       : out std_logic;
-		S_AXIS_MM2S_TDATA_I        : in  std_logic_vector(C_AXI_STREAM_DATA_WIDTH-1 downto 0);
-		S_AXIS_MM2S_TLAST_I        : in  std_logic;
-		S_AXIS_MM2S_TVALID_I       : in  std_logic;
+		S_AXIS_MM2S_TREADY_O       	: out std_logic;
+		S_AXIS_MM2S_TDATA_I        	: in  std_logic_vector(C_AXI_STREAM_DATA_WIDTH-1 downto 0);
+		S_AXIS_MM2S_TLAST_I        	: in  std_logic;
+		S_AXIS_MM2S_TVALID_I       	: in  std_logic;
 		
 		-- Master
-		M_AXIS_S2MM_ACLK_I         : in  std_logic;
-		M_AXIS_S2MM_ARESETN        : in  std_logic;
-		M_AXIS_S2MM_TDATA_O        : out std_logic_vector(C_AXI_STREAM_DATA_WIDTH-1 downto 0);
-		M_AXIS_S2MM_TLAST_O        : out std_logic;
-		M_AXIS_S2MM_TVALID_O       : out std_logic;
-		M_AXIS_S2MM_TREADY_I       : in  std_logic;
-		M_AXIS_S2MM_TKEEP_O        : out std_logic_vector((C_AXI_STREAM_DATA_WIDTH/8)-1 downto 0)
+		M_AXIS_S2MM_ACLK_I         	: in  std_logic;
+		M_AXIS_S2MM_ARESETN        	: in  std_logic;
+		M_AXIS_S2MM_TDATA_O        	: out std_logic_vector(C_AXI_STREAM_DATA_WIDTH-1 downto 0);
+		M_AXIS_S2MM_TLAST_O        	: out std_logic;
+		M_AXIS_S2MM_TVALID_O       	: out std_logic;
+		M_AXIS_S2MM_TREADY_I       	: in  std_logic;
+		M_AXIS_S2MM_TKEEP_O        	: out std_logic_vector((C_AXI_STREAM_DATA_WIDTH/8)-1 downto 0)
 	
 	);
 end i2s_stream;
@@ -99,9 +101,12 @@ begin
 			if (S_AXIS_MM2S_ARESETN = '0') then
 				nr_of_rd <= NR_OF_SMPL_I;
 			elsif (RX_STREAM_EN_I = '1') then
-				if (nr_of_rd > 0) then
+				if (nr_of_rd > 0 or RX_NONSTOP = '1') then
 					if (S_AXIS_MM2S_TVALID_I = '1' and ready = '1') then
 						TX_FIFO_D_O <= S_AXIS_MM2S_TDATA_I(C_DATA_WIDTH-1 downto 0);
+					end if;
+
+					if (RX_NONSTOP = '0') then
 						nr_of_rd <= nr_of_rd-1;
 					end if;
 				end if;
@@ -132,6 +137,9 @@ begin
 					end if;
 				end if;
 				if (nr_of_wr = 0) then
+					if (TX_NONSTOP = '1') then
+						nr_of_wr <= NR_OF_SMPL_I;
+					end if;
 					tlast <= '0';
 				end if;
 				if (nr_of_wr = 1) then

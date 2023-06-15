@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Mon Apr 17 14:09:03 2023
+| Date         : Thu Jun 15 13:22:04 2023
 | Host         : guojun-server running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_utilization -file main_bd_d_axi_i2s_audio_0_0_utilization_synth.rpt -pb main_bd_d_axi_i2s_audio_0_0_utilization_synth.pb
 | Design       : main_bd_d_axi_i2s_audio_0_0
@@ -152,14 +152,14 @@ Warning! LUT value is adjusted to account for LUT combining.
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
 | FDRE      |  782 |        Flop & Latch |
-| LUT4      |  153 |                 LUT |
-| LUT6      |  149 |                 LUT |
+| LUT6      |  170 |                 LUT |
 | FDCE      |  149 |        Flop & Latch |
-| LUT2      |  128 |                 LUT |
+| LUT4      |  133 |                 LUT |
+| LUT2      |  127 |                 LUT |
 | LUT1      |   90 |                 LUT |
-| LUT5      |   78 |                 LUT |
+| LUT5      |   77 |                 LUT |
+| LUT3      |   59 |                 LUT |
 | FDPE      |   58 |        Flop & Latch |
-| LUT3      |   57 |                 LUT |
 | CARRY4    |   48 |          CarryLogic |
 | RAMB36E1  |    6 |        Block Memory |
 | FDSE      |    4 |        Flop & Latch |

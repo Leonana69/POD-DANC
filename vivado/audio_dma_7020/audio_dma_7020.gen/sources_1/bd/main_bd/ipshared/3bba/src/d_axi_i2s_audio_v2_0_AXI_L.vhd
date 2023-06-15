@@ -177,8 +177,10 @@ component i2s_rx_tx
 		TX_FIFO_D_O                : out std_logic_vector(C_DATA_WIDTH-1 downto 0);
 		RX_FIFO_D_I                : in  std_logic_vector(C_DATA_WIDTH-1 downto 0);
 		NR_OF_SMPL_I               : in  std_logic_vector(20 downto 0);
-        TX_STREAM_EN_I             : in std_logic;
-        RX_STREAM_EN_I             : in std_logic;
+        TX_STREAM_EN_I             : in  std_logic;
+        RX_STREAM_EN_I             : in  std_logic;
+		TX_NONSTOP				   : in  std_logic;
+		RX_NONSTOP 				   : in  std_logic;
 		S_AXIS_MM2S_ACLK_I		   : in  std_logic;
 	    S_AXIS_MM2S_ARESETN        : in  std_logic;
 		S_AXIS_MM2S_TREADY_O       : out std_logic;
@@ -238,6 +240,9 @@ component i2s_rx_tx
       signal TX_FIFO_WR_EN_STREAM_O    : std_logic;
       signal TX_STREAM_EN_I            : std_logic;
       signal RX_STREAM_EN_I            : std_logic;
+
+	  signal TX_NONSTOP 			   : std_logic;
+	  signal RX_NONSTOP 			   : std_logic;
       
       
       signal RxFifoRdEn                : std_logic;
@@ -298,7 +303,7 @@ component i2s_rx_tx
 	  signal I2S_CLOCK_CONTROL_REG     	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	  signal I2S_PERIOD_COUNT_REG	    :std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	  signal I2S_STREAM_CONTROL_REG	    :std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-	  signal slv_reg9	                :std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	  signal I2S_NONSTOP_REG	        :std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	  signal slv_reg_rden	            : std_logic;
 	  signal slv_reg_wren	            : std_logic;
 	  signal reg_data_out	            :std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -355,6 +360,8 @@ begin
     NR_OF_SMPL_I           <= I2S_PERIOD_COUNT_REG(20 downto 0);
     TX_STREAM_EN_I         <= I2S_STREAM_CONTROL_REG(0);
     RX_STREAM_EN_I         <= I2S_STREAM_CONTROL_REG(1);
+	TX_NONSTOP			   <= I2S_NONSTOP_REG(0);
+	RX_NONSTOP			   <= I2S_NONSTOP_REG(1);
     DIV_CE                 <= RX_STREAM_EN_I and (S_AXIS_MM2S_TVALID and not TX_FIFO_FULL_O);
     
 --    DBG_RX_FIFO_D_O <= I2S_DATA_OUT_REG(C_DATA_WIDTH-1 downto 0);
@@ -443,6 +450,8 @@ begin
             NR_OF_SMPL_I               => NR_OF_SMPL_I,
             TX_STREAM_EN_I             => TX_STREAM_EN_I,
             RX_STREAM_EN_I             => RX_STREAM_EN_I,
+			TX_NONSTOP			   	   => TX_NONSTOP,
+			RX_NONSTOP			   	   => RX_NONSTOP,
             S_AXIS_MM2S_ACLK_I         => S_AXIS_MM2S_ACLK,
             S_AXIS_MM2S_ARESETN        => S_AXIS_MM2S_ARESETN,
             S_AXIS_MM2S_TREADY_O       => S_AXIS_MM2S_TREADY,
@@ -547,7 +556,7 @@ begin
 	      I2S_CLOCK_CONTROL_REG <= (others => '0');
 	      I2S_PERIOD_COUNT_REG <= (others => '0');
 	      I2S_STREAM_CONTROL_REG <= (others => '0');
-	      slv_reg9 <= (others => '0');
+		  I2S_NONSTOP_REG <= (others => '0');
 	    else
 	      loc_addr := axi_awaddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
 	      if (slv_reg_wren = '1') then
@@ -613,7 +622,7 @@ begin
 	              if ( S_AXI_WSTRB(byte_index) = '1' ) then
 	                -- Respective byte enables are asserted as per write strobes                   
 	                -- slave registor 9
-	                slv_reg9(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
+	                I2S_NONSTOP_REG(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
 	              end if;
 	            end loop;
 	          when others =>
@@ -720,7 +729,7 @@ begin
 	-- and the slave is ready to accept the read address.
 	slv_reg_rden <= axi_arready and S_AXI_ARVALID and (not axi_rvalid) ;
 
-	process (I2S_RESET_REG, I2S_TRANSFER_CONTROL_REG, I2S_FIFO_CONTROL_REG, I2S_DATA_IN_REG, I2S_DATA_OUT_REG, I2S_CLOCK_CONTROL_REG, I2S_STATUS_REG, I2S_PERIOD_COUNT_REG, I2S_STREAM_CONTROL_REG, slv_reg9, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
+	process (I2S_RESET_REG, I2S_TRANSFER_CONTROL_REG, I2S_FIFO_CONTROL_REG, I2S_DATA_IN_REG, I2S_DATA_OUT_REG, I2S_CLOCK_CONTROL_REG, I2S_STATUS_REG, I2S_PERIOD_COUNT_REG, I2S_STREAM_CONTROL_REG, I2S_NONSTOP_REG, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
 	variable loc_addr :std_logic_vector(OPT_MEM_ADDR_BITS downto 0);
 	begin
 	  if S_AXI_ARESETN = '0' then
@@ -748,7 +757,7 @@ begin
 	      when b"1000" =>
 	        reg_data_out <= I2S_STREAM_CONTROL_REG;
 	      when b"1001" =>
-	        reg_data_out <= slv_reg9;
+	        reg_data_out <= I2S_NONSTOP_REG;
 	      when others =>
 	        reg_data_out  <= (others => '0');
 	    end case;

@@ -51,8 +51,6 @@ void fnS2MMInterruptHandler(void *Callback) {
 		// disable stream function to send data (S2MM)
 		Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
 		Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
-		if (I2S_CYCLIC_MODE)
-			fnCyclicRecord();
 	}
 }
 
@@ -97,10 +95,8 @@ void fnMM2SInterruptHandler(void *Callback) {
 	if (IrqStatus & XAXIDMA_IRQ_IOC_MASK) {
 		ANC_INSTANCE.fDmaMM2SEvent = 1;
 		// disable stream function to send data (MM2S)
-		// Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
-		// Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
-		if (I2S_CYCLIC_MODE)
-			fnCyclicPlay();
+		Xil_Out32(I2S_STREAM_CONTROL_REG, 0x00000000);
+		Xil_Out32(I2S_TRANSFER_CONTROL_REG, 0x00000000);
 	}
 }
 
@@ -140,12 +136,20 @@ XStatus fnInitDma(XAxiDma *AxiDma, u32 deviceID) {
 	}
 
 	// Disable all the DMA Interrupts
-	XAxiDma_IntrDisable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
-	XAxiDma_IntrDisable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
+	fnEnableDmaIntr(AxiDma, 0);
 
 	// Enable all the DMA Interrupts
-	XAxiDma_IntrEnable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
-	XAxiDma_IntrEnable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
+	fnEnableDmaIntr(AxiDma, 1);
 
 	return XST_SUCCESS;
+}
+
+void fnEnableDmaIntr(XAxiDma *AxiDma, int select) {
+	if (select) {
+		XAxiDma_IntrEnable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+		XAxiDma_IntrEnable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
+	} else {
+		XAxiDma_IntrDisable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+		XAxiDma_IntrDisable(AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
+	}
 }

@@ -22,18 +22,6 @@
 #define DATA_BYTE_LENGTH        4 	// dma is run in 32bit mode
 #define AUDIO_SAMPLING_RATE		16000
 
-// #define BUFFER_SAMPLES          (AUDIO_SAMPLING_RATE / LOOP_FREQ)
-#define BUFFER_SAMPLES          64
-#define BUFFER_SIZE             (BUFFER_SAMPLES * 2 * DATA_BYTE_LENGTH)
-
-#define RECORD_BUFFER_0         (MEM_BASE_ADDR)
-#define RECORD_BUFFER_1         (MEM_BASE_ADDR + BUFFER_SIZE)
-#define PLAY_BUFFER_0           (MEM_BASE_ADDR + 2 * BUFFER_SIZE)
-#define PLAY_BUFFER_1           (MEM_BASE_ADDR + 3 * BUFFER_SIZE)
-
-#define GET_RECORD_BUFFER(i)	(i == 0 ? RECORD_BUFFER_0 : RECORD_BUFFER_1)
-#define GET_PLAY_BUFFER(i)		(i == 0 ? PLAY_BUFFER_0 : PLAY_BUFFER_1)
-
 // i2c address for ssm2603
 #define IIC_SLAVE_ADDR			0b0011010
 
@@ -115,7 +103,8 @@ enum i2sRegisters {
 	I2S_STATUS_REG           	= AUDIO_CTL_ADDR + 0x14,
 	I2S_CLOCK_CONTROL_REG     	= AUDIO_CTL_ADDR + 0x18,
 	I2S_PERIOD_COUNT_REG       	= AUDIO_CTL_ADDR + 0x1C,
-	I2S_STREAM_CONTROL_REG     	= AUDIO_CTL_ADDR + 0x20
+	I2S_STREAM_CONTROL_REG     	= AUDIO_CTL_ADDR + 0x20,
+	I2S_NONSTOP_REG				= AUDIO_CTL_ADDR + 0x24,
 };
 
 // ADAU internal register addresses
@@ -171,11 +160,6 @@ void fnSetLineOutput();
 void fnSetMicInput();
 void fnSetHpOutput();
 
-
-extern int recordBufferIndex;
-extern int playBufferIndex;
-void fnCyclicInit();
-void fnCyclicPlay();
-void fnCyclicRecord();
+void fnNonStopInit();
 
 #endif /* AUDIO_H */

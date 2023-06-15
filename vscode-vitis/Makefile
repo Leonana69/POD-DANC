@@ -41,6 +41,7 @@ con
 endef
 
 init_platform:
+	rm -rf $(WORKSPACE)/$(PLATFORM_NAME)
 	xsct -eval '$(INIT_PLATFORM_STRING)'
 
 build: $(WORKSPACE)/$(APP_NAME)/Debug/makefile
